@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D831AFC1-BFF9-4E1A-BB4A-6EBAC86427F3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>microDrum</RootNamespace>
+    <AssemblyName>microDrum</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>NewBigIcon.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>microDRUM.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Jacobi.Vst.Core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\Jacobi.Vst.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Jacobi.Vst.Interop, Version=0.9.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Release\Jacobi.Vst.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.4.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NAudio1_4\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form\ChannelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ChannelForm.Designer.cs">
+      <DependentUpon>ChannelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LoadButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\LoadButton.Designer.cs">
+      <DependentUpon>LoadButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\CurveSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\CurveSlider.Designer.cs">
+      <DependentUpon>CurveSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Downloader.cs" />
+    <Compile Include="Form\EffectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\EffectControl.Designer.cs">
+      <DependentUpon>EffectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\EffectsChainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\EffectsChainControl.Designer.cs">
+      <DependentUpon>EffectsChainControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExceptionLogger.cs" />
+    <Compile Include="Form\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DrumMapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DrumMapForm.Designer.cs">
+      <DependentUpon>DrumMapForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LedBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\LedBar.Designer.cs">
+      <DependentUpon>LedBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\NoteMapControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\NoteMapControl.Designer.cs">
+      <DependentUpon>NoteMapControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\NoteMapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\NoteMapForm.Designer.cs">
+      <DependentUpon>NoteMapForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalKBHook.cs" />
+    <Compile Include="Form\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\KeyboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\KeyboardForm.Designer.cs">
+      <DependentUpon>KeyboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Knob.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\Knob.Designer.cs">
+      <DependentUpon>Knob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MultiSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MultiSettingForm.Designer.cs">
+      <DependentUpon>MultiSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\InternetUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\InternetUpdateForm.Designer.cs">
+      <DependentUpon>InternetUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LogForm.Designer.cs">
+      <DependentUpon>LogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\NoteSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\NoteSlider.Designer.cs">
+      <DependentUpon>NoteSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Form\SendButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\SendButton.Designer.cs">
+      <DependentUpon>SendButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ReportErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ReportErrorForm.Designer.cs">
+      <DependentUpon>ReportErrorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Slider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form\Slider.Designer.cs">
+      <DependentUpon>Slider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Struct.cs" />
+    <Compile Include="Form\TabForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\TabForm.Designer.cs">
+      <DependentUpon>TabForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\UpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\UpdateForm.Designer.cs">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextFileLogger.cs" />
+    <EmbeddedResource Include="Form\ChannelForm.resx">
+      <DependentUpon>ChannelForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\InternetUpdateForm.resx">
+      <DependentUpon>InternetUpdateForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LoadButton.resx">
+      <DependentUpon>LoadButton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\CurveSlider.resx">
+      <DependentUpon>CurveSlider.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\EffectControl.resx">
+      <DependentUpon>EffectControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\EffectsChainControl.resx">
+      <DependentUpon>EffectsChainControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DrumMapForm.resx">
+      <DependentUpon>DrumMapForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\KeyboardForm.resx">
+      <DependentUpon>KeyboardForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LedBar.resx">
+      <DependentUpon>LedBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Knob.resx">
+      <DependentUpon>Knob.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MultiSettingForm.resx">
+      <DependentUpon>MultiSettingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NoteMapControl.resx">
+      <DependentUpon>NoteMapControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NoteMapForm.resx">
+      <DependentUpon>NoteMapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\NoteSlider.resx">
+      <DependentUpon>NoteSlider.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ReportErrorForm.resx">
+      <DependentUpon>ReportErrorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LogForm.resx">
+      <DependentUpon>LogForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Form\TabForm.resx">
+      <DependentUpon>TabForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UpdateForm.resx">
+      <DependentUpon>UpdateForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\VirtualForm.resx">
+      <DependentUpon>VirtualForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\VSTForm.resx">
+      <DependentUpon>VSTForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Slider.resx">
+      <DependentUpon>Slider.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\SendButton.resx">
+      <DependentUpon>SendButton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Form\VirtualForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\VirtualForm.Designer.cs">
+      <DependentUpon>VirtualForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\VSTForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\VSTForm.Designer.cs">
+      <DependentUpon>VSTForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Version.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NewBigIcon.ico" />
+    <None Include="Resources\LoadButton.png" />
+    <None Include="Resources\NoteSlider.png" />
+    <None Include="Resources\ToolBar.png" />
+    <None Include="Resources\Slider.png" />
+    <None Include="Resources\CurveSlider.png" />
+    <None Include="Resources\SendButton.png" />
+    <None Include="Resources\ProgressBar.png" />
+    <None Include="microDRUM.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Resources\knob.png" />
+    <None Include="Resources\against.gif" />
+    <None Include="Resources\checkmark.gif" />
+    <None Include="Resources\x.gif" />
+    <None Include="Resources\calendar.gif" />
+    <None Include="Resources\black_x.gif" />
+    <None Include="Resources\stop.gif" />
+    <None Include="Resources\graph.gif" />
+    <None Include="Resources\camera.gif" />
+    <None Include="Resources\diskette.gif" />
+    <None Include="Resources\pause.gif" />
+    <None Include="Resources\play.gif" />
+    <None Include="Resources\open-folder.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\microDRUM_Utility\microDRUM_Utility.csproj">
+      <Project>{3DC878E8-5832-4E51-8FB4-2433621198AE}</Project>
+      <Name>microDRUM_Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
