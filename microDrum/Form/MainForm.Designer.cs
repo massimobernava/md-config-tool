@@ -32,26 +32,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tcMain = new System.Windows.Forms.TabControl();
             this.tpStandby = new System.Windows.Forms.TabPage();
-            this.btnLoadPadSend = new microDrum.LoadButton();
             this.gbHHCtrl = new System.Windows.Forms.GroupBox();
             this.label35 = new System.Windows.Forms.Label();
             this.cbTypeHHC = new System.Windows.Forms.ComboBox();
-            this.btnTypeHHC = new microDrum.SendButton();
-            this.btnMaskTimeHHC = new microDrum.SendButton();
             this.nudMaskTimeHHC = new System.Windows.Forms.NumericUpDown();
             this.label34 = new System.Windows.Forms.Label();
             this.nudCCHHC = new System.Windows.Forms.NumericUpDown();
-            this.btnCCHHC = new microDrum.SendButton();
             this.label32 = new System.Windows.Forms.Label();
             this.gbDualPS = new System.Windows.Forms.GroupBox();
             this.chkPiezoSuppression = new System.Windows.Forms.CheckBox();
             this.lblAlternativeNote = new System.Windows.Forms.Label();
             this.lblAlternativeThresold = new System.Windows.Forms.Label();
             this.lblAlternative = new System.Windows.Forms.Label();
-            this.nudAlternativeThresold = new microDrum.Slider();
             this.dudAlternativeNote = new System.Windows.Forms.DomainUpDown();
             this.chkDualPiezoSwitch = new System.Windows.Forms.CheckBox();
-            this.btnDualPiezoSwitch = new microDrum.SendButton();
             this.label1 = new System.Windows.Forms.Label();
             this.lbPads = new System.Windows.Forms.ListBox();
             this.gbHHE = new System.Windows.Forms.GroupBox();
@@ -61,7 +55,6 @@
             this.dudHH_FootSplashNote = new System.Windows.Forms.DomainUpDown();
             this.nudHH_FootCloseThresold = new System.Windows.Forms.NumericUpDown();
             this.dudHH_FootCloseNote = new System.Windows.Forms.DomainUpDown();
-            this.btnHH = new microDrum.SendButton();
             this.nudHH_AThresold = new System.Windows.Forms.NumericUpDown();
             this.label48 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
@@ -74,51 +67,21 @@
             this.nudHH_CThresold = new System.Windows.Forms.NumericUpDown();
             this.dudHH_C = new System.Windows.Forms.DomainUpDown();
             this.dudHH_D = new System.Windows.Forms.DomainUpDown();
-            this.btnSendPad = new microDrum.SendButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.nudNSensor = new System.Windows.Forms.NumericUpDown();
-            this.btnNSensor = new microDrum.SendButton();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnLoadGeneral = new microDrum.LoadButton();
-            this.nudGeneralXtalk = new microDrum.Slider();
-            this.btnGeneralXtalk = new microDrum.SendButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.btnGeneralDelay = new microDrum.SendButton();
-            this.nudDelay = new microDrum.Slider();
             this.gbRim = new System.Windows.Forms.GroupBox();
             this.lblOpenThresoldRim = new System.Windows.Forms.Label();
-            this.btnOpenThresoldRim = new microDrum.SendButton();
-            this.btnOpenNoteRim = new microDrum.SendButton();
             this.dudOpenNoteRim = new System.Windows.Forms.DomainUpDown();
             this.lblOpenNoteRim = new System.Windows.Forms.Label();
-            this.nudOpenThresoldRim = new microDrum.Slider();
-            this.btnXtalkGroupRim = new microDrum.SendButton();
             this.label40 = new System.Windows.Forms.Label();
             this.cbTypeRim = new System.Windows.Forms.ComboBox();
-            this.btnTypeRim = new microDrum.SendButton();
-            this.btnChokeRim = new microDrum.SendButton();
-            this.cbCurveRim = new microDrum.CurveSlider();
             this.dudChokeRim = new System.Windows.Forms.DomainUpDown();
-            this.nudCurveFormRim = new microDrum.Slider();
             this.label15 = new System.Windows.Forms.Label();
             this.lblChokeRim = new System.Windows.Forms.Label();
-            this.btnCurveFormRim = new microDrum.SendButton();
             this.label19 = new System.Windows.Forms.Label();
-            this.dudNoteRim = new microDrum.NoteSlider();
-            this.btnNoteRim = new microDrum.SendButton();
-            this.nudXtalkGroupRim = new microDrum.Slider();
-            this.nudRetriggerRim = new microDrum.Slider();
-            this.nudXtalkRim = new microDrum.Slider();
-            this.btnMaskTimeRim = new microDrum.SendButton();
-            this.btnRetriggerRim = new microDrum.SendButton();
-            this.btnScanTimeRim = new microDrum.SendButton();
-            this.btnThresoldRim = new microDrum.SendButton();
-            this.btnXtalkRim = new microDrum.SendButton();
-            this.nudMaskTimeRim = new microDrum.Slider();
-            this.nudThresoldRim = new microDrum.Slider();
-            this.nudScanTimeRim = new microDrum.Slider();
-            this.btnCurveRim = new microDrum.SendButton();
             this.lblRimMaskTime = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.lblRimScanTime = new System.Windows.Forms.Label();
@@ -130,7 +93,6 @@
             this.labelHR = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnDualPiezo = new microDrum.SendButton();
             this.dudDualD = new System.Windows.Forms.DomainUpDown();
             this.dudDualC = new System.Windows.Forms.DomainUpDown();
             this.dudDualB = new System.Windows.Forms.DomainUpDown();
@@ -144,39 +106,16 @@
             this.tbRim = new System.Windows.Forms.TrackBar();
             this.tbHead = new System.Windows.Forms.TrackBar();
             this.gbHead = new System.Windows.Forms.GroupBox();
-            this.dudNoteHead = new microDrum.NoteSlider();
-            this.btnOpenThresoldHead = new microDrum.SendButton();
-            this.btnXtalkGroupHead = new microDrum.SendButton();
             this.label42 = new System.Windows.Forms.Label();
-            this.btnOpenNoteHead = new microDrum.SendButton();
             this.cbHH_HHC = new System.Windows.Forms.ComboBox();
             this.dudOpenNoteHead = new System.Windows.Forms.DomainUpDown();
-            this.btnChokeHead = new microDrum.SendButton();
             this.cbTypeHead = new System.Windows.Forms.ComboBox();
             this.lblOpenNoteHead = new System.Windows.Forms.Label();
-            this.btnTypeHead = new microDrum.SendButton();
             this.dudChokeHead = new System.Windows.Forms.DomainUpDown();
             this.lblOpenThresoldHead = new System.Windows.Forms.Label();
             this.lblChokeHead = new System.Windows.Forms.Label();
-            this.cbCurveHead = new microDrum.CurveSlider();
-            this.nudOpenThresoldHead = new microDrum.Slider();
-            this.nudCurveFormHead = new microDrum.Slider();
-            this.btnCurveFormHead = new microDrum.SendButton();
             this.label17 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.nudXtalkGroupHead = new microDrum.Slider();
-            this.nudRetriggerHead = new microDrum.Slider();
-            this.nudXtalkHead = new microDrum.Slider();
-            this.btnMaskTimeHead = new microDrum.SendButton();
-            this.btnRetriggerHead = new microDrum.SendButton();
-            this.btnScanTimeHead = new microDrum.SendButton();
-            this.btnThresoldHead = new microDrum.SendButton();
-            this.btnXtalkHead = new microDrum.SendButton();
-            this.nudMaskTimeHead = new microDrum.Slider();
-            this.nudThresoldHead = new microDrum.Slider();
-            this.nudScanTimeHead = new microDrum.Slider();
-            this.btnCurveHead = new microDrum.SendButton();
-            this.btnNoteHead = new microDrum.SendButton();
             this.lblHeadMaskTime = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblHeadScanTime = new System.Windows.Forms.Label();
@@ -196,6 +135,7 @@
             this.pbDiagnostic = new System.Windows.Forms.PictureBox();
             this.cbxOn = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.chkRecordLog = new System.Windows.Forms.CheckBox();
             this.btnResetProfiling = new System.Windows.Forms.Button();
             this.btnGetProfiling = new System.Windows.Forms.Button();
             this.btnShowLog = new System.Windows.Forms.Button();
@@ -241,17 +181,11 @@
             this.label41 = new System.Windows.Forms.Label();
             this.tcEffects = new System.Windows.Forms.TabControl();
             this.tpGeneral = new System.Windows.Forms.TabPage();
-            this.eccGeneral = new microDrum.EffectsChainControl();
             this.tpEffect1 = new System.Windows.Forms.TabPage();
-            this.eccEffect1 = new microDrum.EffectsChainControl();
             this.tpEffect2 = new System.Windows.Forms.TabPage();
-            this.eccEffect2 = new microDrum.EffectsChainControl();
             this.tpEffect3 = new System.Windows.Forms.TabPage();
-            this.eccEffect3 = new microDrum.EffectsChainControl();
             this.tpEffect4 = new System.Windows.Forms.TabPage();
-            this.eccEffect4 = new microDrum.EffectsChainControl();
             this.tpEffect5 = new System.Windows.Forms.TabPage();
-            this.eccEffect5 = new microDrum.EffectsChainControl();
             this.button3 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -323,18 +257,89 @@
             this.tabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadTabToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.virtualInstrumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sFZToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dkitdsndSFZToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pbLoad = new microDrum.LedBar();
+            this.btnLoadPadSend = new microDrum.LoadButton();
+            this.btnTypeHHC = new microDrum.SendButton();
+            this.btnMaskTimeHHC = new microDrum.SendButton();
+            this.btnCCHHC = new microDrum.SendButton();
+            this.nudAlternativeThresold = new microDrum.Slider();
+            this.btnDualPiezoSwitch = new microDrum.SendButton();
+            this.btnHH = new microDrum.SendButton();
+            this.btnSendPad = new microDrum.SendButton();
+            this.btnNSensor = new microDrum.SendButton();
+            this.btnLoadGeneral = new microDrum.LoadButton();
+            this.nudGeneralXtalk = new microDrum.Slider();
+            this.btnGeneralXtalk = new microDrum.SendButton();
+            this.btnGeneralDelay = new microDrum.SendButton();
+            this.nudDelay = new microDrum.Slider();
+            this.nudSensibilityRim = new microDrum.Slider();
+            this.btnOpenThresoldRim = new microDrum.SendButton();
+            this.btnOpenNoteRim = new microDrum.SendButton();
+            this.nudOpenThresoldRim = new microDrum.Slider();
+            this.btnXtalkGroupRim = new microDrum.SendButton();
+            this.btnTypeRim = new microDrum.SendButton();
+            this.btnChokeRim = new microDrum.SendButton();
+            this.cbCurveRim = new microDrum.CurveSlider();
+            this.nudCurveFormRim = new microDrum.Slider();
+            this.btnCurveFormRim = new microDrum.SendButton();
+            this.dudNoteRim = new microDrum.NoteSlider();
+            this.btnNoteRim = new microDrum.SendButton();
+            this.nudXtalkGroupRim = new microDrum.Slider();
+            this.nudRetriggerRim = new microDrum.Slider();
+            this.nudXtalkRim = new microDrum.Slider();
+            this.btnMaskTimeRim = new microDrum.SendButton();
+            this.btnRetriggerRim = new microDrum.SendButton();
+            this.btnScanTimeRim = new microDrum.SendButton();
+            this.btnThresoldRim = new microDrum.SendButton();
+            this.btnXtalkRim = new microDrum.SendButton();
+            this.nudMaskTimeRim = new microDrum.Slider();
+            this.nudThresoldRim = new microDrum.Slider();
+            this.nudScanTimeRim = new microDrum.Slider();
+            this.btnCurveRim = new microDrum.SendButton();
+            this.btnDualPiezo = new microDrum.SendButton();
+            this.nudSensibilityHead = new microDrum.Slider();
+            this.dudNoteHead = new microDrum.NoteSlider();
+            this.btnOpenThresoldHead = new microDrum.SendButton();
+            this.btnXtalkGroupHead = new microDrum.SendButton();
+            this.btnOpenNoteHead = new microDrum.SendButton();
+            this.btnChokeHead = new microDrum.SendButton();
+            this.btnTypeHead = new microDrum.SendButton();
+            this.cbCurveHead = new microDrum.CurveSlider();
+            this.nudOpenThresoldHead = new microDrum.Slider();
+            this.nudCurveFormHead = new microDrum.Slider();
+            this.btnCurveFormHead = new microDrum.SendButton();
+            this.nudXtalkGroupHead = new microDrum.Slider();
+            this.nudRetriggerHead = new microDrum.Slider();
+            this.nudXtalkHead = new microDrum.Slider();
+            this.btnMaskTimeHead = new microDrum.SendButton();
+            this.btnRetriggerHead = new microDrum.SendButton();
+            this.btnScanTimeHead = new microDrum.SendButton();
+            this.btnThresoldHead = new microDrum.SendButton();
+            this.btnXtalkHead = new microDrum.SendButton();
+            this.nudMaskTimeHead = new microDrum.Slider();
+            this.nudThresoldHead = new microDrum.Slider();
+            this.nudScanTimeHead = new microDrum.Slider();
+            this.btnCurveHead = new microDrum.SendButton();
+            this.btnNoteHead = new microDrum.SendButton();
+            this.eccGeneral = new microDrum.EffectsChainControl();
+            this.eccEffect1 = new microDrum.EffectsChainControl();
+            this.eccEffect2 = new microDrum.EffectsChainControl();
+            this.eccEffect3 = new microDrum.EffectsChainControl();
+            this.eccEffect4 = new microDrum.EffectsChainControl();
+            this.eccEffect5 = new microDrum.EffectsChainControl();
             this.tcMain.SuspendLayout();
             this.tpStandby.SuspendLayout();
             this.gbHHCtrl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaskTimeHHC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCCHHC)).BeginInit();
             this.gbDualPS.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAlternativeThresold)).BeginInit();
             this.gbHHE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHH_FootSplashThresold)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHH_FootCloseThresold)).BeginInit();
@@ -344,30 +349,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudHH_CThresold)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNSensor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudGeneralXtalk)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDelay)).BeginInit();
             this.gbRim.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudOpenThresoldRim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCurveFormRim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudXtalkGroupRim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudRetriggerRim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudXtalkRim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMaskTimeRim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudThresoldRim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudScanTimeRim)).BeginInit();
             this.gbDualPP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDualZone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbRim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbHead)).BeginInit();
             this.gbHead.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudOpenThresoldHead)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCurveFormHead)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudXtalkGroupHead)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudRetriggerHead)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudXtalkHead)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMaskTimeHead)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudThresoldHead)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudScanTimeHead)).BeginInit();
             this.tpTools.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -395,6 +382,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlternativeThresold)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGeneralXtalk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDelay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSensibilityRim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudOpenThresoldRim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCurveFormRim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudXtalkGroupRim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRetriggerRim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudXtalkRim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaskTimeRim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudThresoldRim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudScanTimeRim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSensibilityHead)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudOpenThresoldHead)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCurveFormHead)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudXtalkGroupHead)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRetriggerHead)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudXtalkHead)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaskTimeHead)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudThresoldHead)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudScanTimeHead)).BeginInit();
             this.SuspendLayout();
             // 
             // tcMain
@@ -438,14 +446,6 @@
             this.tpStandby.TabIndex = 1;
             this.tpStandby.Text = "Configuration";
             // 
-            // btnLoadPadSend
-            // 
-            this.btnLoadPadSend.Location = new System.Drawing.Point(75, 557);
-            this.btnLoadPadSend.Name = "btnLoadPadSend";
-            this.btnLoadPadSend.Size = new System.Drawing.Size(27, 27);
-            this.btnLoadPadSend.TabIndex = 22;
-            this.btnLoadPadSend.Click += new System.EventHandler(this.btnLoadSelectedPad_Click);
-            // 
             // gbHHCtrl
             // 
             this.gbHHCtrl.Controls.Add(this.label35);
@@ -486,24 +486,6 @@
             this.cbTypeHHC.TabIndex = 79;
             this.cbTypeHHC.SelectedIndexChanged += new System.EventHandler(this.cbTypeHHC_SelectedIndexChanged);
             // 
-            // btnTypeHHC
-            // 
-            this.btnTypeHHC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTypeHHC.Location = new System.Drawing.Point(136, 17);
-            this.btnTypeHHC.Name = "btnTypeHHC";
-            this.btnTypeHHC.Size = new System.Drawing.Size(27, 27);
-            this.btnTypeHHC.TabIndex = 78;
-            this.btnTypeHHC.Click += new System.EventHandler(this.btnTypeHead_Click);
-            // 
-            // btnMaskTimeHHC
-            // 
-            this.btnMaskTimeHHC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMaskTimeHHC.Location = new System.Drawing.Point(136, 81);
-            this.btnMaskTimeHHC.Name = "btnMaskTimeHHC";
-            this.btnMaskTimeHHC.Size = new System.Drawing.Size(27, 27);
-            this.btnMaskTimeHHC.TabIndex = 45;
-            this.btnMaskTimeHHC.Click += new System.EventHandler(this.btnMaskTimeHHC_Click);
-            // 
             // nudMaskTimeHHC
             // 
             this.nudMaskTimeHHC.Location = new System.Drawing.Point(77, 86);
@@ -540,15 +522,6 @@
             this.nudCCHHC.TabIndex = 42;
             this.nudCCHHC.ValueChanged += new System.EventHandler(this.nudCCHHC_ValueChanged);
             // 
-            // btnCCHHC
-            // 
-            this.btnCCHHC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCCHHC.Location = new System.Drawing.Point(136, 49);
-            this.btnCCHHC.Name = "btnCCHHC";
-            this.btnCCHHC.Size = new System.Drawing.Size(27, 27);
-            this.btnCCHHC.TabIndex = 41;
-            this.btnCCHHC.Click += new System.EventHandler(this.btnCCHHC_Click);
-            // 
             // label32
             // 
             this.label32.AutoSize = true;
@@ -570,7 +543,7 @@
             this.gbDualPS.Controls.Add(this.chkDualPiezoSwitch);
             this.gbDualPS.Controls.Add(this.btnDualPiezoSwitch);
             this.gbDualPS.ForeColor = System.Drawing.Color.SteelBlue;
-            this.gbDualPS.Location = new System.Drawing.Point(21, 424);
+            this.gbDualPS.Location = new System.Drawing.Point(21, 479);
             this.gbDualPS.Name = "gbDualPS";
             this.gbDualPS.Size = new System.Drawing.Size(353, 125);
             this.gbDualPS.TabIndex = 20;
@@ -626,19 +599,6 @@
             this.lblAlternative.TabIndex = 106;
             this.lblAlternative.Text = "Alternative";
             // 
-            // nudAlternativeThresold
-            // 
-            this.nudAlternativeThresold.Enabled = false;
-            this.nudAlternativeThresold.Location = new System.Drawing.Point(247, 41);
-            this.nudAlternativeThresold.Maximum = 255;
-            this.nudAlternativeThresold.Minimum = 0;
-            this.nudAlternativeThresold.Name = "nudAlternativeThresold";
-            this.nudAlternativeThresold.ShowSlider = false;
-            this.nudAlternativeThresold.Size = new System.Drawing.Size(66, 21);
-            this.nudAlternativeThresold.TabIndex = 105;
-            this.nudAlternativeThresold.Value = 20;
-            this.nudAlternativeThresold.ValueChanged += new System.EventHandler(this.nudAlternativeThresold_ValueChanged);
-            // 
             // dudAlternativeNote
             // 
             this.dudAlternativeNote.Enabled = false;
@@ -661,15 +621,6 @@
             this.chkDualPiezoSwitch.Text = "Active";
             this.chkDualPiezoSwitch.UseVisualStyleBackColor = true;
             this.chkDualPiezoSwitch.CheckedChanged += new System.EventHandler(this.chkDualPiezoSwitch_CheckedChanged);
-            // 
-            // btnDualPiezoSwitch
-            // 
-            this.btnDualPiezoSwitch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDualPiezoSwitch.Location = new System.Drawing.Point(312, 88);
-            this.btnDualPiezoSwitch.Name = "btnDualPiezoSwitch";
-            this.btnDualPiezoSwitch.Size = new System.Drawing.Size(35, 35);
-            this.btnDualPiezoSwitch.TabIndex = 39;
-            this.btnDualPiezoSwitch.Click += new System.EventHandler(this.btnDualPiezoSwitch_Click);
             // 
             // label1
             // 
@@ -713,7 +664,7 @@
             this.gbHHE.Controls.Add(this.dudHH_C);
             this.gbHHE.Controls.Add(this.dudHH_D);
             this.gbHHE.ForeColor = System.Drawing.Color.SteelBlue;
-            this.gbHHE.Location = new System.Drawing.Point(75, 262);
+            this.gbHHE.Location = new System.Drawing.Point(9, 503);
             this.gbHHE.Name = "gbHHE";
             this.gbHHE.Size = new System.Drawing.Size(353, 125);
             this.gbHHE.TabIndex = 19;
@@ -800,15 +751,6 @@
             this.dudHH_FootCloseNote.TabIndex = 106;
             this.dudHH_FootCloseNote.Text = "---";
             this.dudHH_FootCloseNote.SelectedItemChanged += new System.EventHandler(this.dudHH_FootCloseNote_SelectedItemChanged);
-            // 
-            // btnHH
-            // 
-            this.btnHH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHH.Location = new System.Drawing.Point(321, 92);
-            this.btnHH.Name = "btnHH";
-            this.btnHH.Size = new System.Drawing.Size(27, 27);
-            this.btnHH.TabIndex = 94;
-            this.btnHH.Click += new System.EventHandler(this.btnHH_Click);
             // 
             // nudHH_AThresold
             // 
@@ -970,16 +912,6 @@
             this.dudHH_D.Text = "---";
             this.dudHH_D.SelectedItemChanged += new System.EventHandler(this.dudHH_D_SelectedItemChanged);
             // 
-            // btnSendPad
-            // 
-            this.btnSendPad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSendPad.Location = new System.Drawing.Point(43, 557);
-            this.btnSendPad.Name = "btnSendPad";
-            this.btnSendPad.Size = new System.Drawing.Size(30, 30);
-            this.btnSendPad.TabIndex = 18;
-            this.btnSendPad.Load += new System.EventHandler(this.btnPadSend_Click);
-            this.btnSendPad.Click += new System.EventHandler(this.btnLoadSelectedPad_Click);
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.nudNSensor);
@@ -1028,15 +960,6 @@
             0});
             this.nudNSensor.ValueChanged += new System.EventHandler(this.nudNSensor_ValueChanged);
             // 
-            // btnNSensor
-            // 
-            this.btnNSensor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNSensor.Location = new System.Drawing.Point(383, 12);
-            this.btnNSensor.Name = "btnNSensor";
-            this.btnNSensor.Size = new System.Drawing.Size(35, 35);
-            this.btnNSensor.TabIndex = 67;
-            this.btnNSensor.Click += new System.EventHandler(this.btnNSensor_Click);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -1046,35 +969,6 @@
             this.label11.Size = new System.Drawing.Size(51, 13);
             this.label11.TabIndex = 66;
             this.label11.Text = "NSensor:";
-            // 
-            // btnLoadGeneral
-            // 
-            this.btnLoadGeneral.Location = new System.Drawing.Point(424, 12);
-            this.btnLoadGeneral.Name = "btnLoadGeneral";
-            this.btnLoadGeneral.Size = new System.Drawing.Size(27, 27);
-            this.btnLoadGeneral.TabIndex = 65;
-            this.btnLoadGeneral.Click += new System.EventHandler(this.btnLoadGeneral_Click);
-            // 
-            // nudGeneralXtalk
-            // 
-            this.nudGeneralXtalk.Location = new System.Drawing.Point(178, 19);
-            this.nudGeneralXtalk.Maximum = 7;
-            this.nudGeneralXtalk.Minimum = 0;
-            this.nudGeneralXtalk.Name = "nudGeneralXtalk";
-            this.nudGeneralXtalk.ShowSlider = false;
-            this.nudGeneralXtalk.Size = new System.Drawing.Size(66, 20);
-            this.nudGeneralXtalk.TabIndex = 63;
-            this.nudGeneralXtalk.Value = 1;
-            this.nudGeneralXtalk.ValueChanged += new System.EventHandler(this.nudGeneralXtalk_ValueChanged);
-            // 
-            // btnGeneralXtalk
-            // 
-            this.btnGeneralXtalk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnGeneralXtalk.Location = new System.Drawing.Point(247, 12);
-            this.btnGeneralXtalk.Name = "btnGeneralXtalk";
-            this.btnGeneralXtalk.Size = new System.Drawing.Size(35, 35);
-            this.btnGeneralXtalk.TabIndex = 62;
-            this.btnGeneralXtalk.Click += new System.EventHandler(this.btnGeneralXtalk_Click);
             // 
             // label8
             // 
@@ -1096,29 +990,9 @@
             this.label29.TabIndex = 16;
             this.label29.Text = "Delay:";
             // 
-            // btnGeneralDelay
-            // 
-            this.btnGeneralDelay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnGeneralDelay.Location = new System.Drawing.Point(112, 12);
-            this.btnGeneralDelay.Name = "btnGeneralDelay";
-            this.btnGeneralDelay.Size = new System.Drawing.Size(35, 35);
-            this.btnGeneralDelay.TabIndex = 15;
-            this.btnGeneralDelay.Click += new System.EventHandler(this.btnGeneral_Click);
-            // 
-            // nudDelay
-            // 
-            this.nudDelay.Location = new System.Drawing.Point(43, 19);
-            this.nudDelay.Maximum = 127;
-            this.nudDelay.Minimum = 1;
-            this.nudDelay.Name = "nudDelay";
-            this.nudDelay.ShowSlider = false;
-            this.nudDelay.Size = new System.Drawing.Size(66, 20);
-            this.nudDelay.TabIndex = 3;
-            this.nudDelay.Value = 1;
-            this.nudDelay.ValueChanged += new System.EventHandler(this.nudDelay_ValueChanged);
-            // 
             // gbRim
             // 
+            this.gbRim.Controls.Add(this.nudSensibilityRim);
             this.gbRim.Controls.Add(this.lblOpenThresoldRim);
             this.gbRim.Controls.Add(this.btnOpenThresoldRim);
             this.gbRim.Controls.Add(this.btnOpenNoteRim);
@@ -1176,26 +1050,6 @@
             this.lblOpenThresoldRim.Text = "Open Thresold:";
             this.lblOpenThresoldRim.Visible = false;
             // 
-            // btnOpenThresoldRim
-            // 
-            this.btnOpenThresoldRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnOpenThresoldRim.Location = new System.Drawing.Point(143, 342);
-            this.btnOpenThresoldRim.Name = "btnOpenThresoldRim";
-            this.btnOpenThresoldRim.Size = new System.Drawing.Size(27, 27);
-            this.btnOpenThresoldRim.TabIndex = 98;
-            this.btnOpenThresoldRim.Visible = false;
-            this.btnOpenThresoldRim.Click += new System.EventHandler(this.btnOpenThresoldRim_Click);
-            // 
-            // btnOpenNoteRim
-            // 
-            this.btnOpenNoteRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnOpenNoteRim.Location = new System.Drawing.Point(143, 372);
-            this.btnOpenNoteRim.Name = "btnOpenNoteRim";
-            this.btnOpenNoteRim.Size = new System.Drawing.Size(27, 27);
-            this.btnOpenNoteRim.TabIndex = 97;
-            this.btnOpenNoteRim.Visible = false;
-            this.btnOpenNoteRim.Click += new System.EventHandler(this.btnOpenNoteRim_Click);
-            // 
             // dudOpenNoteRim
             // 
             this.dudOpenNoteRim.Location = new System.Drawing.Point(71, 376);
@@ -1218,28 +1072,6 @@
             this.lblOpenNoteRim.Text = "Open:";
             this.lblOpenNoteRim.Visible = false;
             // 
-            // nudOpenThresoldRim
-            // 
-            this.nudOpenThresoldRim.Location = new System.Drawing.Point(70, 347);
-            this.nudOpenThresoldRim.Maximum = 127;
-            this.nudOpenThresoldRim.Minimum = 0;
-            this.nudOpenThresoldRim.Name = "nudOpenThresoldRim";
-            this.nudOpenThresoldRim.ShowSlider = false;
-            this.nudOpenThresoldRim.Size = new System.Drawing.Size(66, 21);
-            this.nudOpenThresoldRim.TabIndex = 93;
-            this.nudOpenThresoldRim.Value = 1;
-            this.nudOpenThresoldRim.Visible = false;
-            this.nudOpenThresoldRim.ValueChanged += new System.EventHandler(this.nudOpenThresoldRim_ValueChanged);
-            // 
-            // btnXtalkGroupRim
-            // 
-            this.btnXtalkGroupRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnXtalkGroupRim.Location = new System.Drawing.Point(143, 282);
-            this.btnXtalkGroupRim.Name = "btnXtalkGroupRim";
-            this.btnXtalkGroupRim.Size = new System.Drawing.Size(27, 27);
-            this.btnXtalkGroupRim.TabIndex = 92;
-            this.btnXtalkGroupRim.Click += new System.EventHandler(this.btnXtalkGroupRim_Click);
-            // 
             // label40
             // 
             this.label40.AutoSize = true;
@@ -1261,34 +1093,6 @@
             this.cbTypeRim.TabIndex = 73;
             this.cbTypeRim.SelectedIndexChanged += new System.EventHandler(this.cbTypeRim_SelectedIndexChanged);
             // 
-            // btnTypeRim
-            // 
-            this.btnTypeRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTypeRim.Location = new System.Drawing.Point(143, 12);
-            this.btnTypeRim.Name = "btnTypeRim";
-            this.btnTypeRim.Size = new System.Drawing.Size(27, 27);
-            this.btnTypeRim.TabIndex = 72;
-            this.btnTypeRim.Click += new System.EventHandler(this.btnTypeRim_Click);
-            // 
-            // btnChokeRim
-            // 
-            this.btnChokeRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnChokeRim.Location = new System.Drawing.Point(143, 312);
-            this.btnChokeRim.Name = "btnChokeRim";
-            this.btnChokeRim.Size = new System.Drawing.Size(27, 27);
-            this.btnChokeRim.TabIndex = 71;
-            this.btnChokeRim.Click += new System.EventHandler(this.btnChokeRim_Click);
-            // 
-            // cbCurveRim
-            // 
-            this.cbCurveRim.Location = new System.Drawing.Point(40, 75);
-            this.cbCurveRim.Name = "cbCurveRim";
-            this.cbCurveRim.SelectedIndex = 0;
-            this.cbCurveRim.ShowSlider = false;
-            this.cbCurveRim.Size = new System.Drawing.Size(100, 21);
-            this.cbCurveRim.TabIndex = 65;
-            this.cbCurveRim.SelectedIndexChanged += new System.EventHandler(this.cbCurveRim_SelectedItemChanged);
-            // 
             // dudChokeRim
             // 
             this.dudChokeRim.Location = new System.Drawing.Point(71, 316);
@@ -1298,18 +1102,6 @@
             this.dudChokeRim.TabIndex = 70;
             this.dudChokeRim.Text = "---";
             this.dudChokeRim.SelectedItemChanged += new System.EventHandler(this.dudChokeRim_SelectedItemChanged);
-            // 
-            // nudCurveFormRim
-            // 
-            this.nudCurveFormRim.Location = new System.Drawing.Point(70, 105);
-            this.nudCurveFormRim.Maximum = 127;
-            this.nudCurveFormRim.Minimum = 1;
-            this.nudCurveFormRim.Name = "nudCurveFormRim";
-            this.nudCurveFormRim.ShowSlider = false;
-            this.nudCurveFormRim.Size = new System.Drawing.Size(66, 20);
-            this.nudCurveFormRim.TabIndex = 64;
-            this.nudCurveFormRim.Value = 1;
-            this.nudCurveFormRim.ValueChanged += new System.EventHandler(this.nudCurveFormRim_ValueChanged);
             // 
             // label15
             // 
@@ -1331,15 +1123,6 @@
             this.lblChokeRim.TabIndex = 69;
             this.lblChokeRim.Text = "Choke:";
             // 
-            // btnCurveFormRim
-            // 
-            this.btnCurveFormRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCurveFormRim.Location = new System.Drawing.Point(143, 102);
-            this.btnCurveFormRim.Name = "btnCurveFormRim";
-            this.btnCurveFormRim.Size = new System.Drawing.Size(27, 27);
-            this.btnCurveFormRim.TabIndex = 63;
-            this.btnCurveFormRim.Click += new System.EventHandler(this.btnCurveFormRim_Click);
-            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -1350,151 +1133,6 @@
             this.label19.Size = new System.Drawing.Size(64, 13);
             this.label19.TabIndex = 62;
             this.label19.Text = "Curve Form:";
-            // 
-            // dudNoteRim
-            // 
-            this.dudNoteRim.Location = new System.Drawing.Point(70, 48);
-            this.dudNoteRim.Name = "dudNoteRim";
-            this.dudNoteRim.SelectedIndex = 94;
-            this.dudNoteRim.ShowSlider = false;
-            this.dudNoteRim.Size = new System.Drawing.Size(70, 20);
-            this.dudNoteRim.TabIndex = 35;
-            this.dudNoteRim.SelectedItemChanged += new System.EventHandler(this.dudNoteRim_SelectedItemChanged);
-            // 
-            // btnNoteRim
-            // 
-            this.btnNoteRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNoteRim.Location = new System.Drawing.Point(143, 42);
-            this.btnNoteRim.Name = "btnNoteRim";
-            this.btnNoteRim.Size = new System.Drawing.Size(27, 27);
-            this.btnNoteRim.TabIndex = 56;
-            this.btnNoteRim.Click += new System.EventHandler(this.btnNoteRim_Click);
-            // 
-            // nudXtalkGroupRim
-            // 
-            this.nudXtalkGroupRim.Location = new System.Drawing.Point(70, 287);
-            this.nudXtalkGroupRim.Maximum = 7;
-            this.nudXtalkGroupRim.Minimum = 0;
-            this.nudXtalkGroupRim.Name = "nudXtalkGroupRim";
-            this.nudXtalkGroupRim.ShowSlider = false;
-            this.nudXtalkGroupRim.Size = new System.Drawing.Size(66, 21);
-            this.nudXtalkGroupRim.TabIndex = 55;
-            this.nudXtalkGroupRim.Value = 1;
-            this.nudXtalkGroupRim.ValueChanged += new System.EventHandler(this.nudXtalkGroupRim_ValueChanged);
-            // 
-            // nudRetriggerRim
-            // 
-            this.nudRetriggerRim.Location = new System.Drawing.Point(70, 196);
-            this.nudRetriggerRim.Maximum = 127;
-            this.nudRetriggerRim.Minimum = 0;
-            this.nudRetriggerRim.Name = "nudRetriggerRim";
-            this.nudRetriggerRim.ShowSlider = false;
-            this.nudRetriggerRim.Size = new System.Drawing.Size(66, 21);
-            this.nudRetriggerRim.TabIndex = 54;
-            this.nudRetriggerRim.Value = 1;
-            this.nudRetriggerRim.ValueChanged += new System.EventHandler(this.nudRetriggerRim_ValueChanged);
-            // 
-            // nudXtalkRim
-            // 
-            this.nudXtalkRim.Location = new System.Drawing.Point(70, 257);
-            this.nudXtalkRim.Maximum = 7;
-            this.nudXtalkRim.Minimum = 0;
-            this.nudXtalkRim.Name = "nudXtalkRim";
-            this.nudXtalkRim.ShowSlider = false;
-            this.nudXtalkRim.Size = new System.Drawing.Size(66, 21);
-            this.nudXtalkRim.TabIndex = 53;
-            this.nudXtalkRim.Value = 1;
-            this.nudXtalkRim.ValueChanged += new System.EventHandler(this.nudXtalkRim_ValueChanged);
-            // 
-            // btnMaskTimeRim
-            // 
-            this.btnMaskTimeRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMaskTimeRim.Location = new System.Drawing.Point(143, 222);
-            this.btnMaskTimeRim.Name = "btnMaskTimeRim";
-            this.btnMaskTimeRim.Size = new System.Drawing.Size(27, 27);
-            this.btnMaskTimeRim.TabIndex = 50;
-            this.btnMaskTimeRim.Click += new System.EventHandler(this.btnMaskTimeRim_Click);
-            // 
-            // btnRetriggerRim
-            // 
-            this.btnRetriggerRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRetriggerRim.Location = new System.Drawing.Point(143, 192);
-            this.btnRetriggerRim.Name = "btnRetriggerRim";
-            this.btnRetriggerRim.Size = new System.Drawing.Size(27, 27);
-            this.btnRetriggerRim.TabIndex = 49;
-            this.btnRetriggerRim.Click += new System.EventHandler(this.btnRetriggerRim_Click);
-            // 
-            // btnScanTimeRim
-            // 
-            this.btnScanTimeRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnScanTimeRim.Location = new System.Drawing.Point(143, 161);
-            this.btnScanTimeRim.Name = "btnScanTimeRim";
-            this.btnScanTimeRim.Size = new System.Drawing.Size(27, 27);
-            this.btnScanTimeRim.TabIndex = 48;
-            this.btnScanTimeRim.Click += new System.EventHandler(this.btnScanTimeRim_Click);
-            // 
-            // btnThresoldRim
-            // 
-            this.btnThresoldRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThresoldRim.Location = new System.Drawing.Point(143, 131);
-            this.btnThresoldRim.Name = "btnThresoldRim";
-            this.btnThresoldRim.Size = new System.Drawing.Size(27, 27);
-            this.btnThresoldRim.TabIndex = 47;
-            this.btnThresoldRim.Click += new System.EventHandler(this.btnThresoldRim_Click);
-            // 
-            // btnXtalkRim
-            // 
-            this.btnXtalkRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnXtalkRim.Location = new System.Drawing.Point(143, 251);
-            this.btnXtalkRim.Name = "btnXtalkRim";
-            this.btnXtalkRim.Size = new System.Drawing.Size(27, 27);
-            this.btnXtalkRim.TabIndex = 46;
-            this.btnXtalkRim.Click += new System.EventHandler(this.btnXtalkRim_Click);
-            // 
-            // nudMaskTimeRim
-            // 
-            this.nudMaskTimeRim.Location = new System.Drawing.Point(70, 226);
-            this.nudMaskTimeRim.Maximum = 127;
-            this.nudMaskTimeRim.Minimum = 1;
-            this.nudMaskTimeRim.Name = "nudMaskTimeRim";
-            this.nudMaskTimeRim.ShowSlider = false;
-            this.nudMaskTimeRim.Size = new System.Drawing.Size(66, 21);
-            this.nudMaskTimeRim.TabIndex = 43;
-            this.nudMaskTimeRim.Value = 1;
-            this.nudMaskTimeRim.ValueChanged += new System.EventHandler(this.nudMaskTimeRim_ValueChanged);
-            // 
-            // nudThresoldRim
-            // 
-            this.nudThresoldRim.Location = new System.Drawing.Point(71, 138);
-            this.nudThresoldRim.Maximum = 127;
-            this.nudThresoldRim.Minimum = 1;
-            this.nudThresoldRim.Name = "nudThresoldRim";
-            this.nudThresoldRim.ShowSlider = false;
-            this.nudThresoldRim.Size = new System.Drawing.Size(66, 21);
-            this.nudThresoldRim.TabIndex = 41;
-            this.nudThresoldRim.Value = 1;
-            this.nudThresoldRim.ValueChanged += new System.EventHandler(this.nudThresoldRim_ValueChanged);
-            // 
-            // nudScanTimeRim
-            // 
-            this.nudScanTimeRim.Location = new System.Drawing.Point(70, 168);
-            this.nudScanTimeRim.Maximum = 127;
-            this.nudScanTimeRim.Minimum = 0;
-            this.nudScanTimeRim.Name = "nudScanTimeRim";
-            this.nudScanTimeRim.ShowSlider = false;
-            this.nudScanTimeRim.Size = new System.Drawing.Size(66, 21);
-            this.nudScanTimeRim.TabIndex = 40;
-            this.nudScanTimeRim.Value = 1;
-            this.nudScanTimeRim.ValueChanged += new System.EventHandler(this.nudScanTimeRim_ValueChanged);
-            // 
-            // btnCurveRim
-            // 
-            this.btnCurveRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCurveRim.Location = new System.Drawing.Point(143, 73);
-            this.btnCurveRim.Name = "btnCurveRim";
-            this.btnCurveRim.Size = new System.Drawing.Size(27, 27);
-            this.btnCurveRim.TabIndex = 39;
-            this.btnCurveRim.Click += new System.EventHandler(this.btnCurveRim_Click);
             // 
             // lblRimMaskTime
             // 
@@ -1623,15 +1261,6 @@
             this.label5.TabIndex = 71;
             this.label5.Text = "H";
             // 
-            // btnDualPiezo
-            // 
-            this.btnDualPiezo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDualPiezo.Location = new System.Drawing.Point(312, 88);
-            this.btnDualPiezo.Name = "btnDualPiezo";
-            this.btnDualPiezo.Size = new System.Drawing.Size(35, 35);
-            this.btnDualPiezo.TabIndex = 39;
-            this.btnDualPiezo.Click += new System.EventHandler(this.btnDualPiezo_Click);
-            // 
             // dudDualD
             // 
             this.dudDualD.Enabled = false;
@@ -1746,7 +1375,7 @@
             this.tbRim.Maximum = 255;
             this.tbRim.Name = "tbRim";
             this.tbRim.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.tbRim.Size = new System.Drawing.Size(42, 64);
+            this.tbRim.Size = new System.Drawing.Size(45, 64);
             this.tbRim.TabIndex = 1;
             this.tbRim.TickStyle = System.Windows.Forms.TickStyle.None;
             this.tbRim.Value = 128;
@@ -1758,7 +1387,7 @@
             this.tbHead.Location = new System.Drawing.Point(91, 16);
             this.tbHead.Maximum = 255;
             this.tbHead.Name = "tbHead";
-            this.tbHead.Size = new System.Drawing.Size(65, 42);
+            this.tbHead.Size = new System.Drawing.Size(65, 45);
             this.tbHead.TabIndex = 0;
             this.tbHead.TickStyle = System.Windows.Forms.TickStyle.None;
             this.tbHead.Value = 128;
@@ -1766,6 +1395,7 @@
             // 
             // gbHead
             // 
+            this.gbHead.Controls.Add(this.nudSensibilityHead);
             this.gbHead.Controls.Add(this.dudNoteHead);
             this.gbHead.Controls.Add(this.btnOpenThresoldHead);
             this.gbHead.Controls.Add(this.btnXtalkGroupHead);
@@ -1814,35 +1444,6 @@
             this.gbHead.TabStop = false;
             this.gbHead.Text = "Parameters Head";
             // 
-            // dudNoteHead
-            // 
-            this.dudNoteHead.Location = new System.Drawing.Point(61, 48);
-            this.dudNoteHead.Name = "dudNoteHead";
-            this.dudNoteHead.SelectedIndex = 94;
-            this.dudNoteHead.ShowSlider = false;
-            this.dudNoteHead.Size = new System.Drawing.Size(70, 20);
-            this.dudNoteHead.TabIndex = 98;
-            this.dudNoteHead.SelectedItemChanged += new System.EventHandler(this.dudNoteHead_SelectedItemChanged);
-            // 
-            // btnOpenThresoldHead
-            // 
-            this.btnOpenThresoldHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnOpenThresoldHead.Location = new System.Drawing.Point(142, 341);
-            this.btnOpenThresoldHead.Name = "btnOpenThresoldHead";
-            this.btnOpenThresoldHead.Size = new System.Drawing.Size(27, 27);
-            this.btnOpenThresoldHead.TabIndex = 97;
-            this.btnOpenThresoldHead.Visible = false;
-            this.btnOpenThresoldHead.Click += new System.EventHandler(this.btnOpenThresoldHead_Click);
-            // 
-            // btnXtalkGroupHead
-            // 
-            this.btnXtalkGroupHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnXtalkGroupHead.Location = new System.Drawing.Point(142, 282);
-            this.btnXtalkGroupHead.Name = "btnXtalkGroupHead";
-            this.btnXtalkGroupHead.Size = new System.Drawing.Size(27, 27);
-            this.btnXtalkGroupHead.TabIndex = 91;
-            this.btnXtalkGroupHead.Click += new System.EventHandler(this.btnXtalkGroupHead_Click);
-            // 
             // label42
             // 
             this.label42.AutoSize = true;
@@ -1852,16 +1453,6 @@
             this.label42.Size = new System.Drawing.Size(34, 13);
             this.label42.TabIndex = 77;
             this.label42.Text = "Type:";
-            // 
-            // btnOpenNoteHead
-            // 
-            this.btnOpenNoteHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnOpenNoteHead.Location = new System.Drawing.Point(142, 371);
-            this.btnOpenNoteHead.Name = "btnOpenNoteHead";
-            this.btnOpenNoteHead.Size = new System.Drawing.Size(27, 27);
-            this.btnOpenNoteHead.TabIndex = 96;
-            this.btnOpenNoteHead.Visible = false;
-            this.btnOpenNoteHead.Click += new System.EventHandler(this.btnOpenNoteHead_Click);
             // 
             // cbHH_HHC
             // 
@@ -1891,15 +1482,6 @@
             this.dudOpenNoteHead.Visible = false;
             this.dudOpenNoteHead.SelectedItemChanged += new System.EventHandler(this.dudOpenNoteHead_SelectedItemChanged);
             // 
-            // btnChokeHead
-            // 
-            this.btnChokeHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnChokeHead.Location = new System.Drawing.Point(142, 310);
-            this.btnChokeHead.Name = "btnChokeHead";
-            this.btnChokeHead.Size = new System.Drawing.Size(27, 27);
-            this.btnChokeHead.TabIndex = 74;
-            this.btnChokeHead.Click += new System.EventHandler(this.btnChokeHead_Click);
-            // 
             // cbTypeHead
             // 
             this.cbTypeHead.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1920,15 +1502,6 @@
             this.lblOpenNoteHead.TabIndex = 94;
             this.lblOpenNoteHead.Text = "Open:";
             this.lblOpenNoteHead.Visible = false;
-            // 
-            // btnTypeHead
-            // 
-            this.btnTypeHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTypeHead.Location = new System.Drawing.Point(142, 12);
-            this.btnTypeHead.Name = "btnTypeHead";
-            this.btnTypeHead.Size = new System.Drawing.Size(27, 27);
-            this.btnTypeHead.TabIndex = 75;
-            this.btnTypeHead.Click += new System.EventHandler(this.btnTypeHead_Click);
             // 
             // dudChokeHead
             // 
@@ -1960,50 +1533,6 @@
             this.lblChokeHead.TabIndex = 72;
             this.lblChokeHead.Text = "Choke:";
             // 
-            // cbCurveHead
-            // 
-            this.cbCurveHead.Location = new System.Drawing.Point(40, 75);
-            this.cbCurveHead.Name = "cbCurveHead";
-            this.cbCurveHead.SelectedIndex = 0;
-            this.cbCurveHead.ShowSlider = false;
-            this.cbCurveHead.Size = new System.Drawing.Size(100, 21);
-            this.cbCurveHead.TabIndex = 40;
-            this.cbCurveHead.SelectedIndexChanged += new System.EventHandler(this.cbCurveHead_SelectedItemChanged);
-            // 
-            // nudOpenThresoldHead
-            // 
-            this.nudOpenThresoldHead.Location = new System.Drawing.Point(70, 346);
-            this.nudOpenThresoldHead.Maximum = 127;
-            this.nudOpenThresoldHead.Minimum = 0;
-            this.nudOpenThresoldHead.Name = "nudOpenThresoldHead";
-            this.nudOpenThresoldHead.ShowSlider = false;
-            this.nudOpenThresoldHead.Size = new System.Drawing.Size(66, 21);
-            this.nudOpenThresoldHead.TabIndex = 92;
-            this.nudOpenThresoldHead.Value = 1;
-            this.nudOpenThresoldHead.Visible = false;
-            this.nudOpenThresoldHead.ValueChanged += new System.EventHandler(this.nudOpenThresoldHead_ValueChanged);
-            // 
-            // nudCurveFormHead
-            // 
-            this.nudCurveFormHead.Location = new System.Drawing.Point(70, 107);
-            this.nudCurveFormHead.Maximum = 127;
-            this.nudCurveFormHead.Minimum = 1;
-            this.nudCurveFormHead.Name = "nudCurveFormHead";
-            this.nudCurveFormHead.ShowSlider = false;
-            this.nudCurveFormHead.Size = new System.Drawing.Size(66, 21);
-            this.nudCurveFormHead.TabIndex = 39;
-            this.nudCurveFormHead.Value = 1;
-            this.nudCurveFormHead.ValueChanged += new System.EventHandler(this.nudCurveFormHead_ValueChanged);
-            // 
-            // btnCurveFormHead
-            // 
-            this.btnCurveFormHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCurveFormHead.Location = new System.Drawing.Point(142, 103);
-            this.btnCurveFormHead.Name = "btnCurveFormHead";
-            this.btnCurveFormHead.Size = new System.Drawing.Size(27, 27);
-            this.btnCurveFormHead.TabIndex = 38;
-            this.btnCurveFormHead.Click += new System.EventHandler(this.btnCurveFormHead_Click);
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -2023,141 +1552,6 @@
             this.label14.Size = new System.Drawing.Size(66, 13);
             this.label14.TabIndex = 36;
             this.label14.Text = "Xtalk Group:";
-            // 
-            // nudXtalkGroupHead
-            // 
-            this.nudXtalkGroupHead.Location = new System.Drawing.Point(70, 287);
-            this.nudXtalkGroupHead.Maximum = 7;
-            this.nudXtalkGroupHead.Minimum = 0;
-            this.nudXtalkGroupHead.Name = "nudXtalkGroupHead";
-            this.nudXtalkGroupHead.ShowSlider = false;
-            this.nudXtalkGroupHead.Size = new System.Drawing.Size(66, 21);
-            this.nudXtalkGroupHead.TabIndex = 30;
-            this.nudXtalkGroupHead.Value = 1;
-            this.nudXtalkGroupHead.ValueChanged += new System.EventHandler(this.nudXtalkGroupHead_ValueChanged);
-            // 
-            // nudRetriggerHead
-            // 
-            this.nudRetriggerHead.Location = new System.Drawing.Point(70, 196);
-            this.nudRetriggerHead.Maximum = 127;
-            this.nudRetriggerHead.Minimum = 0;
-            this.nudRetriggerHead.Name = "nudRetriggerHead";
-            this.nudRetriggerHead.ShowSlider = false;
-            this.nudRetriggerHead.Size = new System.Drawing.Size(66, 21);
-            this.nudRetriggerHead.TabIndex = 29;
-            this.nudRetriggerHead.Value = 1;
-            this.nudRetriggerHead.ValueChanged += new System.EventHandler(this.nudRetriggerHead_ValueChanged);
-            // 
-            // nudXtalkHead
-            // 
-            this.nudXtalkHead.Location = new System.Drawing.Point(70, 257);
-            this.nudXtalkHead.Maximum = 7;
-            this.nudXtalkHead.Minimum = 0;
-            this.nudXtalkHead.Name = "nudXtalkHead";
-            this.nudXtalkHead.ShowSlider = false;
-            this.nudXtalkHead.Size = new System.Drawing.Size(66, 21);
-            this.nudXtalkHead.TabIndex = 28;
-            this.nudXtalkHead.Value = 1;
-            this.nudXtalkHead.ValueChanged += new System.EventHandler(this.nudXtalkHead_ValueChanged);
-            // 
-            // btnMaskTimeHead
-            // 
-            this.btnMaskTimeHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMaskTimeHead.Location = new System.Drawing.Point(142, 222);
-            this.btnMaskTimeHead.Name = "btnMaskTimeHead";
-            this.btnMaskTimeHead.Size = new System.Drawing.Size(27, 27);
-            this.btnMaskTimeHead.TabIndex = 25;
-            this.btnMaskTimeHead.Click += new System.EventHandler(this.btnMaskTimeHead_Click);
-            // 
-            // btnRetriggerHead
-            // 
-            this.btnRetriggerHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRetriggerHead.Location = new System.Drawing.Point(142, 192);
-            this.btnRetriggerHead.Name = "btnRetriggerHead";
-            this.btnRetriggerHead.Size = new System.Drawing.Size(27, 27);
-            this.btnRetriggerHead.TabIndex = 24;
-            this.btnRetriggerHead.Click += new System.EventHandler(this.btnRetriggerHead_Click);
-            // 
-            // btnScanTimeHead
-            // 
-            this.btnScanTimeHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnScanTimeHead.Location = new System.Drawing.Point(142, 161);
-            this.btnScanTimeHead.Name = "btnScanTimeHead";
-            this.btnScanTimeHead.Size = new System.Drawing.Size(27, 27);
-            this.btnScanTimeHead.TabIndex = 23;
-            this.btnScanTimeHead.Click += new System.EventHandler(this.btnScanTimeHead_Click);
-            // 
-            // btnThresoldHead
-            // 
-            this.btnThresoldHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThresoldHead.Location = new System.Drawing.Point(142, 131);
-            this.btnThresoldHead.Name = "btnThresoldHead";
-            this.btnThresoldHead.Size = new System.Drawing.Size(27, 27);
-            this.btnThresoldHead.TabIndex = 22;
-            this.btnThresoldHead.Click += new System.EventHandler(this.btnThresoldHead_Click);
-            // 
-            // btnXtalkHead
-            // 
-            this.btnXtalkHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnXtalkHead.Location = new System.Drawing.Point(142, 251);
-            this.btnXtalkHead.Name = "btnXtalkHead";
-            this.btnXtalkHead.Size = new System.Drawing.Size(27, 27);
-            this.btnXtalkHead.TabIndex = 21;
-            this.btnXtalkHead.Click += new System.EventHandler(this.btnXtalkHead_Click);
-            // 
-            // nudMaskTimeHead
-            // 
-            this.nudMaskTimeHead.Location = new System.Drawing.Point(70, 226);
-            this.nudMaskTimeHead.Maximum = 127;
-            this.nudMaskTimeHead.Minimum = 1;
-            this.nudMaskTimeHead.Name = "nudMaskTimeHead";
-            this.nudMaskTimeHead.ShowSlider = false;
-            this.nudMaskTimeHead.Size = new System.Drawing.Size(66, 21);
-            this.nudMaskTimeHead.TabIndex = 18;
-            this.nudMaskTimeHead.Value = 1;
-            this.nudMaskTimeHead.ValueChanged += new System.EventHandler(this.nudMaskTimeHead_ValueChanged);
-            // 
-            // nudThresoldHead
-            // 
-            this.nudThresoldHead.Location = new System.Drawing.Point(70, 138);
-            this.nudThresoldHead.Maximum = 127;
-            this.nudThresoldHead.Minimum = 1;
-            this.nudThresoldHead.Name = "nudThresoldHead";
-            this.nudThresoldHead.ShowSlider = false;
-            this.nudThresoldHead.Size = new System.Drawing.Size(66, 21);
-            this.nudThresoldHead.TabIndex = 16;
-            this.nudThresoldHead.Value = 1;
-            this.nudThresoldHead.ValueChanged += new System.EventHandler(this.nudThresoldHead_ValueChanged);
-            // 
-            // nudScanTimeHead
-            // 
-            this.nudScanTimeHead.Location = new System.Drawing.Point(70, 168);
-            this.nudScanTimeHead.Maximum = 127;
-            this.nudScanTimeHead.Minimum = 0;
-            this.nudScanTimeHead.Name = "nudScanTimeHead";
-            this.nudScanTimeHead.ShowSlider = false;
-            this.nudScanTimeHead.Size = new System.Drawing.Size(66, 21);
-            this.nudScanTimeHead.TabIndex = 15;
-            this.nudScanTimeHead.Value = 1;
-            this.nudScanTimeHead.ValueChanged += new System.EventHandler(this.nudScanTimeHead_ValueChanged);
-            // 
-            // btnCurveHead
-            // 
-            this.btnCurveHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCurveHead.Location = new System.Drawing.Point(142, 73);
-            this.btnCurveHead.Name = "btnCurveHead";
-            this.btnCurveHead.Size = new System.Drawing.Size(27, 27);
-            this.btnCurveHead.TabIndex = 14;
-            this.btnCurveHead.Click += new System.EventHandler(this.btnCurveHead_Click);
-            // 
-            // btnNoteHead
-            // 
-            this.btnNoteHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNoteHead.Location = new System.Drawing.Point(142, 42);
-            this.btnNoteHead.Name = "btnNoteHead";
-            this.btnNoteHead.Size = new System.Drawing.Size(27, 27);
-            this.btnNoteHead.TabIndex = 13;
-            this.btnNoteHead.Click += new System.EventHandler(this.btnNoteHead_Click);
             // 
             // lblHeadMaskTime
             // 
@@ -2351,6 +1745,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.chkRecordLog);
             this.groupBox5.Controls.Add(this.btnResetProfiling);
             this.groupBox5.Controls.Add(this.btnGetProfiling);
             this.groupBox5.Controls.Add(this.btnShowLog);
@@ -2369,6 +1764,17 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Log";
             // 
+            // chkRecordLog
+            // 
+            this.chkRecordLog.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkRecordLog.Location = new System.Drawing.Point(112, 42);
+            this.chkRecordLog.Name = "chkRecordLog";
+            this.chkRecordLog.Size = new System.Drawing.Size(64, 24);
+            this.chkRecordLog.TabIndex = 45;
+            this.chkRecordLog.Text = "Record";
+            this.chkRecordLog.UseVisualStyleBackColor = true;
+            this.chkRecordLog.CheckedChanged += new System.EventHandler(this.chkRecordLog_CheckedChanged);
+            // 
             // btnResetProfiling
             // 
             this.btnResetProfiling.Location = new System.Drawing.Point(101, 71);
@@ -2377,7 +1783,6 @@
             this.btnResetProfiling.TabIndex = 44;
             this.btnResetProfiling.Text = "Reset Prof";
             this.btnResetProfiling.UseVisualStyleBackColor = true;
-            this.btnResetProfiling.Visible = false;
             this.btnResetProfiling.Click += new System.EventHandler(this.btnResetProfiling_Click);
             // 
             // btnGetProfiling
@@ -2388,14 +1793,13 @@
             this.btnGetProfiling.TabIndex = 43;
             this.btnGetProfiling.Text = "Get Profiling";
             this.btnGetProfiling.UseVisualStyleBackColor = true;
-            this.btnGetProfiling.Visible = false;
             this.btnGetProfiling.Click += new System.EventHandler(this.btnGetProfiling_Click);
             // 
             // btnShowLog
             // 
             this.btnShowLog.Location = new System.Drawing.Point(6, 42);
             this.btnShowLog.Name = "btnShowLog";
-            this.btnShowLog.Size = new System.Drawing.Size(75, 23);
+            this.btnShowLog.Size = new System.Drawing.Size(47, 23);
             this.btnShowLog.TabIndex = 12;
             this.btnShowLog.Text = "Show";
             this.btnShowLog.UseVisualStyleBackColor = true;
@@ -2425,9 +1829,9 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(101, 42);
+            this.btnClear.Location = new System.Drawing.Point(59, 42);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.Size = new System.Drawing.Size(47, 23);
             this.btnClear.TabIndex = 9;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -2894,14 +2298,6 @@
             this.tpGeneral.Text = "General";
             this.tpGeneral.UseVisualStyleBackColor = true;
             // 
-            // eccGeneral
-            // 
-            this.eccGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.eccGeneral.Location = new System.Drawing.Point(0, 0);
-            this.eccGeneral.Name = "eccGeneral";
-            this.eccGeneral.Size = new System.Drawing.Size(452, 516);
-            this.eccGeneral.TabIndex = 0;
-            // 
             // tpEffect1
             // 
             this.tpEffect1.Controls.Add(this.eccEffect1);
@@ -2911,14 +2307,6 @@
             this.tpEffect1.TabIndex = 1;
             this.tpEffect1.Text = "Effect Chain 1";
             this.tpEffect1.UseVisualStyleBackColor = true;
-            // 
-            // eccEffect1
-            // 
-            this.eccEffect1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.eccEffect1.Location = new System.Drawing.Point(0, 0);
-            this.eccEffect1.Name = "eccEffect1";
-            this.eccEffect1.Size = new System.Drawing.Size(452, 516);
-            this.eccEffect1.TabIndex = 0;
             // 
             // tpEffect2
             // 
@@ -2930,14 +2318,6 @@
             this.tpEffect2.Text = "Effect Chain 2";
             this.tpEffect2.UseVisualStyleBackColor = true;
             // 
-            // eccEffect2
-            // 
-            this.eccEffect2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.eccEffect2.Location = new System.Drawing.Point(0, 0);
-            this.eccEffect2.Name = "eccEffect2";
-            this.eccEffect2.Size = new System.Drawing.Size(452, 516);
-            this.eccEffect2.TabIndex = 0;
-            // 
             // tpEffect3
             // 
             this.tpEffect3.Controls.Add(this.eccEffect3);
@@ -2947,14 +2327,6 @@
             this.tpEffect3.TabIndex = 3;
             this.tpEffect3.Text = "Effect Chain 3";
             this.tpEffect3.UseVisualStyleBackColor = true;
-            // 
-            // eccEffect3
-            // 
-            this.eccEffect3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.eccEffect3.Location = new System.Drawing.Point(0, 0);
-            this.eccEffect3.Name = "eccEffect3";
-            this.eccEffect3.Size = new System.Drawing.Size(452, 516);
-            this.eccEffect3.TabIndex = 0;
             // 
             // tpEffect4
             // 
@@ -2966,14 +2338,6 @@
             this.tpEffect4.Text = "Effect Chain 4";
             this.tpEffect4.UseVisualStyleBackColor = true;
             // 
-            // eccEffect4
-            // 
-            this.eccEffect4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.eccEffect4.Location = new System.Drawing.Point(0, 0);
-            this.eccEffect4.Name = "eccEffect4";
-            this.eccEffect4.Size = new System.Drawing.Size(452, 516);
-            this.eccEffect4.TabIndex = 0;
-            // 
             // tpEffect5
             // 
             this.tpEffect5.Controls.Add(this.eccEffect5);
@@ -2983,14 +2347,6 @@
             this.tpEffect5.TabIndex = 5;
             this.tpEffect5.Text = "Effect Chain 5";
             this.tpEffect5.UseVisualStyleBackColor = true;
-            // 
-            // eccEffect5
-            // 
-            this.eccEffect5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.eccEffect5.Location = new System.Drawing.Point(0, 0);
-            this.eccEffect5.Name = "eccEffect5";
-            this.eccEffect5.Size = new System.Drawing.Size(452, 516);
-            this.eccEffect5.TabIndex = 0;
             // 
             // button3
             // 
@@ -3046,7 +2402,7 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(64, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(69, 22);
             this.toolStripLabel1.Text = "Mp3 Player:";
             // 
             // tsbLoad
@@ -3087,13 +2443,13 @@
             // tslNowTime
             // 
             this.tslNowTime.Name = "tslNowTime";
-            this.tslNowTime.Size = new System.Drawing.Size(19, 22);
+            this.tslNowTime.Size = new System.Drawing.Size(22, 22);
             this.tslNowTime.Text = "---";
             // 
             // tslTotalTime
             // 
             this.tslTotalTime.Name = "tslTotalTime";
-            this.tslTotalTime.Size = new System.Drawing.Size(26, 22);
+            this.tslTotalTime.Size = new System.Drawing.Size(30, 22);
             this.tslTotalTime.Text = "/ ---";
             // 
             // toolStripSeparator3
@@ -3197,6 +2553,7 @@
             this.viewToolStripMenuItem,
             this.vSTToolStripMenuItem,
             this.tabToolStripMenuItem,
+            this.sFZToolStripMenuItem1,
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -3224,7 +2581,7 @@
             this.updateToolStripMenuItem,
             this.resetToolStripMenuItem});
             this.tsmSetup.Name = "tsmSetup";
-            this.tsmSetup.Size = new System.Drawing.Size(47, 22);
+            this.tsmSetup.Size = new System.Drawing.Size(49, 22);
             this.tsmSetup.Text = "Setup";
             // 
             // selectComToolStripMenuItem
@@ -3233,7 +2590,7 @@
             this.selectComToolStripMenuItem.CheckOnClick = true;
             this.selectComToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.selectComToolStripMenuItem.Name = "selectComToolStripMenuItem";
-            this.selectComToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.selectComToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.selectComToolStripMenuItem.Text = "Select COM...";
             this.selectComToolStripMenuItem.CheckedChanged += new System.EventHandler(this.selectComToolStripMenuItem_CheckedChanged);
             // 
@@ -3242,14 +2599,14 @@
             this.tscCOM.AutoSize = false;
             this.tscCOM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tscCOM.Name = "tscCOM";
-            this.tscCOM.Size = new System.Drawing.Size(120, 21);
+            this.tscCOM.Size = new System.Drawing.Size(120, 23);
             this.tscCOM.SelectedIndexChanged += new System.EventHandler(this.tscCOM_SelectedIndexChanged);
             // 
             // mIDIINToolStripMenuItem
             // 
             this.mIDIINToolStripMenuItem.CheckOnClick = true;
             this.mIDIINToolStripMenuItem.Name = "mIDIINToolStripMenuItem";
-            this.mIDIINToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.mIDIINToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.mIDIINToolStripMenuItem.Text = "Select MIDI IN...";
             this.mIDIINToolStripMenuItem.CheckedChanged += new System.EventHandler(this.mIDIINToolStripMenuItem_CheckedChanged);
             // 
@@ -3259,14 +2616,14 @@
             this.tscMIDIIN.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tscMIDIIN.Enabled = false;
             this.tscMIDIIN.Name = "tscMIDIIN";
-            this.tscMIDIIN.Size = new System.Drawing.Size(120, 21);
+            this.tscMIDIIN.Size = new System.Drawing.Size(120, 23);
             this.tscMIDIIN.SelectedIndexChanged += new System.EventHandler(this.tscMIDIIN_SelectedIndexChanged);
             // 
             // mIDIOUTToolStripMenuItem
             // 
             this.mIDIOUTToolStripMenuItem.CheckOnClick = true;
             this.mIDIOUTToolStripMenuItem.Name = "mIDIOUTToolStripMenuItem";
-            this.mIDIOUTToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.mIDIOUTToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.mIDIOUTToolStripMenuItem.Text = "Select MIDI OUT...";
             this.mIDIOUTToolStripMenuItem.CheckedChanged += new System.EventHandler(this.mIDIOUTToolStripMenuItem_CheckedChanged);
             // 
@@ -3276,7 +2633,7 @@
             this.tscMIDIOUT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tscMIDIOUT.Enabled = false;
             this.tscMIDIOUT.Name = "tscMIDIOUT";
-            this.tscMIDIOUT.Size = new System.Drawing.Size(120, 21);
+            this.tscMIDIOUT.Size = new System.Drawing.Size(120, 23);
             this.tscMIDIOUT.SelectedIndexChanged += new System.EventHandler(this.tscMIDIOUT_SelectedIndexChanged);
             // 
             // toolStripMenuItem1
@@ -3288,7 +2645,7 @@
             this.fileToolStripMenuItem,
             this.multiSettingToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(196, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(202, 22);
             this.toolStripMenuItem1.Text = "Setting...";
             // 
             // sendToMicroDrumToolStripMenuItem
@@ -3298,27 +2655,27 @@
             this.selectedToolStripMenuItem,
             this.generalToolStripMenuItem});
             this.sendToMicroDrumToolStripMenuItem.Name = "sendToMicroDrumToolStripMenuItem";
-            this.sendToMicroDrumToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.sendToMicroDrumToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.sendToMicroDrumToolStripMenuItem.Text = "Send to microDrum...";
             // 
             // sendAllToolStripMenuItem
             // 
             this.sendAllToolStripMenuItem.Name = "sendAllToolStripMenuItem";
-            this.sendAllToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.sendAllToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.sendAllToolStripMenuItem.Text = "All";
             this.sendAllToolStripMenuItem.Click += new System.EventHandler(this.sendAllToolStripMenuItem_Click);
             // 
             // selectedToolStripMenuItem
             // 
             this.selectedToolStripMenuItem.Name = "selectedToolStripMenuItem";
-            this.selectedToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.selectedToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.selectedToolStripMenuItem.Text = "Selected Pad";
             this.selectedToolStripMenuItem.Click += new System.EventHandler(this.selectedToolStripMenuItem_Click);
             // 
             // generalToolStripMenuItem
             // 
             this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
-            this.generalToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.generalToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.generalToolStripMenuItem.Text = "General";
             this.generalToolStripMenuItem.Click += new System.EventHandler(this.generalToolStripMenuItem_Click);
             // 
@@ -3330,27 +2687,27 @@
             this.saveGeneralToolStripMenuItem1,
             this.alwaySaveToolStripMenuItem});
             this.saveToMicroDrumToolStripMenuItem.Name = "saveToMicroDrumToolStripMenuItem";
-            this.saveToMicroDrumToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.saveToMicroDrumToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.saveToMicroDrumToolStripMenuItem.Text = "Save to microDrum...";
             // 
             // saveAllToolStripMenuItem
             // 
             this.saveAllToolStripMenuItem.Name = "saveAllToolStripMenuItem";
-            this.saveAllToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.saveAllToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.saveAllToolStripMenuItem.Text = "All";
             this.saveAllToolStripMenuItem.Click += new System.EventHandler(this.saveAllToolStripMenuItem_Click);
             // 
             // saveSelectedPadToolStripMenuItem
             // 
             this.saveSelectedPadToolStripMenuItem.Name = "saveSelectedPadToolStripMenuItem";
-            this.saveSelectedPadToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.saveSelectedPadToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.saveSelectedPadToolStripMenuItem.Text = "Selected Pad";
             this.saveSelectedPadToolStripMenuItem.Click += new System.EventHandler(this.saveSelectedPadToolStripMenuItem_Click);
             // 
             // saveGeneralToolStripMenuItem1
             // 
             this.saveGeneralToolStripMenuItem1.Name = "saveGeneralToolStripMenuItem1";
-            this.saveGeneralToolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
+            this.saveGeneralToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
             this.saveGeneralToolStripMenuItem1.Text = "General";
             this.saveGeneralToolStripMenuItem1.Click += new System.EventHandler(this.saveGeneralToolStripMenuItem1_Click);
             // 
@@ -3358,7 +2715,7 @@
             // 
             this.alwaySaveToolStripMenuItem.CheckOnClick = true;
             this.alwaySaveToolStripMenuItem.Name = "alwaySaveToolStripMenuItem";
-            this.alwaySaveToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.alwaySaveToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.alwaySaveToolStripMenuItem.Text = "Always Save";
             // 
             // loadFromMicroDrumToolStripMenuItem
@@ -3368,27 +2725,27 @@
             this.loadSelectedToolStripMenuItem,
             this.loadGeneralToolStripMenuItem});
             this.loadFromMicroDrumToolStripMenuItem.Name = "loadFromMicroDrumToolStripMenuItem";
-            this.loadFromMicroDrumToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.loadFromMicroDrumToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.loadFromMicroDrumToolStripMenuItem.Text = "Load from microDrum...";
             // 
             // loadAllToolStripMenuItem
             // 
             this.loadAllToolStripMenuItem.Name = "loadAllToolStripMenuItem";
-            this.loadAllToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.loadAllToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.loadAllToolStripMenuItem.Text = "All";
             this.loadAllToolStripMenuItem.Click += new System.EventHandler(this.loadAllToolStripMenuItem_Click);
             // 
             // loadSelectedToolStripMenuItem
             // 
             this.loadSelectedToolStripMenuItem.Name = "loadSelectedToolStripMenuItem";
-            this.loadSelectedToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.loadSelectedToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.loadSelectedToolStripMenuItem.Text = "Selected Pad";
             this.loadSelectedToolStripMenuItem.Click += new System.EventHandler(this.loadSelectedToolStripMenuItem_Click);
             // 
             // loadGeneralToolStripMenuItem
             // 
             this.loadGeneralToolStripMenuItem.Name = "loadGeneralToolStripMenuItem";
-            this.loadGeneralToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.loadGeneralToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.loadGeneralToolStripMenuItem.Text = "General";
             this.loadGeneralToolStripMenuItem.Click += new System.EventHandler(this.loadGeneralToolStripMenuItem_Click);
             // 
@@ -3399,88 +2756,88 @@
             this.saveFileToolStripMenuItem,
             this.exportToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.fileToolStripMenuItem.Text = "File..";
             // 
             // loadFileToolStripMenuItem
             // 
             this.loadFileToolStripMenuItem.Name = "loadFileToolStripMenuItem";
-            this.loadFileToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.loadFileToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.loadFileToolStripMenuItem.Text = "Load...";
             this.loadFileToolStripMenuItem.Click += new System.EventHandler(this.loadFileToolStripMenuItem_Click);
             // 
             // saveFileToolStripMenuItem
             // 
             this.saveFileToolStripMenuItem.Name = "saveFileToolStripMenuItem";
-            this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.saveFileToolStripMenuItem.Text = "Save...";
             this.saveFileToolStripMenuItem.Click += new System.EventHandler(this.saveFileToolStripMenuItem_Click);
             // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.exportToolStripMenuItem.Text = "Export...";
             this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportToolStripMenuItem_Click);
             // 
             // multiSettingToolStripMenuItem
             // 
             this.multiSettingToolStripMenuItem.Name = "multiSettingToolStripMenuItem";
-            this.multiSettingToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.multiSettingToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.multiSettingToolStripMenuItem.Text = "Multi setting....";
             this.multiSettingToolStripMenuItem.Click += new System.EventHandler(this.multiSettingToolStripMenuItem_Click);
             // 
             // drumMapToolStripMenuItem
             // 
             this.drumMapToolStripMenuItem.Name = "drumMapToolStripMenuItem";
-            this.drumMapToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.drumMapToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.drumMapToolStripMenuItem.Text = "DrumMap...";
             this.drumMapToolStripMenuItem.Click += new System.EventHandler(this.drumMapToolStripMenuItem_Click);
             // 
             // channelMapToolStripMenuItem
             // 
             this.channelMapToolStripMenuItem.Name = "channelMapToolStripMenuItem";
-            this.channelMapToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.channelMapToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.channelMapToolStripMenuItem.Text = "ChannelMap...";
             this.channelMapToolStripMenuItem.Click += new System.EventHandler(this.channelMapToolStripMenuItem_Click);
             // 
             // keyboardToolStripMenuItem
             // 
             this.keyboardToolStripMenuItem.Name = "keyboardToolStripMenuItem";
-            this.keyboardToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.keyboardToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.keyboardToolStripMenuItem.Text = "Keyboard...";
             this.keyboardToolStripMenuItem.Click += new System.EventHandler(this.keyboardToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(193, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(199, 6);
             // 
             // errorReportToolStripMenuItem
             // 
             this.errorReportToolStripMenuItem.Name = "errorReportToolStripMenuItem";
-            this.errorReportToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.errorReportToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.errorReportToolStripMenuItem.Text = "Error Report...";
             this.errorReportToolStripMenuItem.Click += new System.EventHandler(this.errorReportToolStripMenuItem_Click);
             // 
             // checkVersionToolStripMenuItem
             // 
             this.checkVersionToolStripMenuItem.Name = "checkVersionToolStripMenuItem";
-            this.checkVersionToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.checkVersionToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.checkVersionToolStripMenuItem.Text = "Check Internet Version...";
             this.checkVersionToolStripMenuItem.Click += new System.EventHandler(this.checkVersionToolStripMenuItem_Click);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.updateToolStripMenuItem.Text = "Update Firmware...";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // resetToolStripMenuItem
             // 
             this.resetToolStripMenuItem.Name = "resetToolStripMenuItem";
-            this.resetToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.resetToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.resetToolStripMenuItem.Text = "RESET";
             this.resetToolStripMenuItem.Click += new System.EventHandler(this.resetToolStripMenuItem_Click);
             // 
@@ -3495,7 +2852,7 @@
             this.toolStripSeparator5,
             this.showNewControlToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(41, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // configurationToolStripMenuItem
@@ -3504,7 +2861,7 @@
             this.configurationToolStripMenuItem.CheckOnClick = true;
             this.configurationToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
-            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.configurationToolStripMenuItem.Text = "Configuration";
             this.configurationToolStripMenuItem.CheckedChanged += new System.EventHandler(this.ViewToolStripMenuItem_CheckedChanged);
             // 
@@ -3514,7 +2871,7 @@
             this.toolToolStripMenuItem.CheckOnClick = true;
             this.toolToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolToolStripMenuItem.Name = "toolToolStripMenuItem";
-            this.toolToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.toolToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.toolToolStripMenuItem.Text = "Tool";
             this.toolToolStripMenuItem.CheckedChanged += new System.EventHandler(this.ViewToolStripMenuItem_CheckedChanged);
             // 
@@ -3524,7 +2881,7 @@
             this.monitorToolStripMenuItem.CheckOnClick = true;
             this.monitorToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.monitorToolStripMenuItem.Name = "monitorToolStripMenuItem";
-            this.monitorToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.monitorToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.monitorToolStripMenuItem.Text = "Monitor";
             this.monitorToolStripMenuItem.CheckedChanged += new System.EventHandler(this.ViewToolStripMenuItem_CheckedChanged);
             // 
@@ -3534,7 +2891,7 @@
             this.sFZToolStripMenuItem.CheckOnClick = true;
             this.sFZToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.sFZToolStripMenuItem.Name = "sFZToolStripMenuItem";
-            this.sFZToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.sFZToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.sFZToolStripMenuItem.Text = "SFZ";
             this.sFZToolStripMenuItem.CheckedChanged += new System.EventHandler(this.ViewToolStripMenuItem_CheckedChanged);
             // 
@@ -3544,20 +2901,20 @@
             this.effectsToolStripMenuItem.CheckOnClick = true;
             this.effectsToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.effectsToolStripMenuItem.Name = "effectsToolStripMenuItem";
-            this.effectsToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.effectsToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.effectsToolStripMenuItem.Text = "Effects";
             this.effectsToolStripMenuItem.CheckedChanged += new System.EventHandler(this.ViewToolStripMenuItem_CheckedChanged);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(159, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(170, 6);
             // 
             // showNewControlToolStripMenuItem
             // 
             this.showNewControlToolStripMenuItem.CheckOnClick = true;
             this.showNewControlToolStripMenuItem.Name = "showNewControlToolStripMenuItem";
-            this.showNewControlToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.showNewControlToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.showNewControlToolStripMenuItem.Text = "Show New Control";
             this.showNewControlToolStripMenuItem.CheckedChanged += new System.EventHandler(this.showNewControlToolStripMenuItem_CheckedChanged);
             // 
@@ -3569,13 +2926,13 @@
             this.editParametersToolStripMenuItem,
             this.noteMapToolStripMenuItem});
             this.vSTToolStripMenuItem.Name = "vSTToolStripMenuItem";
-            this.vSTToolStripMenuItem.Size = new System.Drawing.Size(37, 22);
+            this.vSTToolStripMenuItem.Size = new System.Drawing.Size(39, 22);
             this.vSTToolStripMenuItem.Text = "VST";
             // 
             // loadToolStripMenuItem1
             // 
             this.loadToolStripMenuItem1.Name = "loadToolStripMenuItem1";
-            this.loadToolStripMenuItem1.Size = new System.Drawing.Size(159, 22);
+            this.loadToolStripMenuItem1.Size = new System.Drawing.Size(162, 22);
             this.loadToolStripMenuItem1.Text = "Load...";
             this.loadToolStripMenuItem1.Click += new System.EventHandler(this.loadToolStripMenuItem1_Click);
             // 
@@ -3583,7 +2940,7 @@
             // 
             this.showToolStripMenuItem.Enabled = false;
             this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.showToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.showToolStripMenuItem.Text = "Show...";
             this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
             // 
@@ -3591,7 +2948,7 @@
             // 
             this.editParametersToolStripMenuItem.Enabled = false;
             this.editParametersToolStripMenuItem.Name = "editParametersToolStripMenuItem";
-            this.editParametersToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.editParametersToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.editParametersToolStripMenuItem.Text = "EditParameters...";
             this.editParametersToolStripMenuItem.Click += new System.EventHandler(this.editParametersToolStripMenuItem_Click);
             // 
@@ -3599,7 +2956,7 @@
             // 
             this.noteMapToolStripMenuItem.Enabled = false;
             this.noteMapToolStripMenuItem.Name = "noteMapToolStripMenuItem";
-            this.noteMapToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.noteMapToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.noteMapToolStripMenuItem.Text = "NoteMap...";
             this.noteMapToolStripMenuItem.Click += new System.EventHandler(this.noteMapToolStripMenuItem_Click);
             // 
@@ -3609,27 +2966,42 @@
             this.loadTabToolStripMenuItem,
             this.virtualInstrumentToolStripMenuItem});
             this.tabToolStripMenuItem.Name = "tabToolStripMenuItem";
-            this.tabToolStripMenuItem.Size = new System.Drawing.Size(37, 22);
+            this.tabToolStripMenuItem.Size = new System.Drawing.Size(39, 22);
             this.tabToolStripMenuItem.Text = "Tab";
             // 
             // loadTabToolStripMenuItem
             // 
             this.loadTabToolStripMenuItem.Name = "loadTabToolStripMenuItem";
-            this.loadTabToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.loadTabToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.loadTabToolStripMenuItem.Text = "Load...";
             this.loadTabToolStripMenuItem.Click += new System.EventHandler(this.loadTabToolStripMenuItem_Click);
             // 
             // virtualInstrumentToolStripMenuItem
             // 
             this.virtualInstrumentToolStripMenuItem.Name = "virtualInstrumentToolStripMenuItem";
-            this.virtualInstrumentToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.virtualInstrumentToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.virtualInstrumentToolStripMenuItem.Text = "Virtual Instrument...";
             this.virtualInstrumentToolStripMenuItem.Click += new System.EventHandler(this.virtualInstrumentToolStripMenuItem_Click);
+            // 
+            // sFZToolStripMenuItem1
+            // 
+            this.sFZToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dkitdsndSFZToolStripMenuItem});
+            this.sFZToolStripMenuItem1.Name = "sFZToolStripMenuItem1";
+            this.sFZToolStripMenuItem1.Size = new System.Drawing.Size(38, 22);
+            this.sFZToolStripMenuItem1.Text = "SFZ";
+            // 
+            // dkitdsndSFZToolStripMenuItem
+            // 
+            this.dkitdsndSFZToolStripMenuItem.Name = "dkitdsndSFZToolStripMenuItem";
+            this.dkitdsndSFZToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.dkitdsndSFZToolStripMenuItem.Text = "dkit,dsnd -> SFZ";
+            this.dkitdsndSFZToolStripMenuItem.Click += new System.EventHandler(this.dkitdsndSFZToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(60, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(61, 22);
             this.aboutToolStripMenuItem.Text = "About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -3672,6 +3044,10 @@
             this.button6.TabIndex = 15;
             this.button6.UseVisualStyleBackColor = true;
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // pbLoad
             // 
             this.pbLoad.Location = new System.Drawing.Point(363, 4);
@@ -3681,6 +3057,694 @@
             this.pbLoad.Size = new System.Drawing.Size(128, 16);
             this.pbLoad.TabIndex = 12;
             this.pbLoad.Value = 0;
+            // 
+            // btnLoadPadSend
+            // 
+            this.btnLoadPadSend.Location = new System.Drawing.Point(75, 557);
+            this.btnLoadPadSend.Name = "btnLoadPadSend";
+            this.btnLoadPadSend.Size = new System.Drawing.Size(27, 27);
+            this.btnLoadPadSend.TabIndex = 22;
+            this.btnLoadPadSend.Click += new System.EventHandler(this.btnLoadSelectedPad_Click);
+            // 
+            // btnTypeHHC
+            // 
+            this.btnTypeHHC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTypeHHC.Location = new System.Drawing.Point(136, 17);
+            this.btnTypeHHC.Name = "btnTypeHHC";
+            this.btnTypeHHC.Size = new System.Drawing.Size(27, 27);
+            this.btnTypeHHC.TabIndex = 78;
+            this.btnTypeHHC.Click += new System.EventHandler(this.btnTypeHead_Click);
+            // 
+            // btnMaskTimeHHC
+            // 
+            this.btnMaskTimeHHC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMaskTimeHHC.Location = new System.Drawing.Point(136, 81);
+            this.btnMaskTimeHHC.Name = "btnMaskTimeHHC";
+            this.btnMaskTimeHHC.Size = new System.Drawing.Size(27, 27);
+            this.btnMaskTimeHHC.TabIndex = 45;
+            this.btnMaskTimeHHC.Click += new System.EventHandler(this.btnMaskTimeHHC_Click);
+            // 
+            // btnCCHHC
+            // 
+            this.btnCCHHC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCCHHC.Location = new System.Drawing.Point(136, 49);
+            this.btnCCHHC.Name = "btnCCHHC";
+            this.btnCCHHC.Size = new System.Drawing.Size(27, 27);
+            this.btnCCHHC.TabIndex = 41;
+            this.btnCCHHC.Click += new System.EventHandler(this.btnCCHHC_Click);
+            // 
+            // nudAlternativeThresold
+            // 
+            this.nudAlternativeThresold.Enabled = false;
+            this.nudAlternativeThresold.Location = new System.Drawing.Point(247, 41);
+            this.nudAlternativeThresold.Maximum = 255;
+            this.nudAlternativeThresold.Minimum = 0;
+            this.nudAlternativeThresold.Name = "nudAlternativeThresold";
+            this.nudAlternativeThresold.ShowSlider = false;
+            this.nudAlternativeThresold.Size = new System.Drawing.Size(66, 21);
+            this.nudAlternativeThresold.TabIndex = 105;
+            this.nudAlternativeThresold.Value = 20;
+            this.nudAlternativeThresold.ValueChanged += new System.EventHandler(this.nudAlternativeThresold_ValueChanged);
+            // 
+            // btnDualPiezoSwitch
+            // 
+            this.btnDualPiezoSwitch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDualPiezoSwitch.Location = new System.Drawing.Point(312, 88);
+            this.btnDualPiezoSwitch.Name = "btnDualPiezoSwitch";
+            this.btnDualPiezoSwitch.Size = new System.Drawing.Size(35, 35);
+            this.btnDualPiezoSwitch.TabIndex = 39;
+            this.btnDualPiezoSwitch.Click += new System.EventHandler(this.btnDualPiezoSwitch_Click);
+            // 
+            // btnHH
+            // 
+            this.btnHH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnHH.Location = new System.Drawing.Point(321, 92);
+            this.btnHH.Name = "btnHH";
+            this.btnHH.Size = new System.Drawing.Size(27, 27);
+            this.btnHH.TabIndex = 94;
+            this.btnHH.Click += new System.EventHandler(this.btnHH_Click);
+            // 
+            // btnSendPad
+            // 
+            this.btnSendPad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSendPad.Location = new System.Drawing.Point(43, 557);
+            this.btnSendPad.Name = "btnSendPad";
+            this.btnSendPad.Size = new System.Drawing.Size(30, 30);
+            this.btnSendPad.TabIndex = 18;
+            this.btnSendPad.Load += new System.EventHandler(this.btnPadSend_Click);
+            this.btnSendPad.Click += new System.EventHandler(this.btnLoadSelectedPad_Click);
+            // 
+            // btnNSensor
+            // 
+            this.btnNSensor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNSensor.Location = new System.Drawing.Point(383, 12);
+            this.btnNSensor.Name = "btnNSensor";
+            this.btnNSensor.Size = new System.Drawing.Size(35, 35);
+            this.btnNSensor.TabIndex = 67;
+            this.btnNSensor.Click += new System.EventHandler(this.btnNSensor_Click);
+            // 
+            // btnLoadGeneral
+            // 
+            this.btnLoadGeneral.Location = new System.Drawing.Point(424, 12);
+            this.btnLoadGeneral.Name = "btnLoadGeneral";
+            this.btnLoadGeneral.Size = new System.Drawing.Size(27, 27);
+            this.btnLoadGeneral.TabIndex = 65;
+            this.btnLoadGeneral.Click += new System.EventHandler(this.btnLoadGeneral_Click);
+            // 
+            // nudGeneralXtalk
+            // 
+            this.nudGeneralXtalk.Location = new System.Drawing.Point(178, 19);
+            this.nudGeneralXtalk.Maximum = 7;
+            this.nudGeneralXtalk.Minimum = 0;
+            this.nudGeneralXtalk.Name = "nudGeneralXtalk";
+            this.nudGeneralXtalk.ShowSlider = false;
+            this.nudGeneralXtalk.Size = new System.Drawing.Size(66, 20);
+            this.nudGeneralXtalk.TabIndex = 63;
+            this.nudGeneralXtalk.Value = 1;
+            this.nudGeneralXtalk.ValueChanged += new System.EventHandler(this.nudGeneralXtalk_ValueChanged);
+            // 
+            // btnGeneralXtalk
+            // 
+            this.btnGeneralXtalk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnGeneralXtalk.Location = new System.Drawing.Point(247, 12);
+            this.btnGeneralXtalk.Name = "btnGeneralXtalk";
+            this.btnGeneralXtalk.Size = new System.Drawing.Size(35, 35);
+            this.btnGeneralXtalk.TabIndex = 62;
+            this.btnGeneralXtalk.Click += new System.EventHandler(this.btnGeneralXtalk_Click);
+            // 
+            // btnGeneralDelay
+            // 
+            this.btnGeneralDelay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnGeneralDelay.Location = new System.Drawing.Point(112, 12);
+            this.btnGeneralDelay.Name = "btnGeneralDelay";
+            this.btnGeneralDelay.Size = new System.Drawing.Size(35, 35);
+            this.btnGeneralDelay.TabIndex = 15;
+            this.btnGeneralDelay.Click += new System.EventHandler(this.btnGeneral_Click);
+            // 
+            // nudDelay
+            // 
+            this.nudDelay.Location = new System.Drawing.Point(43, 19);
+            this.nudDelay.Maximum = 127;
+            this.nudDelay.Minimum = 1;
+            this.nudDelay.Name = "nudDelay";
+            this.nudDelay.ShowSlider = false;
+            this.nudDelay.Size = new System.Drawing.Size(66, 20);
+            this.nudDelay.TabIndex = 3;
+            this.nudDelay.Value = 1;
+            this.nudDelay.ValueChanged += new System.EventHandler(this.nudDelay_ValueChanged);
+            // 
+            // nudSensibilityRim
+            // 
+            this.nudSensibilityRim.Location = new System.Drawing.Point(71, 315);
+            this.nudSensibilityRim.Maximum = 127;
+            this.nudSensibilityRim.Minimum = 0;
+            this.nudSensibilityRim.Name = "nudSensibilityRim";
+            this.nudSensibilityRim.ShowSlider = false;
+            this.nudSensibilityRim.Size = new System.Drawing.Size(66, 21);
+            this.nudSensibilityRim.TabIndex = 100;
+            this.nudSensibilityRim.Value = 1;
+            this.nudSensibilityRim.ValueChanged += new System.EventHandler(this.nudSensibilityRim_ValueChanged);
+            // 
+            // btnOpenThresoldRim
+            // 
+            this.btnOpenThresoldRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnOpenThresoldRim.Location = new System.Drawing.Point(143, 342);
+            this.btnOpenThresoldRim.Name = "btnOpenThresoldRim";
+            this.btnOpenThresoldRim.Size = new System.Drawing.Size(27, 27);
+            this.btnOpenThresoldRim.TabIndex = 98;
+            this.btnOpenThresoldRim.Visible = false;
+            this.btnOpenThresoldRim.Click += new System.EventHandler(this.btnOpenThresoldRim_Click);
+            // 
+            // btnOpenNoteRim
+            // 
+            this.btnOpenNoteRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnOpenNoteRim.Location = new System.Drawing.Point(143, 372);
+            this.btnOpenNoteRim.Name = "btnOpenNoteRim";
+            this.btnOpenNoteRim.Size = new System.Drawing.Size(27, 27);
+            this.btnOpenNoteRim.TabIndex = 97;
+            this.btnOpenNoteRim.Visible = false;
+            this.btnOpenNoteRim.Click += new System.EventHandler(this.btnOpenNoteRim_Click);
+            // 
+            // nudOpenThresoldRim
+            // 
+            this.nudOpenThresoldRim.Location = new System.Drawing.Point(70, 347);
+            this.nudOpenThresoldRim.Maximum = 127;
+            this.nudOpenThresoldRim.Minimum = 0;
+            this.nudOpenThresoldRim.Name = "nudOpenThresoldRim";
+            this.nudOpenThresoldRim.ShowSlider = false;
+            this.nudOpenThresoldRim.Size = new System.Drawing.Size(66, 21);
+            this.nudOpenThresoldRim.TabIndex = 93;
+            this.nudOpenThresoldRim.Value = 1;
+            this.nudOpenThresoldRim.Visible = false;
+            this.nudOpenThresoldRim.ValueChanged += new System.EventHandler(this.nudOpenThresoldRim_ValueChanged);
+            // 
+            // btnXtalkGroupRim
+            // 
+            this.btnXtalkGroupRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnXtalkGroupRim.Location = new System.Drawing.Point(143, 282);
+            this.btnXtalkGroupRim.Name = "btnXtalkGroupRim";
+            this.btnXtalkGroupRim.Size = new System.Drawing.Size(27, 27);
+            this.btnXtalkGroupRim.TabIndex = 92;
+            this.btnXtalkGroupRim.Click += new System.EventHandler(this.btnXtalkGroupRim_Click);
+            // 
+            // btnTypeRim
+            // 
+            this.btnTypeRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTypeRim.Location = new System.Drawing.Point(143, 12);
+            this.btnTypeRim.Name = "btnTypeRim";
+            this.btnTypeRim.Size = new System.Drawing.Size(27, 27);
+            this.btnTypeRim.TabIndex = 72;
+            this.btnTypeRim.Click += new System.EventHandler(this.btnTypeRim_Click);
+            // 
+            // btnChokeRim
+            // 
+            this.btnChokeRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnChokeRim.Location = new System.Drawing.Point(143, 312);
+            this.btnChokeRim.Name = "btnChokeRim";
+            this.btnChokeRim.Size = new System.Drawing.Size(27, 27);
+            this.btnChokeRim.TabIndex = 71;
+            this.btnChokeRim.Click += new System.EventHandler(this.btnChokeRim_Click);
+            // 
+            // cbCurveRim
+            // 
+            this.cbCurveRim.Location = new System.Drawing.Point(40, 75);
+            this.cbCurveRim.Name = "cbCurveRim";
+            this.cbCurveRim.SelectedIndex = 0;
+            this.cbCurveRim.ShowSlider = false;
+            this.cbCurveRim.Size = new System.Drawing.Size(100, 21);
+            this.cbCurveRim.TabIndex = 65;
+            this.cbCurveRim.SelectedIndexChanged += new System.EventHandler(this.cbCurveRim_SelectedItemChanged);
+            // 
+            // nudCurveFormRim
+            // 
+            this.nudCurveFormRim.Location = new System.Drawing.Point(70, 105);
+            this.nudCurveFormRim.Maximum = 127;
+            this.nudCurveFormRim.Minimum = 1;
+            this.nudCurveFormRim.Name = "nudCurveFormRim";
+            this.nudCurveFormRim.ShowSlider = false;
+            this.nudCurveFormRim.Size = new System.Drawing.Size(66, 20);
+            this.nudCurveFormRim.TabIndex = 64;
+            this.nudCurveFormRim.Value = 1;
+            this.nudCurveFormRim.ValueChanged += new System.EventHandler(this.nudCurveFormRim_ValueChanged);
+            // 
+            // btnCurveFormRim
+            // 
+            this.btnCurveFormRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCurveFormRim.Location = new System.Drawing.Point(143, 102);
+            this.btnCurveFormRim.Name = "btnCurveFormRim";
+            this.btnCurveFormRim.Size = new System.Drawing.Size(27, 27);
+            this.btnCurveFormRim.TabIndex = 63;
+            this.btnCurveFormRim.Click += new System.EventHandler(this.btnCurveFormRim_Click);
+            // 
+            // dudNoteRim
+            // 
+            this.dudNoteRim.Location = new System.Drawing.Point(70, 48);
+            this.dudNoteRim.Name = "dudNoteRim";
+            this.dudNoteRim.SelectedIndex = 94;
+            this.dudNoteRim.ShowSlider = false;
+            this.dudNoteRim.Size = new System.Drawing.Size(70, 20);
+            this.dudNoteRim.TabIndex = 35;
+            this.dudNoteRim.SelectedItemChanged += new System.EventHandler(this.dudNoteRim_SelectedItemChanged);
+            // 
+            // btnNoteRim
+            // 
+            this.btnNoteRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNoteRim.Location = new System.Drawing.Point(143, 42);
+            this.btnNoteRim.Name = "btnNoteRim";
+            this.btnNoteRim.Size = new System.Drawing.Size(27, 27);
+            this.btnNoteRim.TabIndex = 56;
+            this.btnNoteRim.Click += new System.EventHandler(this.btnNoteRim_Click);
+            // 
+            // nudXtalkGroupRim
+            // 
+            this.nudXtalkGroupRim.Location = new System.Drawing.Point(70, 287);
+            this.nudXtalkGroupRim.Maximum = 7;
+            this.nudXtalkGroupRim.Minimum = 0;
+            this.nudXtalkGroupRim.Name = "nudXtalkGroupRim";
+            this.nudXtalkGroupRim.ShowSlider = false;
+            this.nudXtalkGroupRim.Size = new System.Drawing.Size(66, 21);
+            this.nudXtalkGroupRim.TabIndex = 55;
+            this.nudXtalkGroupRim.Value = 1;
+            this.nudXtalkGroupRim.ValueChanged += new System.EventHandler(this.nudXtalkGroupRim_ValueChanged);
+            // 
+            // nudRetriggerRim
+            // 
+            this.nudRetriggerRim.Location = new System.Drawing.Point(70, 196);
+            this.nudRetriggerRim.Maximum = 127;
+            this.nudRetriggerRim.Minimum = 0;
+            this.nudRetriggerRim.Name = "nudRetriggerRim";
+            this.nudRetriggerRim.ShowSlider = false;
+            this.nudRetriggerRim.Size = new System.Drawing.Size(66, 21);
+            this.nudRetriggerRim.TabIndex = 54;
+            this.nudRetriggerRim.Value = 1;
+            this.nudRetriggerRim.ValueChanged += new System.EventHandler(this.nudRetriggerRim_ValueChanged);
+            // 
+            // nudXtalkRim
+            // 
+            this.nudXtalkRim.Location = new System.Drawing.Point(70, 257);
+            this.nudXtalkRim.Maximum = 7;
+            this.nudXtalkRim.Minimum = 0;
+            this.nudXtalkRim.Name = "nudXtalkRim";
+            this.nudXtalkRim.ShowSlider = false;
+            this.nudXtalkRim.Size = new System.Drawing.Size(66, 21);
+            this.nudXtalkRim.TabIndex = 53;
+            this.nudXtalkRim.Value = 1;
+            this.nudXtalkRim.ValueChanged += new System.EventHandler(this.nudXtalkRim_ValueChanged);
+            // 
+            // btnMaskTimeRim
+            // 
+            this.btnMaskTimeRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMaskTimeRim.Location = new System.Drawing.Point(143, 222);
+            this.btnMaskTimeRim.Name = "btnMaskTimeRim";
+            this.btnMaskTimeRim.Size = new System.Drawing.Size(27, 27);
+            this.btnMaskTimeRim.TabIndex = 50;
+            this.btnMaskTimeRim.Click += new System.EventHandler(this.btnMaskTimeRim_Click);
+            // 
+            // btnRetriggerRim
+            // 
+            this.btnRetriggerRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRetriggerRim.Location = new System.Drawing.Point(143, 192);
+            this.btnRetriggerRim.Name = "btnRetriggerRim";
+            this.btnRetriggerRim.Size = new System.Drawing.Size(27, 27);
+            this.btnRetriggerRim.TabIndex = 49;
+            this.btnRetriggerRim.Click += new System.EventHandler(this.btnRetriggerRim_Click);
+            // 
+            // btnScanTimeRim
+            // 
+            this.btnScanTimeRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnScanTimeRim.Location = new System.Drawing.Point(143, 161);
+            this.btnScanTimeRim.Name = "btnScanTimeRim";
+            this.btnScanTimeRim.Size = new System.Drawing.Size(27, 27);
+            this.btnScanTimeRim.TabIndex = 48;
+            this.btnScanTimeRim.Click += new System.EventHandler(this.btnScanTimeRim_Click);
+            // 
+            // btnThresoldRim
+            // 
+            this.btnThresoldRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThresoldRim.Location = new System.Drawing.Point(143, 131);
+            this.btnThresoldRim.Name = "btnThresoldRim";
+            this.btnThresoldRim.Size = new System.Drawing.Size(27, 27);
+            this.btnThresoldRim.TabIndex = 47;
+            this.btnThresoldRim.Click += new System.EventHandler(this.btnThresoldRim_Click);
+            // 
+            // btnXtalkRim
+            // 
+            this.btnXtalkRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnXtalkRim.Location = new System.Drawing.Point(143, 251);
+            this.btnXtalkRim.Name = "btnXtalkRim";
+            this.btnXtalkRim.Size = new System.Drawing.Size(27, 27);
+            this.btnXtalkRim.TabIndex = 46;
+            this.btnXtalkRim.Click += new System.EventHandler(this.btnXtalkRim_Click);
+            // 
+            // nudMaskTimeRim
+            // 
+            this.nudMaskTimeRim.Location = new System.Drawing.Point(70, 226);
+            this.nudMaskTimeRim.Maximum = 127;
+            this.nudMaskTimeRim.Minimum = 1;
+            this.nudMaskTimeRim.Name = "nudMaskTimeRim";
+            this.nudMaskTimeRim.ShowSlider = false;
+            this.nudMaskTimeRim.Size = new System.Drawing.Size(66, 21);
+            this.nudMaskTimeRim.TabIndex = 43;
+            this.nudMaskTimeRim.Value = 1;
+            this.nudMaskTimeRim.ValueChanged += new System.EventHandler(this.nudMaskTimeRim_ValueChanged);
+            // 
+            // nudThresoldRim
+            // 
+            this.nudThresoldRim.Location = new System.Drawing.Point(71, 138);
+            this.nudThresoldRim.Maximum = 127;
+            this.nudThresoldRim.Minimum = 1;
+            this.nudThresoldRim.Name = "nudThresoldRim";
+            this.nudThresoldRim.ShowSlider = false;
+            this.nudThresoldRim.Size = new System.Drawing.Size(66, 21);
+            this.nudThresoldRim.TabIndex = 41;
+            this.nudThresoldRim.Value = 1;
+            this.nudThresoldRim.ValueChanged += new System.EventHandler(this.nudThresoldRim_ValueChanged);
+            // 
+            // nudScanTimeRim
+            // 
+            this.nudScanTimeRim.Location = new System.Drawing.Point(70, 168);
+            this.nudScanTimeRim.Maximum = 127;
+            this.nudScanTimeRim.Minimum = 0;
+            this.nudScanTimeRim.Name = "nudScanTimeRim";
+            this.nudScanTimeRim.ShowSlider = false;
+            this.nudScanTimeRim.Size = new System.Drawing.Size(66, 21);
+            this.nudScanTimeRim.TabIndex = 40;
+            this.nudScanTimeRim.Value = 1;
+            this.nudScanTimeRim.ValueChanged += new System.EventHandler(this.nudScanTimeRim_ValueChanged);
+            // 
+            // btnCurveRim
+            // 
+            this.btnCurveRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCurveRim.Location = new System.Drawing.Point(143, 73);
+            this.btnCurveRim.Name = "btnCurveRim";
+            this.btnCurveRim.Size = new System.Drawing.Size(27, 27);
+            this.btnCurveRim.TabIndex = 39;
+            this.btnCurveRim.Click += new System.EventHandler(this.btnCurveRim_Click);
+            // 
+            // btnDualPiezo
+            // 
+            this.btnDualPiezo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDualPiezo.Location = new System.Drawing.Point(312, 88);
+            this.btnDualPiezo.Name = "btnDualPiezo";
+            this.btnDualPiezo.Size = new System.Drawing.Size(35, 35);
+            this.btnDualPiezo.TabIndex = 39;
+            this.btnDualPiezo.Click += new System.EventHandler(this.btnDualPiezo_Click);
+            // 
+            // nudSensibilityHead
+            // 
+            this.nudSensibilityHead.Location = new System.Drawing.Point(70, 315);
+            this.nudSensibilityHead.Maximum = 127;
+            this.nudSensibilityHead.Minimum = 0;
+            this.nudSensibilityHead.Name = "nudSensibilityHead";
+            this.nudSensibilityHead.ShowSlider = false;
+            this.nudSensibilityHead.Size = new System.Drawing.Size(66, 21);
+            this.nudSensibilityHead.TabIndex = 99;
+            this.nudSensibilityHead.Value = 1;
+            this.nudSensibilityHead.ValueChanged += new System.EventHandler(this.nudSensibilityHead_ValueChanged);
+            // 
+            // dudNoteHead
+            // 
+            this.dudNoteHead.Location = new System.Drawing.Point(61, 48);
+            this.dudNoteHead.Name = "dudNoteHead";
+            this.dudNoteHead.SelectedIndex = 94;
+            this.dudNoteHead.ShowSlider = false;
+            this.dudNoteHead.Size = new System.Drawing.Size(70, 20);
+            this.dudNoteHead.TabIndex = 98;
+            this.dudNoteHead.SelectedItemChanged += new System.EventHandler(this.dudNoteHead_SelectedItemChanged);
+            // 
+            // btnOpenThresoldHead
+            // 
+            this.btnOpenThresoldHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnOpenThresoldHead.Location = new System.Drawing.Point(142, 341);
+            this.btnOpenThresoldHead.Name = "btnOpenThresoldHead";
+            this.btnOpenThresoldHead.Size = new System.Drawing.Size(27, 27);
+            this.btnOpenThresoldHead.TabIndex = 97;
+            this.btnOpenThresoldHead.Visible = false;
+            this.btnOpenThresoldHead.Click += new System.EventHandler(this.btnOpenThresoldHead_Click);
+            // 
+            // btnXtalkGroupHead
+            // 
+            this.btnXtalkGroupHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnXtalkGroupHead.Location = new System.Drawing.Point(142, 282);
+            this.btnXtalkGroupHead.Name = "btnXtalkGroupHead";
+            this.btnXtalkGroupHead.Size = new System.Drawing.Size(27, 27);
+            this.btnXtalkGroupHead.TabIndex = 91;
+            this.btnXtalkGroupHead.Click += new System.EventHandler(this.btnXtalkGroupHead_Click);
+            // 
+            // btnOpenNoteHead
+            // 
+            this.btnOpenNoteHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnOpenNoteHead.Location = new System.Drawing.Point(142, 371);
+            this.btnOpenNoteHead.Name = "btnOpenNoteHead";
+            this.btnOpenNoteHead.Size = new System.Drawing.Size(27, 27);
+            this.btnOpenNoteHead.TabIndex = 96;
+            this.btnOpenNoteHead.Visible = false;
+            this.btnOpenNoteHead.Click += new System.EventHandler(this.btnOpenNoteHead_Click);
+            // 
+            // btnChokeHead
+            // 
+            this.btnChokeHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnChokeHead.Location = new System.Drawing.Point(142, 310);
+            this.btnChokeHead.Name = "btnChokeHead";
+            this.btnChokeHead.Size = new System.Drawing.Size(27, 27);
+            this.btnChokeHead.TabIndex = 74;
+            this.btnChokeHead.Click += new System.EventHandler(this.btnChokeHead_Click);
+            // 
+            // btnTypeHead
+            // 
+            this.btnTypeHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTypeHead.Location = new System.Drawing.Point(142, 12);
+            this.btnTypeHead.Name = "btnTypeHead";
+            this.btnTypeHead.Size = new System.Drawing.Size(27, 27);
+            this.btnTypeHead.TabIndex = 75;
+            this.btnTypeHead.Click += new System.EventHandler(this.btnTypeHead_Click);
+            // 
+            // cbCurveHead
+            // 
+            this.cbCurveHead.Location = new System.Drawing.Point(40, 75);
+            this.cbCurveHead.Name = "cbCurveHead";
+            this.cbCurveHead.SelectedIndex = 0;
+            this.cbCurveHead.ShowSlider = false;
+            this.cbCurveHead.Size = new System.Drawing.Size(100, 21);
+            this.cbCurveHead.TabIndex = 40;
+            this.cbCurveHead.SelectedIndexChanged += new System.EventHandler(this.cbCurveHead_SelectedItemChanged);
+            // 
+            // nudOpenThresoldHead
+            // 
+            this.nudOpenThresoldHead.Location = new System.Drawing.Point(70, 346);
+            this.nudOpenThresoldHead.Maximum = 127;
+            this.nudOpenThresoldHead.Minimum = 0;
+            this.nudOpenThresoldHead.Name = "nudOpenThresoldHead";
+            this.nudOpenThresoldHead.ShowSlider = false;
+            this.nudOpenThresoldHead.Size = new System.Drawing.Size(66, 21);
+            this.nudOpenThresoldHead.TabIndex = 92;
+            this.nudOpenThresoldHead.Value = 1;
+            this.nudOpenThresoldHead.Visible = false;
+            this.nudOpenThresoldHead.ValueChanged += new System.EventHandler(this.nudOpenThresoldHead_ValueChanged);
+            // 
+            // nudCurveFormHead
+            // 
+            this.nudCurveFormHead.Location = new System.Drawing.Point(70, 107);
+            this.nudCurveFormHead.Maximum = 127;
+            this.nudCurveFormHead.Minimum = 1;
+            this.nudCurveFormHead.Name = "nudCurveFormHead";
+            this.nudCurveFormHead.ShowSlider = false;
+            this.nudCurveFormHead.Size = new System.Drawing.Size(66, 21);
+            this.nudCurveFormHead.TabIndex = 39;
+            this.nudCurveFormHead.Value = 1;
+            this.nudCurveFormHead.ValueChanged += new System.EventHandler(this.nudCurveFormHead_ValueChanged);
+            // 
+            // btnCurveFormHead
+            // 
+            this.btnCurveFormHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCurveFormHead.Location = new System.Drawing.Point(142, 103);
+            this.btnCurveFormHead.Name = "btnCurveFormHead";
+            this.btnCurveFormHead.Size = new System.Drawing.Size(27, 27);
+            this.btnCurveFormHead.TabIndex = 38;
+            this.btnCurveFormHead.Click += new System.EventHandler(this.btnCurveFormHead_Click);
+            // 
+            // nudXtalkGroupHead
+            // 
+            this.nudXtalkGroupHead.Location = new System.Drawing.Point(70, 287);
+            this.nudXtalkGroupHead.Maximum = 7;
+            this.nudXtalkGroupHead.Minimum = 0;
+            this.nudXtalkGroupHead.Name = "nudXtalkGroupHead";
+            this.nudXtalkGroupHead.ShowSlider = false;
+            this.nudXtalkGroupHead.Size = new System.Drawing.Size(66, 21);
+            this.nudXtalkGroupHead.TabIndex = 30;
+            this.nudXtalkGroupHead.Value = 1;
+            this.nudXtalkGroupHead.ValueChanged += new System.EventHandler(this.nudXtalkGroupHead_ValueChanged);
+            // 
+            // nudRetriggerHead
+            // 
+            this.nudRetriggerHead.Location = new System.Drawing.Point(70, 196);
+            this.nudRetriggerHead.Maximum = 127;
+            this.nudRetriggerHead.Minimum = 0;
+            this.nudRetriggerHead.Name = "nudRetriggerHead";
+            this.nudRetriggerHead.ShowSlider = false;
+            this.nudRetriggerHead.Size = new System.Drawing.Size(66, 21);
+            this.nudRetriggerHead.TabIndex = 29;
+            this.nudRetriggerHead.Value = 1;
+            this.nudRetriggerHead.ValueChanged += new System.EventHandler(this.nudRetriggerHead_ValueChanged);
+            // 
+            // nudXtalkHead
+            // 
+            this.nudXtalkHead.Location = new System.Drawing.Point(70, 257);
+            this.nudXtalkHead.Maximum = 7;
+            this.nudXtalkHead.Minimum = 0;
+            this.nudXtalkHead.Name = "nudXtalkHead";
+            this.nudXtalkHead.ShowSlider = false;
+            this.nudXtalkHead.Size = new System.Drawing.Size(66, 21);
+            this.nudXtalkHead.TabIndex = 28;
+            this.nudXtalkHead.Value = 1;
+            this.nudXtalkHead.ValueChanged += new System.EventHandler(this.nudXtalkHead_ValueChanged);
+            // 
+            // btnMaskTimeHead
+            // 
+            this.btnMaskTimeHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMaskTimeHead.Location = new System.Drawing.Point(142, 222);
+            this.btnMaskTimeHead.Name = "btnMaskTimeHead";
+            this.btnMaskTimeHead.Size = new System.Drawing.Size(27, 27);
+            this.btnMaskTimeHead.TabIndex = 25;
+            this.btnMaskTimeHead.Click += new System.EventHandler(this.btnMaskTimeHead_Click);
+            // 
+            // btnRetriggerHead
+            // 
+            this.btnRetriggerHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRetriggerHead.Location = new System.Drawing.Point(142, 192);
+            this.btnRetriggerHead.Name = "btnRetriggerHead";
+            this.btnRetriggerHead.Size = new System.Drawing.Size(27, 27);
+            this.btnRetriggerHead.TabIndex = 24;
+            this.btnRetriggerHead.Click += new System.EventHandler(this.btnRetriggerHead_Click);
+            // 
+            // btnScanTimeHead
+            // 
+            this.btnScanTimeHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnScanTimeHead.Location = new System.Drawing.Point(142, 161);
+            this.btnScanTimeHead.Name = "btnScanTimeHead";
+            this.btnScanTimeHead.Size = new System.Drawing.Size(27, 27);
+            this.btnScanTimeHead.TabIndex = 23;
+            this.btnScanTimeHead.Click += new System.EventHandler(this.btnScanTimeHead_Click);
+            // 
+            // btnThresoldHead
+            // 
+            this.btnThresoldHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThresoldHead.Location = new System.Drawing.Point(142, 131);
+            this.btnThresoldHead.Name = "btnThresoldHead";
+            this.btnThresoldHead.Size = new System.Drawing.Size(27, 27);
+            this.btnThresoldHead.TabIndex = 22;
+            this.btnThresoldHead.Click += new System.EventHandler(this.btnThresoldHead_Click);
+            // 
+            // btnXtalkHead
+            // 
+            this.btnXtalkHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnXtalkHead.Location = new System.Drawing.Point(142, 251);
+            this.btnXtalkHead.Name = "btnXtalkHead";
+            this.btnXtalkHead.Size = new System.Drawing.Size(27, 27);
+            this.btnXtalkHead.TabIndex = 21;
+            this.btnXtalkHead.Click += new System.EventHandler(this.btnXtalkHead_Click);
+            // 
+            // nudMaskTimeHead
+            // 
+            this.nudMaskTimeHead.Location = new System.Drawing.Point(70, 226);
+            this.nudMaskTimeHead.Maximum = 127;
+            this.nudMaskTimeHead.Minimum = 1;
+            this.nudMaskTimeHead.Name = "nudMaskTimeHead";
+            this.nudMaskTimeHead.ShowSlider = false;
+            this.nudMaskTimeHead.Size = new System.Drawing.Size(66, 21);
+            this.nudMaskTimeHead.TabIndex = 18;
+            this.nudMaskTimeHead.Value = 1;
+            this.nudMaskTimeHead.ValueChanged += new System.EventHandler(this.nudMaskTimeHead_ValueChanged);
+            // 
+            // nudThresoldHead
+            // 
+            this.nudThresoldHead.Location = new System.Drawing.Point(70, 138);
+            this.nudThresoldHead.Maximum = 127;
+            this.nudThresoldHead.Minimum = 1;
+            this.nudThresoldHead.Name = "nudThresoldHead";
+            this.nudThresoldHead.ShowSlider = false;
+            this.nudThresoldHead.Size = new System.Drawing.Size(66, 21);
+            this.nudThresoldHead.TabIndex = 16;
+            this.nudThresoldHead.Value = 1;
+            this.nudThresoldHead.ValueChanged += new System.EventHandler(this.nudThresoldHead_ValueChanged);
+            // 
+            // nudScanTimeHead
+            // 
+            this.nudScanTimeHead.Location = new System.Drawing.Point(70, 168);
+            this.nudScanTimeHead.Maximum = 127;
+            this.nudScanTimeHead.Minimum = 0;
+            this.nudScanTimeHead.Name = "nudScanTimeHead";
+            this.nudScanTimeHead.ShowSlider = false;
+            this.nudScanTimeHead.Size = new System.Drawing.Size(66, 21);
+            this.nudScanTimeHead.TabIndex = 15;
+            this.nudScanTimeHead.Value = 1;
+            this.nudScanTimeHead.ValueChanged += new System.EventHandler(this.nudScanTimeHead_ValueChanged);
+            // 
+            // btnCurveHead
+            // 
+            this.btnCurveHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCurveHead.Location = new System.Drawing.Point(142, 73);
+            this.btnCurveHead.Name = "btnCurveHead";
+            this.btnCurveHead.Size = new System.Drawing.Size(27, 27);
+            this.btnCurveHead.TabIndex = 14;
+            this.btnCurveHead.Click += new System.EventHandler(this.btnCurveHead_Click);
+            // 
+            // btnNoteHead
+            // 
+            this.btnNoteHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNoteHead.Location = new System.Drawing.Point(142, 42);
+            this.btnNoteHead.Name = "btnNoteHead";
+            this.btnNoteHead.Size = new System.Drawing.Size(27, 27);
+            this.btnNoteHead.TabIndex = 13;
+            this.btnNoteHead.Click += new System.EventHandler(this.btnNoteHead_Click);
+            // 
+            // eccGeneral
+            // 
+            this.eccGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eccGeneral.Location = new System.Drawing.Point(0, 0);
+            this.eccGeneral.Name = "eccGeneral";
+            this.eccGeneral.Size = new System.Drawing.Size(452, 516);
+            this.eccGeneral.TabIndex = 0;
+            // 
+            // eccEffect1
+            // 
+            this.eccEffect1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eccEffect1.Location = new System.Drawing.Point(0, 0);
+            this.eccEffect1.Name = "eccEffect1";
+            this.eccEffect1.Size = new System.Drawing.Size(452, 516);
+            this.eccEffect1.TabIndex = 0;
+            // 
+            // eccEffect2
+            // 
+            this.eccEffect2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eccEffect2.Location = new System.Drawing.Point(0, 0);
+            this.eccEffect2.Name = "eccEffect2";
+            this.eccEffect2.Size = new System.Drawing.Size(452, 516);
+            this.eccEffect2.TabIndex = 0;
+            // 
+            // eccEffect3
+            // 
+            this.eccEffect3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eccEffect3.Location = new System.Drawing.Point(0, 0);
+            this.eccEffect3.Name = "eccEffect3";
+            this.eccEffect3.Size = new System.Drawing.Size(452, 516);
+            this.eccEffect3.TabIndex = 0;
+            // 
+            // eccEffect4
+            // 
+            this.eccEffect4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eccEffect4.Location = new System.Drawing.Point(0, 0);
+            this.eccEffect4.Name = "eccEffect4";
+            this.eccEffect4.Size = new System.Drawing.Size(452, 516);
+            this.eccEffect4.TabIndex = 0;
+            // 
+            // eccEffect5
+            // 
+            this.eccEffect5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eccEffect5.Location = new System.Drawing.Point(0, 0);
+            this.eccEffect5.Name = "eccEffect5";
+            this.eccEffect5.Size = new System.Drawing.Size(452, 516);
+            this.eccEffect5.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -3713,7 +3777,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudCCHHC)).EndInit();
             this.gbDualPS.ResumeLayout(false);
             this.gbDualPS.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAlternativeThresold)).EndInit();
             this.gbHHE.ResumeLayout(false);
             this.gbHHE.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHH_FootSplashThresold)).EndInit();
@@ -3725,18 +3788,8 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNSensor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudGeneralXtalk)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDelay)).EndInit();
             this.gbRim.ResumeLayout(false);
             this.gbRim.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudOpenThresoldRim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCurveFormRim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudXtalkGroupRim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudRetriggerRim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudXtalkRim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMaskTimeRim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudThresoldRim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudScanTimeRim)).EndInit();
             this.gbDualPP.ResumeLayout(false);
             this.gbDualPP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDualZone)).EndInit();
@@ -3744,14 +3797,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbHead)).EndInit();
             this.gbHead.ResumeLayout(false);
             this.gbHead.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudOpenThresoldHead)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCurveFormHead)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudXtalkGroupHead)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudRetriggerHead)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudXtalkHead)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMaskTimeHead)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudThresoldHead)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudScanTimeHead)).EndInit();
             this.tpTools.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
@@ -3786,6 +3831,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAlternativeThresold)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudGeneralXtalk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDelay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSensibilityRim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudOpenThresoldRim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCurveFormRim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudXtalkGroupRim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRetriggerRim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudXtalkRim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaskTimeRim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudThresoldRim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudScanTimeRim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSensibilityHead)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudOpenThresoldHead)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCurveFormHead)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudXtalkGroupHead)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudRetriggerHead)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudXtalkHead)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaskTimeHead)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudThresoldHead)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudScanTimeHead)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4091,5 +4157,11 @@
         private SendButton btnNSensor;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.NumericUpDown nudNSensor;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ToolStripMenuItem sFZToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem dkitdsndSFZToolStripMenuItem;
+        private System.Windows.Forms.CheckBox chkRecordLog;
+        private Slider nudSensibilityRim;
+        private Slider nudSensibilityHead;
     }
 }

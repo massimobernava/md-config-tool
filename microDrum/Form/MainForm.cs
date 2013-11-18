@@ -12,7 +12,7 @@ using System.Threading;
 
 namespace microDrum
 {
-    public partial class MainForm : Form
+    public partial class MainForm : System.Windows.Forms.Form
     {
         mDMode Mode = mDMode.Off;
         PinSetting[] Setting = new PinSetting[48];
@@ -45,9 +45,18 @@ namespace microDrum
 
         public static Dictionary<string, string> LastDirectoryUsed = new Dictionary<string, string>();
 
+        private List<Log> LogRecording = new List<Log>();
+
         public MainForm()
         {
             InitializeComponent();
+
+
+            //=================================================
+            // NAMED PIPE
+            //=================================================
+            backgroundWorker1.RunWorkerAsync();
+            //=================================================
 
             TabPages[(int)Tabs.Configuration] = tpStandby;
             TabPages[(int)Tabs.Tools] = tpTools;
@@ -79,6 +88,7 @@ namespace microDrum
             cbTypeHead.Items.Add(PinType.HH);
             cbTypeHead.Items.Add(PinType.HHs);
             cbTypeHead.Items.Add(PinType.YSwitch);
+            cbTypeHead.Items.Add(PinType.Disabled);
 
             cbTypeHHC.Items.Add(PinType.Piezo);
             cbTypeHHC.Items.Add(PinType.Switch);
@@ -86,11 +96,13 @@ namespace microDrum
             cbTypeHHC.Items.Add(PinType.HH);
             cbTypeHHC.Items.Add(PinType.HHs);
             cbTypeHHC.Items.Add(PinType.YSwitch);
+            cbTypeHHC.Items.Add(PinType.Disabled);
 
             cbTypeRim.Items.Add(PinType.Piezo);
             cbTypeRim.Items.Add(PinType.Switch);
             cbTypeRim.Items.Add(PinType.HHs);
             cbTypeRim.Items.Add(PinType.YSwitch);
+            cbTypeRim.Items.Add(PinType.Disabled);
 
             gbHHCtrl.Location = gbHead.Location;
             gbHHE.Location = gbDualPP.Location;
@@ -476,6 +488,8 @@ namespace microDrum
                  log.Y0 = Message[9] | (Message[10] << 8);
                  log.MaxReading = Message[11] | (Message[12] << 8);
                  log.State = Message[13];*/
+                if (chkRecordLog.Checked)
+                    LogRecording.Add(Log);
 
                 UpdateLog(Log);
             }
@@ -746,6 +760,8 @@ namespace microDrum
         }
         private void UpdateDiagnostic(byte Pin, byte Velocity)
         {
+            if (Pin > Diagnostic.Length) return;
+
             Diagnostic[Pin] = (byte)((Diagnostic[Pin] + Velocity) / 2);
             pbDiagnostic.Invoke(new EventHandler(delegate
             {
@@ -766,9 +782,11 @@ namespace microDrum
             GB.Controls["dudOpenNote" + HR].Visible = false;
             GB.Controls["btnOpenThresold" + HR].Visible = false;
             GB.Controls["btnOpenNote" + HR].Visible = false;
-            GB.Controls["lblChoke" + HR].Visible = false;
+            GB.Controls["lblChoke" + HR].Text="Numb:";
+            GB.Controls["lblChoke" + HR].Visible = true;
             GB.Controls["dudChoke" + HR].Visible = false;
-            GB.Controls["btnChoke" + HR].Visible = false;
+            GB.Controls["nudSensibility" + HR].Visible = true;
+            GB.Controls["btnChoke" + HR].Visible = true;
 
             //Dual Piezo-Piezo
             /*if (PS.Dual == 255)
@@ -836,6 +854,7 @@ namespace microDrum
             GB.Controls["lblChoke" + HR].Visible = true;
             GB.Controls["lblChoke" + HR].Text = "Choke:";
             GB.Controls["dudChoke" + HR].Visible = true;
+            GB.Controls["nudSensibility" + HR].Visible = false;
             GB.Controls["btnChoke" + HR].Visible = true;
 
             /*lblAlternative.Visible = true;
@@ -881,6 +900,7 @@ namespace microDrum
             GB.Controls["lblChoke" + HR].Visible = true;
             GB.Controls["lblChoke" + HR].Text = "HHC:";
             GB.Controls["dudChoke" + HR].Visible = false;
+            GB.Controls["nudSensibility" + HR].Visible = false;
             GB.Controls["btnChoke" + HR].Visible = true;
             cbHH_HHC.Visible = true;
 
@@ -963,6 +983,7 @@ namespace microDrum
             GB.Controls["lblChoke" + HR].Visible = true;
             GB.Controls["lblChoke" + HR].Text = "Choke:";
             GB.Controls["dudChoke" + HR].Visible = true;
+            GB.Controls["nudSensibility" + HR].Visible = false;
             GB.Controls["btnChoke" + HR].Visible = true;
 
 
@@ -986,6 +1007,7 @@ namespace microDrum
             GB.Controls["lblChoke" + HR].Visible = true;
             GB.Controls["lblChoke" + HR].Text = "Choke:";
             GB.Controls["dudChoke" + HR].Visible = true;
+            GB.Controls["nudSensibility" + HR].Visible = false;
             GB.Controls["btnChoke" + HR].Visible = true;
 
             /*lblAlternative.Visible = false;
@@ -1218,7 +1240,9 @@ namespace microDrum
                 if (((Note)dudChokeHead.Items[n]).Value == Setting[PinHead].Choke)
                     dudChokeHead.SelectedIndex = n;
             }
-
+            //Numb===========================================================================
+            nudSensibilityHead.Value = Setting[PinHead].Choke;
+            nudSensibilityRim.Value = Setting[PinRim].Choke;
 
             //DualThresold===========================================================================
             nudAlternativeThresold.Value = Setting[PinRim].DualThresold;
@@ -1511,6 +1535,14 @@ namespace microDrum
         {
             Setting[DrumMap[lbPads.SelectedIndex].Head].Choke = ((Note)dudChokeHead.SelectedItem).Value;
         }
+        private void nudSensibilityHead_ValueChanged(object sender, EventArgs e)
+        {
+            Setting[DrumMap[lbPads.SelectedIndex].Head].Choke = (byte)nudSensibilityHead.Value;
+        }
+        private void nudSensibilityRim_ValueChanged(object sender, EventArgs e)
+        {
+            Setting[DrumMap[lbPads.SelectedIndex].Rim].Choke = (byte)nudSensibilityRim.Value;
+        }
         private void cbTypeHead_SelectedIndexChanged(object sender, EventArgs e)
         {
             Setting[DrumMap[lbPads.SelectedIndex].Head].Type = (PinType)cbTypeHead.SelectedIndex;
@@ -1641,12 +1673,17 @@ namespace microDrum
         }
         private void btnChokeRim_Click(object sender, EventArgs e)
         {
-            UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x09, ((Note)dudChokeRim.SelectedItem).Value);
+            if (Setting[DrumMap[lbPads.SelectedIndex].Rim].Type == PinType.Piezo)
+                UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x09, (byte)nudSensibilityRim.Value);
+            else
+                UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x09, ((Note)dudChokeRim.SelectedItem).Value);
         }
         private void btnChokeHead_Click(object sender, EventArgs e)
         {
             if (Setting[DrumMap[lbPads.SelectedIndex].Head].Type == PinType.HH)
                 UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x0A, Setting[DrumMap[lbPads.SelectedIndex].Head].Dual); //HHC
+            else if (Setting[DrumMap[lbPads.SelectedIndex].Head].Type == PinType.Piezo)
+                UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x09, (byte)nudSensibilityHead.Value);
             else
                 UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x09, ((Note)dudChokeHead.SelectedItem).Value);
         }
@@ -1858,8 +1895,10 @@ namespace microDrum
         {
             Clipboard.Clear();
             string Data = "";
+            uint startTime = ((Log)lbLog.Items[0]).Time;
+
             foreach (Log s in lbLog.Items)
-                Data += s.ToString() + "\r\n";
+                Data += ((float)s.Time - startTime) + " " + ((float)s.Reading) + "\r\n";
 
             Clipboard.SetText(Data);
         }
@@ -3020,6 +3059,47 @@ namespace microDrum
             else
                 UtilitySetting.SetGeneralParam(uDrumGeneralParam.NSensor, (byte)(gSetting.NSensor / 8));
         }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            System.IO.Pipes.NamedPipeClientStream MIDIPipe = new System.IO.Pipes.NamedPipeClientStream("MIDIPipe");
+            MIDIPipe.Connect();
+
+            int MIDI = 0;
+            while ((MIDI=MIDIPipe.ReadByte()) > 0)
+            {
+                if ((MIDI & 0xF0) == 0x90)//NoteOn
+                {
+                    UtilityAudio.MIDI_NoteOn((byte)MIDIPipe.ReadByte(),(byte) MIDIPipe.ReadByte());
+                }
+            }
+        }
+
+        private void dkitdsndSFZToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkRecordLog_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkRecordLog.Checked)
+            {
+                LogRecording.Clear();
+
+            }
+            else
+            {
+                uint startTime = LogRecording[0].Time;
+                foreach(Log l in LogRecording)
+                {
+                    File.AppendAllText(Application.StartupPath + System.IO.Path.DirectorySeparatorChar.ToString() + "LogData.txt", ((float)l.Time-startTime) + " " + ((float)l.Reading) / 21.0f + " " + ((float)l.Y0)/21.0f+"\r\n");
+                }
+
+
+            }
+        }
+
+
 
     }
 }

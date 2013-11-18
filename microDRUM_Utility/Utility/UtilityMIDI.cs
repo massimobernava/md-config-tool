@@ -188,7 +188,7 @@ namespace microDrum
                         byte[] Message = new byte[Size];
                         for (int i = 0; i < Size; i++)
                             Message[i] = (byte)UtilitySerial.ReadByte();
-                        if (Message.Length < 4) return;
+                        if (Message.Length < 14) return;
                         Log log = new Log();
                         log.Time = (uint)(Message[0] | (Message[1] << 8) | (Message[2] << 16) | (Message[3] << 24));
                         log.Sensor = Message[4];
