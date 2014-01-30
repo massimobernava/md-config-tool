@@ -42,8 +42,8 @@ public struct PinSetting
     public byte CurveForm;
     public byte Choke;
     public byte Dual;
-    public byte DualNote;
-    public byte DualThresold;
+    //public byte DualNote;//DUAL
+    //public byte DualThresold;
     public PinType Type;
 
     public override string ToString()
@@ -59,8 +59,8 @@ public struct PinSetting
             CurveForm.ToString() + ";" +
             Choke.ToString() + ";" +
             Dual.ToString() + ";" +
-            DualNote.ToString() + ";" +
-            DualThresold.ToString() + ";" +
+            /*DualNote.ToString()+*/  "0;" +//DUAL
+            /*DualThresold.ToString()+*/  "0;" +
             ((byte)Type).ToString()+ ";" +
             Channel.ToString();
     }
@@ -80,8 +80,8 @@ public struct PinSetting
             CurveForm = Convert.ToByte(tmp[8]);
             Choke = Convert.ToByte(tmp[9]);
             Dual = Convert.ToByte(tmp[10]);
-            DualNote = Convert.ToByte(tmp[11]);
-            DualThresold = Convert.ToByte(tmp[12]);
+            //DualNote = Convert.ToByte(tmp[11]);//DUAL
+            //DualThresold = Convert.ToByte(tmp[12]);
             Type = (PinType)Convert.ToByte(tmp[13]);
             Channel = Convert.ToByte(tmp[14]);
         }

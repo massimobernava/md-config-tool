@@ -73,9 +73,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.gbRim = new System.Windows.Forms.GroupBox();
-            this.lblOpenThresoldRim = new System.Windows.Forms.Label();
-            this.dudOpenNoteRim = new System.Windows.Forms.DomainUpDown();
-            this.lblOpenNoteRim = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.cbTypeRim = new System.Windows.Forms.ComboBox();
             this.dudChokeRim = new System.Windows.Forms.DomainUpDown();
@@ -108,11 +105,8 @@
             this.gbHead = new System.Windows.Forms.GroupBox();
             this.label42 = new System.Windows.Forms.Label();
             this.cbHH_HHC = new System.Windows.Forms.ComboBox();
-            this.dudOpenNoteHead = new System.Windows.Forms.DomainUpDown();
             this.cbTypeHead = new System.Windows.Forms.ComboBox();
-            this.lblOpenNoteHead = new System.Windows.Forms.Label();
             this.dudChokeHead = new System.Windows.Forms.DomainUpDown();
-            this.lblOpenThresoldHead = new System.Windows.Forms.Label();
             this.lblChokeHead = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -280,9 +274,6 @@
             this.btnGeneralDelay = new microDrum.SendButton();
             this.nudDelay = new microDrum.Slider();
             this.nudSensibilityRim = new microDrum.Slider();
-            this.btnOpenThresoldRim = new microDrum.SendButton();
-            this.btnOpenNoteRim = new microDrum.SendButton();
-            this.nudOpenThresoldRim = new microDrum.Slider();
             this.btnXtalkGroupRim = new microDrum.SendButton();
             this.btnTypeRim = new microDrum.SendButton();
             this.btnChokeRim = new microDrum.SendButton();
@@ -306,13 +297,10 @@
             this.btnDualPiezo = new microDrum.SendButton();
             this.nudSensibilityHead = new microDrum.Slider();
             this.dudNoteHead = new microDrum.NoteSlider();
-            this.btnOpenThresoldHead = new microDrum.SendButton();
             this.btnXtalkGroupHead = new microDrum.SendButton();
-            this.btnOpenNoteHead = new microDrum.SendButton();
             this.btnChokeHead = new microDrum.SendButton();
             this.btnTypeHead = new microDrum.SendButton();
             this.cbCurveHead = new microDrum.CurveSlider();
-            this.nudOpenThresoldHead = new microDrum.Slider();
             this.nudCurveFormHead = new microDrum.Slider();
             this.btnCurveFormHead = new microDrum.SendButton();
             this.nudXtalkGroupHead = new microDrum.Slider();
@@ -386,7 +374,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudGeneralXtalk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDelay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSensibilityRim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudOpenThresoldRim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurveFormRim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudXtalkGroupRim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudRetriggerRim)).BeginInit();
@@ -395,7 +382,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudThresoldRim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudScanTimeRim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSensibilityHead)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudOpenThresoldHead)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurveFormHead)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudXtalkGroupHead)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudRetriggerHead)).BeginInit();
@@ -419,7 +405,7 @@
             this.tcMain.Name = "tcMain";
             this.tcMain.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tcMain.SelectedIndex = 0;
-            this.tcMain.Size = new System.Drawing.Size(493, 599);
+            this.tcMain.Size = new System.Drawing.Size(493, 482);
             this.tcMain.TabIndex = 0;
             this.tcMain.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tcMain_DrawItem);
             this.tcMain.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
@@ -442,7 +428,7 @@
             this.tpStandby.Name = "tpStandby";
             this.tpStandby.Padding = new System.Windows.Forms.Padding(3);
             this.tpStandby.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tpStandby.Size = new System.Drawing.Size(466, 591);
+            this.tpStandby.Size = new System.Drawing.Size(466, 474);
             this.tpStandby.TabIndex = 1;
             this.tpStandby.Text = "Configuration";
             // 
@@ -458,7 +444,7 @@
             this.gbHHCtrl.Controls.Add(this.btnCCHHC);
             this.gbHHCtrl.Controls.Add(this.label32);
             this.gbHHCtrl.ForeColor = System.Drawing.Color.SteelBlue;
-            this.gbHHCtrl.Location = new System.Drawing.Point(9, 563);
+            this.gbHHCtrl.Location = new System.Drawing.Point(6, 413);
             this.gbHHCtrl.Name = "gbHHCtrl";
             this.gbHHCtrl.Size = new System.Drawing.Size(175, 176);
             this.gbHHCtrl.TabIndex = 17;
@@ -543,9 +529,9 @@
             this.gbDualPS.Controls.Add(this.chkDualPiezoSwitch);
             this.gbDualPS.Controls.Add(this.btnDualPiezoSwitch);
             this.gbDualPS.ForeColor = System.Drawing.Color.SteelBlue;
-            this.gbDualPS.Location = new System.Drawing.Point(21, 479);
+            this.gbDualPS.Location = new System.Drawing.Point(184, 423);
             this.gbDualPS.Name = "gbDualPS";
-            this.gbDualPS.Size = new System.Drawing.Size(353, 125);
+            this.gbDualPS.Size = new System.Drawing.Size(116, 31);
             this.gbDualPS.TabIndex = 20;
             this.gbDualPS.TabStop = false;
             this.gbDualPS.Text = "Dual Piezo/Switch";
@@ -638,7 +624,7 @@
             this.lbPads.FormattingEnabled = true;
             this.lbPads.Location = new System.Drawing.Point(6, 72);
             this.lbPads.Name = "lbPads";
-            this.lbPads.Size = new System.Drawing.Size(99, 485);
+            this.lbPads.Size = new System.Drawing.Size(99, 290);
             this.lbPads.TabIndex = 0;
             this.lbPads.SelectedIndexChanged += new System.EventHandler(this.lbPads_SelectedIndexChanged);
             // 
@@ -664,7 +650,7 @@
             this.gbHHE.Controls.Add(this.dudHH_C);
             this.gbHHE.Controls.Add(this.dudHH_D);
             this.gbHHE.ForeColor = System.Drawing.Color.SteelBlue;
-            this.gbHHE.Location = new System.Drawing.Point(9, 503);
+            this.gbHHE.Location = new System.Drawing.Point(306, 442);
             this.gbHHE.Name = "gbHHE";
             this.gbHHE.Size = new System.Drawing.Size(353, 125);
             this.gbHHE.TabIndex = 19;
@@ -993,12 +979,6 @@
             // gbRim
             // 
             this.gbRim.Controls.Add(this.nudSensibilityRim);
-            this.gbRim.Controls.Add(this.lblOpenThresoldRim);
-            this.gbRim.Controls.Add(this.btnOpenThresoldRim);
-            this.gbRim.Controls.Add(this.btnOpenNoteRim);
-            this.gbRim.Controls.Add(this.dudOpenNoteRim);
-            this.gbRim.Controls.Add(this.lblOpenNoteRim);
-            this.gbRim.Controls.Add(this.nudOpenThresoldRim);
             this.gbRim.Controls.Add(this.btnXtalkGroupRim);
             this.gbRim.Controls.Add(this.label40);
             this.gbRim.Controls.Add(this.cbTypeRim);
@@ -1035,42 +1015,10 @@
             this.gbRim.ForeColor = System.Drawing.Color.SteelBlue;
             this.gbRim.Location = new System.Drawing.Point(289, 56);
             this.gbRim.Name = "gbRim";
-            this.gbRim.Size = new System.Drawing.Size(175, 407);
+            this.gbRim.Size = new System.Drawing.Size(175, 351);
             this.gbRim.TabIndex = 5;
             this.gbRim.TabStop = false;
             this.gbRim.Text = "Parameters Rim";
-            // 
-            // lblOpenThresoldRim
-            // 
-            this.lblOpenThresoldRim.ForeColor = System.Drawing.Color.Black;
-            this.lblOpenThresoldRim.Location = new System.Drawing.Point(5, 341);
-            this.lblOpenThresoldRim.Name = "lblOpenThresoldRim";
-            this.lblOpenThresoldRim.Size = new System.Drawing.Size(60, 31);
-            this.lblOpenThresoldRim.TabIndex = 99;
-            this.lblOpenThresoldRim.Text = "Open Thresold:";
-            this.lblOpenThresoldRim.Visible = false;
-            // 
-            // dudOpenNoteRim
-            // 
-            this.dudOpenNoteRim.Location = new System.Drawing.Point(71, 376);
-            this.dudOpenNoteRim.Name = "dudOpenNoteRim";
-            this.dudOpenNoteRim.ReadOnly = true;
-            this.dudOpenNoteRim.Size = new System.Drawing.Size(65, 20);
-            this.dudOpenNoteRim.TabIndex = 96;
-            this.dudOpenNoteRim.Text = "---";
-            this.dudOpenNoteRim.Visible = false;
-            this.dudOpenNoteRim.SelectedItemChanged += new System.EventHandler(this.dudOpenNoteRim_SelectedItemChanged);
-            // 
-            // lblOpenNoteRim
-            // 
-            this.lblOpenNoteRim.AutoSize = true;
-            this.lblOpenNoteRim.ForeColor = System.Drawing.Color.Black;
-            this.lblOpenNoteRim.Location = new System.Drawing.Point(6, 379);
-            this.lblOpenNoteRim.Name = "lblOpenNoteRim";
-            this.lblOpenNoteRim.Size = new System.Drawing.Size(36, 13);
-            this.lblOpenNoteRim.TabIndex = 95;
-            this.lblOpenNoteRim.Text = "Open:";
-            this.lblOpenNoteRim.Visible = false;
             // 
             // label40
             // 
@@ -1227,12 +1175,13 @@
             this.gbDualPP.Controls.Add(this.tbRim);
             this.gbDualPP.Controls.Add(this.tbHead);
             this.gbDualPP.ForeColor = System.Drawing.Color.SteelBlue;
-            this.gbDualPP.Location = new System.Drawing.Point(110, 463);
+            this.gbDualPP.Location = new System.Drawing.Point(325, 421);
             this.gbDualPP.Name = "gbDualPP";
-            this.gbDualPP.Size = new System.Drawing.Size(353, 125);
+            this.gbDualPP.Size = new System.Drawing.Size(132, 44);
             this.gbDualPP.TabIndex = 16;
             this.gbDualPP.TabStop = false;
             this.gbDualPP.Text = "Dual Piezo/Piezo";
+            this.gbDualPP.Visible = false;
             // 
             // labelHR
             // 
@@ -1397,21 +1346,15 @@
             // 
             this.gbHead.Controls.Add(this.nudSensibilityHead);
             this.gbHead.Controls.Add(this.dudNoteHead);
-            this.gbHead.Controls.Add(this.btnOpenThresoldHead);
             this.gbHead.Controls.Add(this.btnXtalkGroupHead);
             this.gbHead.Controls.Add(this.label42);
-            this.gbHead.Controls.Add(this.btnOpenNoteHead);
             this.gbHead.Controls.Add(this.cbHH_HHC);
-            this.gbHead.Controls.Add(this.dudOpenNoteHead);
             this.gbHead.Controls.Add(this.btnChokeHead);
             this.gbHead.Controls.Add(this.cbTypeHead);
-            this.gbHead.Controls.Add(this.lblOpenNoteHead);
             this.gbHead.Controls.Add(this.btnTypeHead);
             this.gbHead.Controls.Add(this.dudChokeHead);
-            this.gbHead.Controls.Add(this.lblOpenThresoldHead);
             this.gbHead.Controls.Add(this.lblChokeHead);
             this.gbHead.Controls.Add(this.cbCurveHead);
-            this.gbHead.Controls.Add(this.nudOpenThresoldHead);
             this.gbHead.Controls.Add(this.nudCurveFormHead);
             this.gbHead.Controls.Add(this.btnCurveFormHead);
             this.gbHead.Controls.Add(this.label17);
@@ -1439,7 +1382,7 @@
             this.gbHead.ForeColor = System.Drawing.Color.SteelBlue;
             this.gbHead.Location = new System.Drawing.Point(111, 56);
             this.gbHead.Name = "gbHead";
-            this.gbHead.Size = new System.Drawing.Size(173, 407);
+            this.gbHead.Size = new System.Drawing.Size(173, 351);
             this.gbHead.TabIndex = 4;
             this.gbHead.TabStop = false;
             this.gbHead.Text = "Parameters Head";
@@ -1471,17 +1414,6 @@
             this.cbHH_HHC.DropDown += new System.EventHandler(this.cbHH_HHC_DropDown);
             this.cbHH_HHC.SelectedIndexChanged += new System.EventHandler(this.cbHH_HHC_SelectedIndexChanged);
             // 
-            // dudOpenNoteHead
-            // 
-            this.dudOpenNoteHead.Location = new System.Drawing.Point(66, 375);
-            this.dudOpenNoteHead.Name = "dudOpenNoteHead";
-            this.dudOpenNoteHead.ReadOnly = true;
-            this.dudOpenNoteHead.Size = new System.Drawing.Size(65, 20);
-            this.dudOpenNoteHead.TabIndex = 95;
-            this.dudOpenNoteHead.Text = "---";
-            this.dudOpenNoteHead.Visible = false;
-            this.dudOpenNoteHead.SelectedItemChanged += new System.EventHandler(this.dudOpenNoteHead_SelectedItemChanged);
-            // 
             // cbTypeHead
             // 
             this.cbTypeHead.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1492,17 +1424,6 @@
             this.cbTypeHead.TabIndex = 76;
             this.cbTypeHead.SelectedIndexChanged += new System.EventHandler(this.cbTypeHead_SelectedIndexChanged);
             // 
-            // lblOpenNoteHead
-            // 
-            this.lblOpenNoteHead.AutoSize = true;
-            this.lblOpenNoteHead.ForeColor = System.Drawing.Color.Black;
-            this.lblOpenNoteHead.Location = new System.Drawing.Point(5, 379);
-            this.lblOpenNoteHead.Name = "lblOpenNoteHead";
-            this.lblOpenNoteHead.Size = new System.Drawing.Size(36, 13);
-            this.lblOpenNoteHead.TabIndex = 94;
-            this.lblOpenNoteHead.Text = "Open:";
-            this.lblOpenNoteHead.Visible = false;
-            // 
             // dudChokeHead
             // 
             this.dudChokeHead.Location = new System.Drawing.Point(66, 314);
@@ -1512,16 +1433,6 @@
             this.dudChokeHead.TabIndex = 73;
             this.dudChokeHead.Text = "---";
             this.dudChokeHead.SelectedItemChanged += new System.EventHandler(this.dudChokeHead_SelectedItemChanged);
-            // 
-            // lblOpenThresoldHead
-            // 
-            this.lblOpenThresoldHead.ForeColor = System.Drawing.Color.Black;
-            this.lblOpenThresoldHead.Location = new System.Drawing.Point(4, 341);
-            this.lblOpenThresoldHead.Name = "lblOpenThresoldHead";
-            this.lblOpenThresoldHead.Size = new System.Drawing.Size(60, 31);
-            this.lblOpenThresoldHead.TabIndex = 93;
-            this.lblOpenThresoldHead.Text = "Open Thresold:";
-            this.lblOpenThresoldHead.Visible = false;
             // 
             // lblChokeHead
             // 
@@ -1632,7 +1543,7 @@
             this.tpTools.Controls.Add(this.groupBox1);
             this.tpTools.Location = new System.Drawing.Point(23, 4);
             this.tpTools.Name = "tpTools";
-            this.tpTools.Size = new System.Drawing.Size(466, 591);
+            this.tpTools.Size = new System.Drawing.Size(466, 474);
             this.tpTools.TabIndex = 4;
             this.tpTools.Text = "Tools";
             // 
@@ -1645,7 +1556,7 @@
             this.groupBox7.Controls.Add(this.txtEEPROM);
             this.groupBox7.Location = new System.Drawing.Point(191, 192);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(269, 245);
+            this.groupBox7.Size = new System.Drawing.Size(269, 132);
             this.groupBox7.TabIndex = 11;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "EEPROM";
@@ -1695,7 +1606,7 @@
             this.txtEEPROM.Location = new System.Drawing.Point(6, 42);
             this.txtEEPROM.Multiline = true;
             this.txtEEPROM.Name = "txtEEPROM";
-            this.txtEEPROM.Size = new System.Drawing.Size(255, 192);
+            this.txtEEPROM.Size = new System.Drawing.Size(255, 68);
             this.txtEEPROM.TabIndex = 0;
             // 
             // groupBox2
@@ -1703,7 +1614,7 @@
             this.groupBox2.Controls.Add(this.btnResetDiagnostic);
             this.groupBox2.Controls.Add(this.pbDiagnostic);
             this.groupBox2.Controls.Add(this.cbxOn);
-            this.groupBox2.Location = new System.Drawing.Point(4, 443);
+            this.groupBox2.Location = new System.Drawing.Point(4, 322);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(456, 147);
             this.groupBox2.TabIndex = 10;
@@ -1759,7 +1670,7 @@
             this.groupBox5.Controls.Add(this.nudThresold);
             this.groupBox5.Location = new System.Drawing.Point(3, 3);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(185, 434);
+            this.groupBox5.Size = new System.Drawing.Size(185, 321);
             this.groupBox5.TabIndex = 9;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Log";
@@ -1783,6 +1694,7 @@
             this.btnResetProfiling.TabIndex = 44;
             this.btnResetProfiling.Text = "Reset Prof";
             this.btnResetProfiling.UseVisualStyleBackColor = true;
+            this.btnResetProfiling.Visible = false;
             this.btnResetProfiling.Click += new System.EventHandler(this.btnResetProfiling_Click);
             // 
             // btnGetProfiling
@@ -1793,6 +1705,7 @@
             this.btnGetProfiling.TabIndex = 43;
             this.btnGetProfiling.Text = "Get Profiling";
             this.btnGetProfiling.UseVisualStyleBackColor = true;
+            this.btnGetProfiling.Visible = false;
             this.btnGetProfiling.Click += new System.EventHandler(this.btnGetProfiling_Click);
             // 
             // btnShowLog
@@ -1809,7 +1722,7 @@
             // chkZoom
             // 
             this.chkZoom.AutoSize = true;
-            this.chkZoom.Location = new System.Drawing.Point(109, 289);
+            this.chkZoom.Location = new System.Drawing.Point(109, 182);
             this.chkZoom.Name = "chkZoom";
             this.chkZoom.Size = new System.Drawing.Size(67, 17);
             this.chkZoom.TabIndex = 11;
@@ -1821,7 +1734,7 @@
             this.wfpLog.BackColor = System.Drawing.Color.Black;
             this.wfpLog.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.wfpLog.ForeColor = System.Drawing.Color.SteelBlue;
-            this.wfpLog.Location = new System.Drawing.Point(3, 312);
+            this.wfpLog.Location = new System.Drawing.Point(3, 199);
             this.wfpLog.Name = "wfpLog";
             this.wfpLog.Size = new System.Drawing.Size(179, 119);
             this.wfpLog.TabIndex = 10;
@@ -1853,7 +1766,7 @@
             this.lbLog.Location = new System.Drawing.Point(6, 68);
             this.lbLog.Name = "lbLog";
             this.lbLog.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.lbLog.Size = new System.Drawing.Size(171, 212);
+            this.lbLog.Size = new System.Drawing.Size(171, 108);
             this.lbLog.TabIndex = 1;
             this.lbLog.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbLog_MouseDown);
             // 
@@ -1962,7 +1875,7 @@
             this.tpMIDI.Controls.Add(this.pbMIDI);
             this.tpMIDI.Location = new System.Drawing.Point(23, 4);
             this.tpMIDI.Name = "tpMIDI";
-            this.tpMIDI.Size = new System.Drawing.Size(466, 591);
+            this.tpMIDI.Size = new System.Drawing.Size(466, 474);
             this.tpMIDI.TabIndex = 2;
             this.tpMIDI.Text = "Monitor";
             // 
@@ -1973,7 +1886,7 @@
             this.groupBox6.Controls.Add(this.cbFire);
             this.groupBox6.Location = new System.Drawing.Point(3, 308);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(341, 278);
+            this.groupBox6.Size = new System.Drawing.Size(341, 163);
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Option";
@@ -2019,7 +1932,7 @@
             this.lbMIDI.FormattingEnabled = true;
             this.lbMIDI.Location = new System.Drawing.Point(347, 3);
             this.lbMIDI.Name = "lbMIDI";
-            this.lbMIDI.Size = new System.Drawing.Size(119, 589);
+            this.lbMIDI.Size = new System.Drawing.Size(119, 459);
             this.lbMIDI.TabIndex = 1;
             this.lbMIDI.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbMIDI_MouseDoubleClick);
             // 
@@ -2038,7 +1951,7 @@
             this.tpSFZ.Controls.Add(this.groupBox8);
             this.tpSFZ.Location = new System.Drawing.Point(23, 4);
             this.tpSFZ.Name = "tpSFZ";
-            this.tpSFZ.Size = new System.Drawing.Size(466, 591);
+            this.tpSFZ.Size = new System.Drawing.Size(466, 474);
             this.tpSFZ.TabIndex = 5;
             this.tpSFZ.Text = "SFZ";
             // 
@@ -2060,7 +1973,7 @@
             this.groupBox8.Controls.Add(this.label26);
             this.groupBox8.Location = new System.Drawing.Point(12, 3);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(447, 582);
+            this.groupBox8.Size = new System.Drawing.Size(447, 468);
             this.groupBox8.TabIndex = 10;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "SFZ";
@@ -2128,7 +2041,7 @@
             this.tvSFZ.HideSelection = false;
             this.tvSFZ.Location = new System.Drawing.Point(6, 49);
             this.tvSFZ.Name = "tvSFZ";
-            this.tvSFZ.Size = new System.Drawing.Size(435, 454);
+            this.tvSFZ.Size = new System.Drawing.Size(435, 413);
             this.tvSFZ.TabIndex = 18;
             this.tvSFZ.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvSFZ_AfterSelect);
             this.tvSFZ.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvSFZ_NodeMouseDoubleClick);
@@ -2239,7 +2152,7 @@
             this.tpEffects.Controls.Add(this.button7);
             this.tpEffects.Location = new System.Drawing.Point(23, 4);
             this.tpEffects.Name = "tpEffects";
-            this.tpEffects.Size = new System.Drawing.Size(466, 591);
+            this.tpEffects.Size = new System.Drawing.Size(466, 474);
             this.tpEffects.TabIndex = 6;
             this.tpEffects.Text = "Effects";
             // 
@@ -2285,7 +2198,7 @@
             this.tcEffects.Location = new System.Drawing.Point(3, 48);
             this.tcEffects.Name = "tcEffects";
             this.tcEffects.SelectedIndex = 0;
-            this.tcEffects.Size = new System.Drawing.Size(460, 542);
+            this.tcEffects.Size = new System.Drawing.Size(460, 423);
             this.tcEffects.TabIndex = 0;
             // 
             // tpGeneral
@@ -2293,7 +2206,7 @@
             this.tpGeneral.Controls.Add(this.eccGeneral);
             this.tpGeneral.Location = new System.Drawing.Point(4, 22);
             this.tpGeneral.Name = "tpGeneral";
-            this.tpGeneral.Size = new System.Drawing.Size(452, 516);
+            this.tpGeneral.Size = new System.Drawing.Size(452, 397);
             this.tpGeneral.TabIndex = 0;
             this.tpGeneral.Text = "General";
             this.tpGeneral.UseVisualStyleBackColor = true;
@@ -2303,7 +2216,7 @@
             this.tpEffect1.Controls.Add(this.eccEffect1);
             this.tpEffect1.Location = new System.Drawing.Point(4, 22);
             this.tpEffect1.Name = "tpEffect1";
-            this.tpEffect1.Size = new System.Drawing.Size(452, 516);
+            this.tpEffect1.Size = new System.Drawing.Size(452, 397);
             this.tpEffect1.TabIndex = 1;
             this.tpEffect1.Text = "Effect Chain 1";
             this.tpEffect1.UseVisualStyleBackColor = true;
@@ -2313,7 +2226,7 @@
             this.tpEffect2.Controls.Add(this.eccEffect2);
             this.tpEffect2.Location = new System.Drawing.Point(4, 22);
             this.tpEffect2.Name = "tpEffect2";
-            this.tpEffect2.Size = new System.Drawing.Size(452, 516);
+            this.tpEffect2.Size = new System.Drawing.Size(452, 397);
             this.tpEffect2.TabIndex = 2;
             this.tpEffect2.Text = "Effect Chain 2";
             this.tpEffect2.UseVisualStyleBackColor = true;
@@ -2323,7 +2236,7 @@
             this.tpEffect3.Controls.Add(this.eccEffect3);
             this.tpEffect3.Location = new System.Drawing.Point(4, 22);
             this.tpEffect3.Name = "tpEffect3";
-            this.tpEffect3.Size = new System.Drawing.Size(452, 516);
+            this.tpEffect3.Size = new System.Drawing.Size(452, 397);
             this.tpEffect3.TabIndex = 3;
             this.tpEffect3.Text = "Effect Chain 3";
             this.tpEffect3.UseVisualStyleBackColor = true;
@@ -2333,7 +2246,7 @@
             this.tpEffect4.Controls.Add(this.eccEffect4);
             this.tpEffect4.Location = new System.Drawing.Point(4, 22);
             this.tpEffect4.Name = "tpEffect4";
-            this.tpEffect4.Size = new System.Drawing.Size(452, 516);
+            this.tpEffect4.Size = new System.Drawing.Size(452, 397);
             this.tpEffect4.TabIndex = 4;
             this.tpEffect4.Text = "Effect Chain 4";
             this.tpEffect4.UseVisualStyleBackColor = true;
@@ -2343,7 +2256,7 @@
             this.tpEffect5.Controls.Add(this.eccEffect5);
             this.tpEffect5.Location = new System.Drawing.Point(4, 22);
             this.tpEffect5.Name = "tpEffect5";
-            this.tpEffect5.Size = new System.Drawing.Size(452, 516);
+            this.tpEffect5.Size = new System.Drawing.Size(452, 397);
             this.tpEffect5.TabIndex = 5;
             this.tpEffect5.Text = "Effect Chain 5";
             this.tpEffect5.UseVisualStyleBackColor = true;
@@ -2393,7 +2306,7 @@
             this.tsbRec,
             this.toolStripSeparator4,
             this.tsbMixer});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 626);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 510);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(493, 25);
             this.toolStrip1.TabIndex = 11;
@@ -3060,7 +2973,7 @@
             // 
             // btnLoadPadSend
             // 
-            this.btnLoadPadSend.Location = new System.Drawing.Point(75, 557);
+            this.btnLoadPadSend.Location = new System.Drawing.Point(78, 368);
             this.btnLoadPadSend.Name = "btnLoadPadSend";
             this.btnLoadPadSend.Size = new System.Drawing.Size(27, 27);
             this.btnLoadPadSend.TabIndex = 22;
@@ -3127,7 +3040,7 @@
             // btnSendPad
             // 
             this.btnSendPad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSendPad.Location = new System.Drawing.Point(43, 557);
+            this.btnSendPad.Location = new System.Drawing.Point(46, 368);
             this.btnSendPad.Name = "btnSendPad";
             this.btnSendPad.Size = new System.Drawing.Size(30, 30);
             this.btnSendPad.TabIndex = 18;
@@ -3204,39 +3117,6 @@
             this.nudSensibilityRim.TabIndex = 100;
             this.nudSensibilityRim.Value = 1;
             this.nudSensibilityRim.ValueChanged += new System.EventHandler(this.nudSensibilityRim_ValueChanged);
-            // 
-            // btnOpenThresoldRim
-            // 
-            this.btnOpenThresoldRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnOpenThresoldRim.Location = new System.Drawing.Point(143, 342);
-            this.btnOpenThresoldRim.Name = "btnOpenThresoldRim";
-            this.btnOpenThresoldRim.Size = new System.Drawing.Size(27, 27);
-            this.btnOpenThresoldRim.TabIndex = 98;
-            this.btnOpenThresoldRim.Visible = false;
-            this.btnOpenThresoldRim.Click += new System.EventHandler(this.btnOpenThresoldRim_Click);
-            // 
-            // btnOpenNoteRim
-            // 
-            this.btnOpenNoteRim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnOpenNoteRim.Location = new System.Drawing.Point(143, 372);
-            this.btnOpenNoteRim.Name = "btnOpenNoteRim";
-            this.btnOpenNoteRim.Size = new System.Drawing.Size(27, 27);
-            this.btnOpenNoteRim.TabIndex = 97;
-            this.btnOpenNoteRim.Visible = false;
-            this.btnOpenNoteRim.Click += new System.EventHandler(this.btnOpenNoteRim_Click);
-            // 
-            // nudOpenThresoldRim
-            // 
-            this.nudOpenThresoldRim.Location = new System.Drawing.Point(70, 347);
-            this.nudOpenThresoldRim.Maximum = 127;
-            this.nudOpenThresoldRim.Minimum = 0;
-            this.nudOpenThresoldRim.Name = "nudOpenThresoldRim";
-            this.nudOpenThresoldRim.ShowSlider = false;
-            this.nudOpenThresoldRim.Size = new System.Drawing.Size(66, 21);
-            this.nudOpenThresoldRim.TabIndex = 93;
-            this.nudOpenThresoldRim.Value = 1;
-            this.nudOpenThresoldRim.Visible = false;
-            this.nudOpenThresoldRim.ValueChanged += new System.EventHandler(this.nudOpenThresoldRim_ValueChanged);
             // 
             // btnXtalkGroupRim
             // 
@@ -3472,16 +3352,6 @@
             this.dudNoteHead.TabIndex = 98;
             this.dudNoteHead.SelectedItemChanged += new System.EventHandler(this.dudNoteHead_SelectedItemChanged);
             // 
-            // btnOpenThresoldHead
-            // 
-            this.btnOpenThresoldHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnOpenThresoldHead.Location = new System.Drawing.Point(142, 341);
-            this.btnOpenThresoldHead.Name = "btnOpenThresoldHead";
-            this.btnOpenThresoldHead.Size = new System.Drawing.Size(27, 27);
-            this.btnOpenThresoldHead.TabIndex = 97;
-            this.btnOpenThresoldHead.Visible = false;
-            this.btnOpenThresoldHead.Click += new System.EventHandler(this.btnOpenThresoldHead_Click);
-            // 
             // btnXtalkGroupHead
             // 
             this.btnXtalkGroupHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -3490,16 +3360,6 @@
             this.btnXtalkGroupHead.Size = new System.Drawing.Size(27, 27);
             this.btnXtalkGroupHead.TabIndex = 91;
             this.btnXtalkGroupHead.Click += new System.EventHandler(this.btnXtalkGroupHead_Click);
-            // 
-            // btnOpenNoteHead
-            // 
-            this.btnOpenNoteHead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnOpenNoteHead.Location = new System.Drawing.Point(142, 371);
-            this.btnOpenNoteHead.Name = "btnOpenNoteHead";
-            this.btnOpenNoteHead.Size = new System.Drawing.Size(27, 27);
-            this.btnOpenNoteHead.TabIndex = 96;
-            this.btnOpenNoteHead.Visible = false;
-            this.btnOpenNoteHead.Click += new System.EventHandler(this.btnOpenNoteHead_Click);
             // 
             // btnChokeHead
             // 
@@ -3528,19 +3388,6 @@
             this.cbCurveHead.Size = new System.Drawing.Size(100, 21);
             this.cbCurveHead.TabIndex = 40;
             this.cbCurveHead.SelectedIndexChanged += new System.EventHandler(this.cbCurveHead_SelectedItemChanged);
-            // 
-            // nudOpenThresoldHead
-            // 
-            this.nudOpenThresoldHead.Location = new System.Drawing.Point(70, 346);
-            this.nudOpenThresoldHead.Maximum = 127;
-            this.nudOpenThresoldHead.Minimum = 0;
-            this.nudOpenThresoldHead.Name = "nudOpenThresoldHead";
-            this.nudOpenThresoldHead.ShowSlider = false;
-            this.nudOpenThresoldHead.Size = new System.Drawing.Size(66, 21);
-            this.nudOpenThresoldHead.TabIndex = 92;
-            this.nudOpenThresoldHead.Value = 1;
-            this.nudOpenThresoldHead.Visible = false;
-            this.nudOpenThresoldHead.ValueChanged += new System.EventHandler(this.nudOpenThresoldHead_ValueChanged);
             // 
             // nudCurveFormHead
             // 
@@ -3703,7 +3550,7 @@
             this.eccGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.eccGeneral.Location = new System.Drawing.Point(0, 0);
             this.eccGeneral.Name = "eccGeneral";
-            this.eccGeneral.Size = new System.Drawing.Size(452, 516);
+            this.eccGeneral.Size = new System.Drawing.Size(452, 397);
             this.eccGeneral.TabIndex = 0;
             // 
             // eccEffect1
@@ -3711,7 +3558,7 @@
             this.eccEffect1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.eccEffect1.Location = new System.Drawing.Point(0, 0);
             this.eccEffect1.Name = "eccEffect1";
-            this.eccEffect1.Size = new System.Drawing.Size(452, 516);
+            this.eccEffect1.Size = new System.Drawing.Size(452, 397);
             this.eccEffect1.TabIndex = 0;
             // 
             // eccEffect2
@@ -3719,7 +3566,7 @@
             this.eccEffect2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.eccEffect2.Location = new System.Drawing.Point(0, 0);
             this.eccEffect2.Name = "eccEffect2";
-            this.eccEffect2.Size = new System.Drawing.Size(452, 516);
+            this.eccEffect2.Size = new System.Drawing.Size(452, 397);
             this.eccEffect2.TabIndex = 0;
             // 
             // eccEffect3
@@ -3727,7 +3574,7 @@
             this.eccEffect3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.eccEffect3.Location = new System.Drawing.Point(0, 0);
             this.eccEffect3.Name = "eccEffect3";
-            this.eccEffect3.Size = new System.Drawing.Size(452, 516);
+            this.eccEffect3.Size = new System.Drawing.Size(452, 397);
             this.eccEffect3.TabIndex = 0;
             // 
             // eccEffect4
@@ -3735,7 +3582,7 @@
             this.eccEffect4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.eccEffect4.Location = new System.Drawing.Point(0, 0);
             this.eccEffect4.Name = "eccEffect4";
-            this.eccEffect4.Size = new System.Drawing.Size(452, 516);
+            this.eccEffect4.Size = new System.Drawing.Size(452, 397);
             this.eccEffect4.TabIndex = 0;
             // 
             // eccEffect5
@@ -3743,7 +3590,7 @@
             this.eccEffect5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.eccEffect5.Location = new System.Drawing.Point(0, 0);
             this.eccEffect5.Name = "eccEffect5";
-            this.eccEffect5.Size = new System.Drawing.Size(452, 516);
+            this.eccEffect5.Size = new System.Drawing.Size(452, 397);
             this.eccEffect5.TabIndex = 0;
             // 
             // MainForm
@@ -3751,7 +3598,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(493, 651);
+            this.ClientSize = new System.Drawing.Size(493, 535);
             this.Controls.Add(this.pbLoad);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.tcMain);
@@ -3835,7 +3682,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudGeneralXtalk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDelay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSensibilityRim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudOpenThresoldRim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurveFormRim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudXtalkGroupRim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudRetriggerRim)).EndInit();
@@ -3844,7 +3690,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudThresoldRim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudScanTimeRim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSensibilityHead)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudOpenThresoldHead)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurveFormHead)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudXtalkGroupHead)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudRetriggerHead)).EndInit();
@@ -4045,18 +3890,6 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.CheckBox cbFire;
         private System.Windows.Forms.ToolStripMenuItem alwaySaveToolStripMenuItem;
-        private System.Windows.Forms.Label lblOpenThresoldRim;
-        private microDrum.SendButton btnOpenThresoldRim;
-        private microDrum.SendButton btnOpenNoteRim;
-        private System.Windows.Forms.DomainUpDown dudOpenNoteRim;
-        private System.Windows.Forms.Label lblOpenNoteRim;
-        private microDrum.Slider nudOpenThresoldRim;
-        private microDrum.SendButton btnOpenThresoldHead;
-        private microDrum.SendButton btnOpenNoteHead;
-        private System.Windows.Forms.DomainUpDown dudOpenNoteHead;
-        private System.Windows.Forms.Label lblOpenNoteHead;
-        private System.Windows.Forms.Label lblOpenThresoldHead;
-        private microDrum.Slider nudOpenThresoldHead;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nudHH_FootSplashThresold;

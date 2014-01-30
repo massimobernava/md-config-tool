@@ -180,8 +180,8 @@ namespace microDrum
                 dudHH_FootSplashNote.Items.Add(new Note(n));
 
                 dudAlternativeNote.Items.Add(new Note(n));
-                dudOpenNoteRim.Items.Add(new Note(n));
-                dudOpenNoteHead.Items.Add(new Note(n));
+                //dudOpenNoteRim.Items.Add(new Note(n));
+                //dudOpenNoteHead.Items.Add(new Note(n));
             }
             dudChokeHead.Items.Add(new Note(127));
             dudChokeRim.Items.Add(new Note(127));
@@ -447,13 +447,13 @@ namespace microDrum
                 }
             }
 
-                /*if (aboutForm.IsValid())
-                    UtilityMIDI.MIDI_SysEx(0x60, (byte)Data1, (byte)Data2, UtilityCryptography.GetPearsonHash(lic));
-                else
-                {
-                    Random rand = new Random(DateTime.Now.Millisecond);
-                    UtilityMIDI.MIDI_SysEx(0x60, (byte)rand.Next(127), 0x00, 0x00);
-                }*/
+            /*if (aboutForm.IsValid())
+                UtilityMIDI.MIDI_SysEx(0x60, (byte)Data1, (byte)Data2, UtilityCryptography.GetPearsonHash(lic));
+            else
+            {
+                Random rand = new Random(DateTime.Now.Millisecond);
+                UtilityMIDI.MIDI_SysEx(0x60, (byte)rand.Next(127), 0x00, 0x00);
+            }*/
 
         }
         void LogMode(byte Cmd, byte Data1, byte Data2, byte Data3, Log Log)
@@ -610,12 +610,12 @@ namespace microDrum
                         case 0x0A: //Dual
                             Setting[Data1].Dual = Data3;
                             break;
-                        case 0x0B: //DualNote
+                        /*case 0x0B: //DualNote//DUAL
                             Setting[Data1].DualNote = Data3;
                             break;
                         case 0x0C: //DualThresold
                             Setting[Data1].DualThresold = Data3;
-                            break;
+                            break;*/
                         case 0x0D: //Type
                             Setting[Data1].Type = (PinType)Data3;
                             break;
@@ -626,17 +626,17 @@ namespace microDrum
                 }
                 UpdateProgressBar(false);
             }
-           /* else if (Cmd == 0x60) //License
-            {
-                byte[] lic = new byte[] { (byte)Data1, (byte)Data2, (byte)Data3 };
-                if (aboutForm.IsValid())
-                    UtilityMIDI.MIDI_SysEx(0x60, UtilityCryptography.GetPearsonHash(lic), 0x00, 0x00);
-                else
-                {
-                    Random rand = new Random(DateTime.Now.Millisecond);
-                    UtilityMIDI.MIDI_SysEx(0x60, (byte)rand.Next(127), 0x00, 0x00);
-                }
-            }*/
+            /* else if (Cmd == 0x60) //License
+             {
+                 byte[] lic = new byte[] { (byte)Data1, (byte)Data2, (byte)Data3 };
+                 if (aboutForm.IsValid())
+                     UtilityMIDI.MIDI_SysEx(0x60, UtilityCryptography.GetPearsonHash(lic), 0x00, 0x00);
+                 else
+                 {
+                     Random rand = new Random(DateTime.Now.Millisecond);
+                     UtilityMIDI.MIDI_SysEx(0x60, (byte)rand.Next(127), 0x00, 0x00);
+                 }
+             }*/
             //      }
             //  }
         }
@@ -691,7 +691,7 @@ namespace microDrum
         private void Draw(int Data1, int Data2)
         {
             for (int i = 0; i < Setting.Length; i++)
-                if (Setting[i].Note == Data1 || Setting[i].DualNote == Data1)
+                if (Setting[i].Note == Data1 /*|| Setting[i].DualNote == Data1*/)//DUAL
                 {
                     for (int j = 0; j < DrumMap.Length; j++)
                     {
@@ -776,13 +776,13 @@ namespace microDrum
             GB.Controls["lbl" + HR + "Note"].Text = "Note:";
             GB.Controls["lbl" + HR + "ScanTime"].Text = "Scan Time:";
             GB.Controls["lbl" + HR + "MaskTime"].Text = "Mask Time:";
-            GB.Controls["lblOpenThresold" + HR].Visible = false;
-            GB.Controls["lblOpenNote" + HR].Visible = false;
-            GB.Controls["nudOpenThresold" + HR].Visible = false;
-            GB.Controls["dudOpenNote" + HR].Visible = false;
-            GB.Controls["btnOpenThresold" + HR].Visible = false;
-            GB.Controls["btnOpenNote" + HR].Visible = false;
-            GB.Controls["lblChoke" + HR].Text="Numb:";
+            //GB.Controls["lblOpenThresold" + HR].Visible = false;
+            //GB.Controls["lblOpenNote" + HR].Visible = false;
+            //GB.Controls["nudOpenThresold" + HR].Visible = false;
+            //GB.Controls["dudOpenNote" + HR].Visible = false;
+            //GB.Controls["btnOpenThresold" + HR].Visible = false;
+            //GB.Controls["btnOpenNote" + HR].Visible = false;
+            GB.Controls["lblChoke" + HR].Text="Gain:";
             GB.Controls["lblChoke" + HR].Visible = true;
             GB.Controls["dudChoke" + HR].Visible = false;
             GB.Controls["nudSensibility" + HR].Visible = true;
@@ -845,12 +845,12 @@ namespace microDrum
             GB.Controls["lbl" + HR + "Note"].Text = "Note:";
             GB.Controls["lbl" + HR + "ScanTime"].Text = "Switch Time:";
             GB.Controls["lbl" + HR + "MaskTime"].Text = "Choke Time:";
-            GB.Controls["lblOpenThresold" + HR].Visible = false;
-            GB.Controls["lblOpenNote" + HR].Visible = false;
-            GB.Controls["nudOpenThresold" + HR].Visible = false;
-            GB.Controls["dudOpenNote" + HR].Visible = false;
-            GB.Controls["btnOpenThresold" + HR].Visible = false;
-            GB.Controls["btnOpenNote" + HR].Visible = false;
+            //GB.Controls["lblOpenThresold" + HR].Visible = false;
+            //GB.Controls["lblOpenNote" + HR].Visible = false;
+            //GB.Controls["nudOpenThresold" + HR].Visible = false;
+            //GB.Controls["dudOpenNote" + HR].Visible = false;
+            //GB.Controls["btnOpenThresold" + HR].Visible = false;
+            //GB.Controls["btnOpenNote" + HR].Visible = false;
             GB.Controls["lblChoke" + HR].Visible = true;
             GB.Controls["lblChoke" + HR].Text = "Choke:";
             GB.Controls["dudChoke" + HR].Visible = true;
@@ -889,14 +889,14 @@ namespace microDrum
             GB.Controls["lbl" + HR + "Note"].Text = "Close:";
             GB.Controls["lbl" + HR + "ScanTime"].Text = "Scan Time:";
             GB.Controls["lbl" + HR + "MaskTime"].Text = "Mask Time:";
-            GB.Controls["lblOpenThresold" + HR].Text = "Open Thresold:";
-            GB.Controls["lblOpenNote" + HR].Text = "Open Note:";
-            GB.Controls["lblOpenThresold" + HR].Visible = true;
-            GB.Controls["lblOpenNote" + HR].Visible = true;
-            GB.Controls["nudOpenThresold" + HR].Visible = true;
-            GB.Controls["dudOpenNote" + HR].Visible = true;
-            GB.Controls["btnOpenThresold" + HR].Visible = true;
-            GB.Controls["btnOpenNote" + HR].Visible = true;
+            //GB.Controls["lblOpenThresold" + HR].Text = "Open Thresold:";
+            //GB.Controls["lblOpenNote" + HR].Text = "Open Note:";
+            //GB.Controls["lblOpenThresold" + HR].Visible = true;
+            //GB.Controls["lblOpenNote" + HR].Visible = true;
+            //GB.Controls["nudOpenThresold" + HR].Visible = true;
+            //GB.Controls["dudOpenNote" + HR].Visible = true;
+            //GB.Controls["btnOpenThresold" + HR].Visible = true;
+            //GB.Controls["btnOpenNote" + HR].Visible = true;
             GB.Controls["lblChoke" + HR].Visible = true;
             GB.Controls["lblChoke" + HR].Text = "HHC:";
             GB.Controls["dudChoke" + HR].Visible = false;
@@ -972,14 +972,14 @@ namespace microDrum
             GB.Controls["lbl" + HR + "Note"].Text = "Close:";
             GB.Controls["lbl" + HR + "ScanTime"].Text = "Switch Time:";
             GB.Controls["lbl" + HR + "MaskTime"].Text = "Choke Time:";
-            GB.Controls["lblOpenThresold" + HR].Text = "Open Thresold:";
-            GB.Controls["lblOpenNote" + HR].Text = "Open Note:";
-            GB.Controls["lblOpenThresold" + HR].Visible = true;
-            GB.Controls["lblOpenNote" + HR].Visible = true;
-            GB.Controls["nudOpenThresold" + HR].Visible = true;
-            GB.Controls["dudOpenNote" + HR].Visible = true;
-            GB.Controls["btnOpenThresold" + HR].Visible = true;
-            GB.Controls["btnOpenNote" + HR].Visible = true;
+            //GB.Controls["lblOpenThresold" + HR].Text = "Open Thresold:";
+            //GB.Controls["lblOpenNote" + HR].Text = "Open Note:";
+            //GB.Controls["lblOpenThresold" + HR].Visible = true;
+            //GB.Controls["lblOpenNote" + HR].Visible = true;
+            //GB.Controls["nudOpenThresold" + HR].Visible = true;
+            //GB.Controls["dudOpenNote" + HR].Visible = true;
+            //GB.Controls["btnOpenThresold" + HR].Visible = true;
+            //GB.Controls["btnOpenNote" + HR].Visible = true;
             GB.Controls["lblChoke" + HR].Visible = true;
             GB.Controls["lblChoke" + HR].Text = "Choke:";
             GB.Controls["dudChoke" + HR].Visible = true;
@@ -996,14 +996,14 @@ namespace microDrum
             GB.Controls["lbl" + HR + "Note"].Text = "Shaft Note:";
             GB.Controls["lbl" + HR + "ScanTime"].Text = "Switch Time:";
             GB.Controls["lbl" + HR + "MaskTime"].Text = "Choke Time:";
-            GB.Controls["lblOpenThresold" + HR].Text = "Bell Thresold:";
+            /*GB.Controls["lblOpenThresold" + HR].Text = "Bell Thresold:";
             GB.Controls["lblOpenNote" + HR].Text = "Bell Note:";
             GB.Controls["lblOpenThresold" + HR].Visible = true;
             GB.Controls["lblOpenNote" + HR].Visible = true;
             GB.Controls["nudOpenThresold" + HR].Visible = true;
             GB.Controls["dudOpenNote" + HR].Visible = true;
             GB.Controls["btnOpenThresold" + HR].Visible = true;
-            GB.Controls["btnOpenNote" + HR].Visible = true;
+            GB.Controls["btnOpenNote" + HR].Visible = true;*/
             GB.Controls["lblChoke" + HR].Visible = true;
             GB.Controls["lblChoke" + HR].Text = "Choke:";
             GB.Controls["dudChoke" + HR].Visible = true;
@@ -1131,7 +1131,7 @@ namespace microDrum
             gbRim.Text = lbPads.SelectedItem.ToString() + " Rim";
             if (DrumMap[lbPads.SelectedIndex].Single || Setting[PinHead].Type == PinType.HHC)
                 gbHead.Text = lbPads.SelectedItem.ToString();
-            labelHR.Text = "H:" + Setting[PinHead].DualThresold.ToString() + "   R:" + Setting[PinRim].DualThresold.ToString();
+            //labelHR.Text = "H:" + Setting[PinHead].DualThresold.ToString() + "   R:" + Setting[PinRim].DualThresold.ToString();//DUAL
 
             if (Setting[PinHead].Type == PinType.Piezo) UpdatePiezo(true, Setting[PinHead]);
             else if (Setting[PinHead].Type == PinType.Switch) UpdateSwitch(true, Setting[PinHead]);
@@ -1167,7 +1167,7 @@ namespace microDrum
                     dudDualC.SelectedIndex = n;
                     RimChanged = true;
                 }
-                if (((Note)dudDualD.Items[n]).Value == Setting[PinHead].DualNote)
+                /*if (((Note)dudDualD.Items[n]).Value == Setting[PinHead].DualNote)//DUAL
                     dudDualD.SelectedIndex = n;
                 if (((Note)dudDualA.Items[n]).Value == Setting[PinRim].DualNote)
                     dudDualA.SelectedIndex = n;
@@ -1176,7 +1176,7 @@ namespace microDrum
                 if (((Note)dudOpenNoteRim.Items[n]).Value == Setting[PinRim].DualNote)
                     dudOpenNoteRim.SelectedIndex = n;
                 if (((Note)dudOpenNoteHead.Items[n]).Value == Setting[PinHead].DualNote)
-                    dudOpenNoteHead.SelectedIndex = n;
+                    dudOpenNoteHead.SelectedIndex = n;*/
             }
             if (!HeadChanged)
             {
@@ -1225,9 +1225,10 @@ namespace microDrum
             nudCurveFormRim.Value = Setting[PinRim].CurveForm;
 
             //Type===========================================================================
-            cbTypeHead.SelectedIndex = (int)Setting[PinHead].Type;
-            cbTypeRim.SelectedItem = Setting[PinRim].Type;
-            cbTypeHHC.SelectedIndex = cbTypeHead.SelectedIndex;
+
+            cbTypeHead.SelectedIndex = Setting[PinHead].Type == PinType.Disabled ? 6 : (int)Setting[PinHead].Type;
+            cbTypeRim.SelectedItem = Setting[PinRim].Type == PinType.Disabled ? 6 : (int)Setting[PinRim].Type;
+            cbTypeHHC.SelectedIndex = cbTypeHead.SelectedIndex == (int)PinType.Disabled ? 6 : cbTypeHead.SelectedIndex;
 
             //Choke===========================================================================
             for (int n = 0; n < dudChokeRim.Items.Count; n++)
@@ -1240,12 +1241,12 @@ namespace microDrum
                 if (((Note)dudChokeHead.Items[n]).Value == Setting[PinHead].Choke)
                     dudChokeHead.SelectedIndex = n;
             }
-            //Numb===========================================================================
+            //Gain===========================================================================
             nudSensibilityHead.Value = Setting[PinHead].Choke;
             nudSensibilityRim.Value = Setting[PinRim].Choke;
 
             //DualThresold===========================================================================
-            nudAlternativeThresold.Value = Setting[PinRim].DualThresold;
+            /*nudAlternativeThresold.Value = Setting[PinRim].DualThresold;//DUAL
             tbHead.Value = Setting[PinHead].DualThresold;
             tbRim.Value = 255 - Setting[PinRim].DualThresold;
             nudOpenThresoldRim.Value = Setting[PinRim].DualThresold;
@@ -1258,7 +1259,7 @@ namespace microDrum
             {
                 if (Setting[PinHead].Dual == DrumMap[i].Head)
                     cbHH_HHC.SelectedItem = DrumMap[i].Name;
-            }
+            }*/
 
             //General===========================================================================
 
@@ -1421,8 +1422,8 @@ namespace microDrum
                 UtilityMIDI.MIDI_SysEx(0x03, i, 0x08, Setting[i].CurveForm);
                 UtilityMIDI.MIDI_SysEx(0x03, i, 0x09, Setting[i].Choke);
                 UtilityMIDI.MIDI_SysEx(0x03, i, 0x0A, Setting[i].Dual);
-                UtilityMIDI.MIDI_SysEx(0x03, i, 0x0B, Setting[i].DualNote);
-                UtilityMIDI.MIDI_SysEx(0x03, i, 0x0C, Setting[i].DualThresold);
+                // UtilityMIDI.MIDI_SysEx(0x03, i, 0x0B, Setting[i].DualNote);//DUAL
+                //UtilityMIDI.MIDI_SysEx(0x03, i, 0x0C, Setting[i].DualThresold);
                 UtilityMIDI.MIDI_SysEx(0x03, i, 0x0D, (byte)Setting[i].Type);
             }
 
@@ -1545,7 +1546,7 @@ namespace microDrum
         }
         private void cbTypeHead_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Setting[DrumMap[lbPads.SelectedIndex].Head].Type = (PinType)cbTypeHead.SelectedIndex;
+            Setting[DrumMap[lbPads.SelectedIndex].Head].Type = (PinType)cbTypeHead.SelectedItem;
             UpdateSetting();
         }
         private void cbTypeRim_SelectedIndexChanged(object sender, EventArgs e)
@@ -1570,8 +1571,8 @@ namespace microDrum
         }
         private void dudDualA_SelectedItemChanged(object sender, EventArgs e)
         {
-            if (dudDualA.SelectedItem != null)
-                Setting[DrumMap[lbPads.SelectedIndex].Rim].DualNote = ((Note)dudDualA.SelectedItem).Value;
+            /* if (dudDualA.SelectedItem != null)//DUAL
+                 Setting[DrumMap[lbPads.SelectedIndex].Rim].DualNote = ((Note)dudDualA.SelectedItem).Value;*/
         }
         private void dudDualB_SelectedItemChanged(object sender, EventArgs e)
         {
@@ -1585,8 +1586,8 @@ namespace microDrum
         }
         private void dudDualD_SelectedItemChanged(object sender, EventArgs e)
         {
-            if (dudDualD.SelectedItem != null)
-                Setting[DrumMap[lbPads.SelectedIndex].Head].DualNote = ((Note)dudDualD.SelectedItem).Value;
+            /*if (dudDualD.SelectedItem != null)//DUAL
+                Setting[DrumMap[lbPads.SelectedIndex].Head].DualNote = ((Note)dudDualD.SelectedItem).Value;*/
         }
         private void nudXtalkHead_ValueChanged(object sender, EventArgs e)
         {
@@ -1676,7 +1677,7 @@ namespace microDrum
             if (Setting[DrumMap[lbPads.SelectedIndex].Rim].Type == PinType.Piezo)
                 UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x09, (byte)nudSensibilityRim.Value);
             else
-                UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x09, ((Note)dudChokeRim.SelectedItem).Value);
+            UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x09, ((Note)dudChokeRim.SelectedItem).Value);
         }
         private void btnChokeHead_Click(object sender, EventArgs e)
         {
@@ -1689,7 +1690,7 @@ namespace microDrum
         }
         private void btnTypeHead_Click(object sender, EventArgs e)
         {
-            UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x0D, (byte)cbTypeHead.SelectedIndex);
+            UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x0D, (byte)(PinType)cbTypeHead.SelectedItem);
         }
         private void btnTypeRim_Click(object sender, EventArgs e)
         {
@@ -1971,12 +1972,12 @@ namespace microDrum
 
         private void tbHeadRim_Scroll(object sender, EventArgs e)
         {
-            Setting[DrumMap[lbPads.SelectedIndex].Head].DualThresold = (byte)tbHead.Value;
+            /*Setting[DrumMap[lbPads.SelectedIndex].Head].DualThresold = (byte)tbHead.Value;
             Setting[DrumMap[lbPads.SelectedIndex].Rim].DualThresold = (byte)(255 - (byte)tbRim.Value);
             pbDualZone.Refresh();
 
             labelHR.Text = "H:" + Setting[DrumMap[lbPads.SelectedIndex].Head].DualThresold.ToString() +
-                "   R:" + Setting[DrumMap[lbPads.SelectedIndex].Rim].DualThresold.ToString();
+                "   R:" + Setting[DrumMap[lbPads.SelectedIndex].Rim].DualThresold.ToString();*/
         }
 
         private void nudLog_ValueChanged(object sender, EventArgs e)
@@ -2330,8 +2331,8 @@ namespace microDrum
                 UtilityMIDI.MIDI_SysEx(0x04, i, 0x09, Setting[i].Choke);
                 UtilityMIDI.MIDI_SysEx(0x04, i, 0x0A, Setting[i].Dual);
                 Thread.Sleep(100);
-                UtilityMIDI.MIDI_SysEx(0x04, i, 0x0B, Setting[i].DualNote);
-                UtilityMIDI.MIDI_SysEx(0x04, i, 0x0C, Setting[i].DualThresold);
+                //UtilityMIDI.MIDI_SysEx(0x04, i, 0x0B, Setting[i].DualNote);//DUAL
+                //UtilityMIDI.MIDI_SysEx(0x04, i, 0x0C, Setting[i].DualThresold);
                 UtilityMIDI.MIDI_SysEx(0x04, i, 0x0D, (byte)Setting[i].Type);
                 UtilityMIDI.MIDI_SysEx(0x04, i, 0x0E, Setting[i].Channel);
 
@@ -2834,8 +2835,8 @@ namespace microDrum
 
         private void dudAlternativeNote_SelectedItemChanged(object sender, EventArgs e)
         {
-            if (dudAlternativeNote.SelectedItem != null)
-                Setting[DrumMap[lbPads.SelectedIndex].Rim].DualNote = ((Note)dudAlternativeNote.SelectedItem).Value;
+            /*if (dudAlternativeNote.SelectedItem != null)
+                Setting[DrumMap[lbPads.SelectedIndex].Rim].DualNote = ((Note)dudAlternativeNote.SelectedItem).Value;*/
         }
 
         private void chkDualPiezoSwitch_CheckedChanged(object sender, EventArgs e)
@@ -2865,49 +2866,51 @@ namespace microDrum
 
         private void nudAlternativeThresold_ValueChanged(object sender, EventArgs e)
         {
-            Setting[DrumMap[lbPads.SelectedIndex].Rim].DualThresold = (byte)nudAlternativeThresold.Value;
+            // Setting[DrumMap[lbPads.SelectedIndex].Rim].DualThresold = (byte)nudAlternativeThresold.Value;//DUAL
         }
 
         private void btnOpenThresoldRim_Click(object sender, EventArgs e)
         {
-            UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x0C, (byte)nudOpenThresoldRim.Value);
+            //UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x0C, (byte)nudOpenThresoldRim.Value);
         }
 
         private void btnOpenNoteRim_Click(object sender, EventArgs e)
         {
-            UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x0B, ((Note)dudOpenNoteRim.SelectedItem).Value);
+            //UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x0B, ((Note)dudOpenNoteRim.SelectedItem).Value);
         }
 
         private void dudOpenNoteRim_SelectedItemChanged(object sender, EventArgs e)
         {
-            if (dudOpenNoteRim.SelectedIndex >= 0)
-                Setting[DrumMap[lbPads.SelectedIndex].Rim].DualNote = ((Note)dudOpenNoteRim.SelectedItem).Value;
+            /*if (dudOpenNoteRim.SelectedIndex >= 0)
+                Setting[DrumMap[lbPads.SelectedIndex].Rim].DualNote = ((Note)dudOpenNoteRim.SelectedItem).Value;*/
+            //DUAL
         }
 
         private void nudOpenThresoldRim_ValueChanged(object sender, EventArgs e)
         {
-            Setting[DrumMap[lbPads.SelectedIndex].Rim].DualThresold = (byte)nudOpenThresoldRim.Value;
+            // Setting[DrumMap[lbPads.SelectedIndex].Rim].DualThresold = (byte)nudOpenThresoldRim.Value;//DUAL
         }
 
         private void btnOpenThresoldHead_Click(object sender, EventArgs e)
         {
-            UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x0C, (byte)nudOpenThresoldHead.Value);
+            //UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x0C, (byte)nudOpenThresoldHead.Value);
         }
 
         private void btnOpenNoteHead_Click(object sender, EventArgs e)
         {
-            UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x0B, ((Note)dudOpenNoteHead.SelectedItem).Value);
+           // UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x0B, ((Note)dudOpenNoteHead.SelectedItem).Value);
         }
 
         private void nudOpenThresoldHead_ValueChanged(object sender, EventArgs e)
         {
-            Setting[DrumMap[lbPads.SelectedIndex].Head].DualThresold = (byte)nudOpenThresoldHead.Value;
+            //Setting[DrumMap[lbPads.SelectedIndex].Head].DualThresold = (byte)nudOpenThresoldHead.Value;//DUAL
         }
 
         private void dudOpenNoteHead_SelectedItemChanged(object sender, EventArgs e)
         {
-            if (dudOpenNoteHead.SelectedIndex >= 0)
-                Setting[DrumMap[lbPads.SelectedIndex].Head].DualNote = ((Note)dudOpenNoteHead.SelectedItem).Value;
+            /* if (dudOpenNoteHead.SelectedIndex >= 0)
+                 Setting[DrumMap[lbPads.SelectedIndex].Head].DualNote = ((Note)dudOpenNoteHead.SelectedItem).Value;*/
+            //DUAL
 
         }
 
@@ -3066,11 +3069,11 @@ namespace microDrum
             MIDIPipe.Connect();
 
             int MIDI = 0;
-            while ((MIDI=MIDIPipe.ReadByte()) > 0)
+            while ((MIDI = MIDIPipe.ReadByte()) > 0)
             {
                 if ((MIDI & 0xF0) == 0x90)//NoteOn
                 {
-                    UtilityAudio.MIDI_NoteOn((byte)MIDIPipe.ReadByte(),(byte) MIDIPipe.ReadByte());
+                    UtilityAudio.MIDI_NoteOn((byte)MIDIPipe.ReadByte(), (byte)MIDIPipe.ReadByte());
                 }
             }
         }
@@ -3090,16 +3093,14 @@ namespace microDrum
             else
             {
                 uint startTime = LogRecording[0].Time;
-                foreach(Log l in LogRecording)
+                foreach (Log l in LogRecording)
                 {
-                    File.AppendAllText(Application.StartupPath + System.IO.Path.DirectorySeparatorChar.ToString() + "LogData.txt", ((float)l.Time-startTime) + " " + ((float)l.Reading) / 21.0f + " " + ((float)l.Y0)/21.0f+"\r\n");
+                    File.AppendAllText(Application.StartupPath + System.IO.Path.DirectorySeparatorChar.ToString() + "LogData.txt", ((float)l.Time - startTime) + " " + ((float)l.Reading) / 21.0f + " " + ((float)l.Y0) / 21.0f + "\r\n");
                 }
 
 
             }
         }
-
-
 
     }
 }

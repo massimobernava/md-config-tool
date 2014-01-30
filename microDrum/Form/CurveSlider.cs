@@ -23,8 +23,9 @@ namespace microDrum
         {
             get { return Status; }
             set { 
-                Status = value; 
-                cbBase.SelectedIndex = value;
+                Status = value;
+                if (value >=cbBase.Items.Count) cbBase.SelectedIndex = -1;
+                else cbBase.SelectedIndex = value;
                 if (SelectedIndexChanged != null) SelectedIndexChanged(this, new EventArgs());
             }
         }
