@@ -39,13 +39,6 @@
             this.label34 = new System.Windows.Forms.Label();
             this.nudCCHHC = new System.Windows.Forms.NumericUpDown();
             this.label32 = new System.Windows.Forms.Label();
-            this.gbDualPS = new System.Windows.Forms.GroupBox();
-            this.chkPiezoSuppression = new System.Windows.Forms.CheckBox();
-            this.lblAlternativeNote = new System.Windows.Forms.Label();
-            this.lblAlternativeThresold = new System.Windows.Forms.Label();
-            this.lblAlternative = new System.Windows.Forms.Label();
-            this.dudAlternativeNote = new System.Windows.Forms.DomainUpDown();
-            this.chkDualPiezoSwitch = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbPads = new System.Windows.Forms.ListBox();
             this.gbHHE = new System.Windows.Forms.GroupBox();
@@ -86,22 +79,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.lblRimNote = new System.Windows.Forms.Label();
-            this.gbDualPP = new System.Windows.Forms.GroupBox();
-            this.labelHR = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dudDualD = new System.Windows.Forms.DomainUpDown();
-            this.dudDualC = new System.Windows.Forms.DomainUpDown();
-            this.dudDualB = new System.Windows.Forms.DomainUpDown();
-            this.dudDualA = new System.Windows.Forms.DomainUpDown();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.chkDualPiezo = new System.Windows.Forms.CheckBox();
-            this.pbDualZone = new System.Windows.Forms.PictureBox();
-            this.tbRim = new System.Windows.Forms.TrackBar();
-            this.tbHead = new System.Windows.Forms.TrackBar();
             this.gbHead = new System.Windows.Forms.GroupBox();
             this.label42 = new System.Windows.Forms.Label();
             this.cbHH_HHC = new System.Windows.Forms.ComboBox();
@@ -259,13 +236,11 @@
             this.button6 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pbLoad = new microDrum.LedBar();
+            this.btnHH = new microDrum.SendButton();
             this.btnLoadPadSend = new microDrum.LoadButton();
             this.btnTypeHHC = new microDrum.SendButton();
             this.btnMaskTimeHHC = new microDrum.SendButton();
             this.btnCCHHC = new microDrum.SendButton();
-            this.nudAlternativeThresold = new microDrum.Slider();
-            this.btnDualPiezoSwitch = new microDrum.SendButton();
-            this.btnHH = new microDrum.SendButton();
             this.btnSendPad = new microDrum.SendButton();
             this.btnNSensor = new microDrum.SendButton();
             this.btnLoadGeneral = new microDrum.LoadButton();
@@ -294,7 +269,6 @@
             this.nudThresoldRim = new microDrum.Slider();
             this.nudScanTimeRim = new microDrum.Slider();
             this.btnCurveRim = new microDrum.SendButton();
-            this.btnDualPiezo = new microDrum.SendButton();
             this.nudSensibilityHead = new microDrum.Slider();
             this.dudNoteHead = new microDrum.NoteSlider();
             this.btnXtalkGroupHead = new microDrum.SendButton();
@@ -327,7 +301,6 @@
             this.gbHHCtrl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaskTimeHHC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCCHHC)).BeginInit();
-            this.gbDualPS.SuspendLayout();
             this.gbHHE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHH_FootSplashThresold)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHH_FootCloseThresold)).BeginInit();
@@ -338,10 +311,6 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNSensor)).BeginInit();
             this.gbRim.SuspendLayout();
-            this.gbDualPP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDualZone)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbRim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbHead)).BeginInit();
             this.gbHead.SuspendLayout();
             this.tpTools.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -370,7 +339,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAlternativeThresold)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGeneralXtalk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDelay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSensibilityRim)).BeginInit();
@@ -413,16 +381,14 @@
             // tpStandby
             // 
             this.tpStandby.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tpStandby.Controls.Add(this.gbHHE);
             this.tpStandby.Controls.Add(this.btnLoadPadSend);
             this.tpStandby.Controls.Add(this.gbHHCtrl);
-            this.tpStandby.Controls.Add(this.gbDualPS);
             this.tpStandby.Controls.Add(this.label1);
             this.tpStandby.Controls.Add(this.lbPads);
-            this.tpStandby.Controls.Add(this.gbHHE);
             this.tpStandby.Controls.Add(this.btnSendPad);
             this.tpStandby.Controls.Add(this.groupBox3);
             this.tpStandby.Controls.Add(this.gbRim);
-            this.tpStandby.Controls.Add(this.gbDualPP);
             this.tpStandby.Controls.Add(this.gbHead);
             this.tpStandby.Location = new System.Drawing.Point(23, 4);
             this.tpStandby.Name = "tpStandby";
@@ -444,7 +410,7 @@
             this.gbHHCtrl.Controls.Add(this.btnCCHHC);
             this.gbHHCtrl.Controls.Add(this.label32);
             this.gbHHCtrl.ForeColor = System.Drawing.Color.SteelBlue;
-            this.gbHHCtrl.Location = new System.Drawing.Point(6, 413);
+            this.gbHHCtrl.Location = new System.Drawing.Point(111, 413);
             this.gbHHCtrl.Name = "gbHHCtrl";
             this.gbHHCtrl.Size = new System.Drawing.Size(175, 176);
             this.gbHHCtrl.TabIndex = 17;
@@ -518,96 +484,6 @@
             this.label32.TabIndex = 40;
             this.label32.Text = "CC:";
             // 
-            // gbDualPS
-            // 
-            this.gbDualPS.Controls.Add(this.chkPiezoSuppression);
-            this.gbDualPS.Controls.Add(this.lblAlternativeNote);
-            this.gbDualPS.Controls.Add(this.lblAlternativeThresold);
-            this.gbDualPS.Controls.Add(this.lblAlternative);
-            this.gbDualPS.Controls.Add(this.nudAlternativeThresold);
-            this.gbDualPS.Controls.Add(this.dudAlternativeNote);
-            this.gbDualPS.Controls.Add(this.chkDualPiezoSwitch);
-            this.gbDualPS.Controls.Add(this.btnDualPiezoSwitch);
-            this.gbDualPS.ForeColor = System.Drawing.Color.SteelBlue;
-            this.gbDualPS.Location = new System.Drawing.Point(184, 423);
-            this.gbDualPS.Name = "gbDualPS";
-            this.gbDualPS.Size = new System.Drawing.Size(116, 31);
-            this.gbDualPS.TabIndex = 20;
-            this.gbDualPS.TabStop = false;
-            this.gbDualPS.Text = "Dual Piezo/Switch";
-            this.gbDualPS.Visible = false;
-            // 
-            // chkPiezoSuppression
-            // 
-            this.chkPiezoSuppression.AutoSize = true;
-            this.chkPiezoSuppression.Enabled = false;
-            this.chkPiezoSuppression.Location = new System.Drawing.Point(6, 63);
-            this.chkPiezoSuppression.Name = "chkPiezoSuppression";
-            this.chkPiezoSuppression.Size = new System.Drawing.Size(149, 17);
-            this.chkPiezoSuppression.TabIndex = 109;
-            this.chkPiezoSuppression.Text = "Enable Piezo Suppression";
-            this.chkPiezoSuppression.UseVisualStyleBackColor = true;
-            this.chkPiezoSuppression.CheckedChanged += new System.EventHandler(this.chkPiezoSuppression_CheckedChanged);
-            // 
-            // lblAlternativeNote
-            // 
-            this.lblAlternativeNote.AutoSize = true;
-            this.lblAlternativeNote.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.lblAlternativeNote.Enabled = false;
-            this.lblAlternativeNote.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblAlternativeNote.Location = new System.Drawing.Point(193, 69);
-            this.lblAlternativeNote.Name = "lblAlternativeNote";
-            this.lblAlternativeNote.Size = new System.Drawing.Size(30, 13);
-            this.lblAlternativeNote.TabIndex = 108;
-            this.lblAlternativeNote.Text = "Note";
-            // 
-            // lblAlternativeThresold
-            // 
-            this.lblAlternativeThresold.AutoSize = true;
-            this.lblAlternativeThresold.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.lblAlternativeThresold.Enabled = false;
-            this.lblAlternativeThresold.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblAlternativeThresold.Location = new System.Drawing.Point(193, 45);
-            this.lblAlternativeThresold.Name = "lblAlternativeThresold";
-            this.lblAlternativeThresold.Size = new System.Drawing.Size(48, 13);
-            this.lblAlternativeThresold.TabIndex = 107;
-            this.lblAlternativeThresold.Text = "Thresold";
-            // 
-            // lblAlternative
-            // 
-            this.lblAlternative.AutoSize = true;
-            this.lblAlternative.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.lblAlternative.Enabled = false;
-            this.lblAlternative.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblAlternative.Location = new System.Drawing.Point(244, 22);
-            this.lblAlternative.Name = "lblAlternative";
-            this.lblAlternative.Size = new System.Drawing.Size(57, 13);
-            this.lblAlternative.TabIndex = 106;
-            this.lblAlternative.Text = "Alternative";
-            // 
-            // dudAlternativeNote
-            // 
-            this.dudAlternativeNote.Enabled = false;
-            this.dudAlternativeNote.Location = new System.Drawing.Point(247, 65);
-            this.dudAlternativeNote.Name = "dudAlternativeNote";
-            this.dudAlternativeNote.ReadOnly = true;
-            this.dudAlternativeNote.Size = new System.Drawing.Size(66, 20);
-            this.dudAlternativeNote.TabIndex = 104;
-            this.dudAlternativeNote.Text = "---";
-            this.dudAlternativeNote.SelectedItemChanged += new System.EventHandler(this.dudAlternativeNote_SelectedItemChanged);
-            // 
-            // chkDualPiezoSwitch
-            // 
-            this.chkDualPiezoSwitch.AutoSize = true;
-            this.chkDualPiezoSwitch.ForeColor = System.Drawing.Color.Black;
-            this.chkDualPiezoSwitch.Location = new System.Drawing.Point(6, 18);
-            this.chkDualPiezoSwitch.Name = "chkDualPiezoSwitch";
-            this.chkDualPiezoSwitch.Size = new System.Drawing.Size(56, 17);
-            this.chkDualPiezoSwitch.TabIndex = 40;
-            this.chkDualPiezoSwitch.Text = "Active";
-            this.chkDualPiezoSwitch.UseVisualStyleBackColor = true;
-            this.chkDualPiezoSwitch.CheckedChanged += new System.EventHandler(this.chkDualPiezoSwitch_CheckedChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -622,9 +498,9 @@
             // 
             this.lbPads.BackColor = System.Drawing.SystemColors.Window;
             this.lbPads.FormattingEnabled = true;
-            this.lbPads.Location = new System.Drawing.Point(6, 72);
+            this.lbPads.Location = new System.Drawing.Point(6, 74);
             this.lbPads.Name = "lbPads";
-            this.lbPads.Size = new System.Drawing.Size(99, 290);
+            this.lbPads.Size = new System.Drawing.Size(99, 303);
             this.lbPads.TabIndex = 0;
             this.lbPads.SelectedIndexChanged += new System.EventHandler(this.lbPads_SelectedIndexChanged);
             // 
@@ -650,9 +526,9 @@
             this.gbHHE.Controls.Add(this.dudHH_C);
             this.gbHHE.Controls.Add(this.dudHH_D);
             this.gbHHE.ForeColor = System.Drawing.Color.SteelBlue;
-            this.gbHHE.Location = new System.Drawing.Point(306, 442);
+            this.gbHHE.Location = new System.Drawing.Point(289, 413);
             this.gbHHE.Name = "gbHHE";
-            this.gbHHE.Size = new System.Drawing.Size(353, 125);
+            this.gbHHE.Size = new System.Drawing.Size(175, 196);
             this.gbHHE.TabIndex = 19;
             this.gbHHE.TabStop = false;
             this.gbHHE.Text = "HH Extension";
@@ -664,7 +540,7 @@
             this.label2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label2.Enabled = false;
             this.label2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label2.Location = new System.Drawing.Point(166, 48);
+            this.label2.Location = new System.Drawing.Point(-14, 148);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 111;
@@ -676,7 +552,7 @@
             this.label3.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label3.Enabled = false;
             this.label3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label3.Location = new System.Drawing.Point(172, 23);
+            this.label3.Location = new System.Drawing.Point(-8, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 110;
@@ -684,7 +560,7 @@
             // 
             // nudHH_FootSplashThresold
             // 
-            this.nudHH_FootSplashThresold.Location = new System.Drawing.Point(233, 44);
+            this.nudHH_FootSplashThresold.Location = new System.Drawing.Point(53, 144);
             this.nudHH_FootSplashThresold.Maximum = new decimal(new int[] {
             127,
             0,
@@ -702,7 +578,7 @@
             // 
             // dudHH_FootSplashNote
             // 
-            this.dudHH_FootSplashNote.Location = new System.Drawing.Point(282, 44);
+            this.dudHH_FootSplashNote.Location = new System.Drawing.Point(102, 144);
             this.dudHH_FootSplashNote.Name = "dudHH_FootSplashNote";
             this.dudHH_FootSplashNote.ReadOnly = true;
             this.dudHH_FootSplashNote.Size = new System.Drawing.Size(65, 20);
@@ -712,7 +588,7 @@
             // 
             // nudHH_FootCloseThresold
             // 
-            this.nudHH_FootCloseThresold.Location = new System.Drawing.Point(233, 18);
+            this.nudHH_FootCloseThresold.Location = new System.Drawing.Point(53, 118);
             this.nudHH_FootCloseThresold.Maximum = new decimal(new int[] {
             127,
             0,
@@ -730,7 +606,7 @@
             // 
             // dudHH_FootCloseNote
             // 
-            this.dudHH_FootCloseNote.Location = new System.Drawing.Point(282, 18);
+            this.dudHH_FootCloseNote.Location = new System.Drawing.Point(102, 118);
             this.dudHH_FootCloseNote.Name = "dudHH_FootCloseNote";
             this.dudHH_FootCloseNote.ReadOnly = true;
             this.dudHH_FootCloseNote.Size = new System.Drawing.Size(65, 20);
@@ -740,7 +616,7 @@
             // 
             // nudHH_AThresold
             // 
-            this.nudHH_AThresold.Location = new System.Drawing.Point(29, 18);
+            this.nudHH_AThresold.Location = new System.Drawing.Point(54, 15);
             this.nudHH_AThresold.Maximum = new decimal(new int[] {
             127,
             0,
@@ -762,7 +638,7 @@
             this.label48.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label48.Enabled = false;
             this.label48.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label48.Location = new System.Drawing.Point(9, 23);
+            this.label48.Location = new System.Drawing.Point(34, 20);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(14, 13);
             this.label48.TabIndex = 4;
@@ -774,7 +650,7 @@
             this.label47.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label47.Enabled = false;
             this.label47.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label47.Location = new System.Drawing.Point(9, 48);
+            this.label47.Location = new System.Drawing.Point(34, 45);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(14, 13);
             this.label47.TabIndex = 7;
@@ -786,7 +662,7 @@
             this.label46.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label46.Enabled = false;
             this.label46.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label46.Location = new System.Drawing.Point(9, 73);
+            this.label46.Location = new System.Drawing.Point(34, 70);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(14, 13);
             this.label46.TabIndex = 10;
@@ -794,7 +670,7 @@
             // 
             // nudHH_DThresold
             // 
-            this.nudHH_DThresold.Location = new System.Drawing.Point(29, 95);
+            this.nudHH_DThresold.Location = new System.Drawing.Point(54, 92);
             this.nudHH_DThresold.Maximum = new decimal(new int[] {
             127,
             0,
@@ -816,7 +692,7 @@
             this.label45.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label45.Enabled = false;
             this.label45.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label45.Location = new System.Drawing.Point(9, 99);
+            this.label45.Location = new System.Drawing.Point(34, 96);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(15, 13);
             this.label45.TabIndex = 13;
@@ -824,7 +700,7 @@
             // 
             // dudHH_A
             // 
-            this.dudHH_A.Location = new System.Drawing.Point(78, 18);
+            this.dudHH_A.Location = new System.Drawing.Point(103, 15);
             this.dudHH_A.Name = "dudHH_A";
             this.dudHH_A.ReadOnly = true;
             this.dudHH_A.Size = new System.Drawing.Size(65, 20);
@@ -834,7 +710,7 @@
             // 
             // nudHH_BThresold
             // 
-            this.nudHH_BThresold.Location = new System.Drawing.Point(29, 44);
+            this.nudHH_BThresold.Location = new System.Drawing.Point(54, 41);
             this.nudHH_BThresold.Maximum = new decimal(new int[] {
             127,
             0,
@@ -852,7 +728,7 @@
             // 
             // dudHH_B
             // 
-            this.dudHH_B.Location = new System.Drawing.Point(78, 44);
+            this.dudHH_B.Location = new System.Drawing.Point(103, 41);
             this.dudHH_B.Name = "dudHH_B";
             this.dudHH_B.ReadOnly = true;
             this.dudHH_B.Size = new System.Drawing.Size(65, 20);
@@ -862,7 +738,7 @@
             // 
             // nudHH_CThresold
             // 
-            this.nudHH_CThresold.Location = new System.Drawing.Point(29, 69);
+            this.nudHH_CThresold.Location = new System.Drawing.Point(54, 66);
             this.nudHH_CThresold.Maximum = new decimal(new int[] {
             127,
             0,
@@ -880,7 +756,7 @@
             // 
             // dudHH_C
             // 
-            this.dudHH_C.Location = new System.Drawing.Point(78, 69);
+            this.dudHH_C.Location = new System.Drawing.Point(103, 66);
             this.dudHH_C.Name = "dudHH_C";
             this.dudHH_C.ReadOnly = true;
             this.dudHH_C.Size = new System.Drawing.Size(65, 20);
@@ -890,7 +766,7 @@
             // 
             // dudHH_D
             // 
-            this.dudHH_D.Location = new System.Drawing.Point(78, 95);
+            this.dudHH_D.Location = new System.Drawing.Point(103, 92);
             this.dudHH_D.Name = "dudHH_D";
             this.dudHH_D.ReadOnly = true;
             this.dudHH_D.Size = new System.Drawing.Size(65, 20);
@@ -1155,192 +1031,6 @@
             this.lblRimNote.Size = new System.Drawing.Size(33, 13);
             this.lblRimNote.TabIndex = 3;
             this.lblRimNote.Text = "Note:";
-            // 
-            // gbDualPP
-            // 
-            this.gbDualPP.Controls.Add(this.labelHR);
-            this.gbDualPP.Controls.Add(this.label37);
-            this.gbDualPP.Controls.Add(this.label5);
-            this.gbDualPP.Controls.Add(this.btnDualPiezo);
-            this.gbDualPP.Controls.Add(this.dudDualD);
-            this.gbDualPP.Controls.Add(this.dudDualC);
-            this.gbDualPP.Controls.Add(this.dudDualB);
-            this.gbDualPP.Controls.Add(this.dudDualA);
-            this.gbDualPP.Controls.Add(this.label20);
-            this.gbDualPP.Controls.Add(this.label18);
-            this.gbDualPP.Controls.Add(this.label16);
-            this.gbDualPP.Controls.Add(this.label4);
-            this.gbDualPP.Controls.Add(this.chkDualPiezo);
-            this.gbDualPP.Controls.Add(this.pbDualZone);
-            this.gbDualPP.Controls.Add(this.tbRim);
-            this.gbDualPP.Controls.Add(this.tbHead);
-            this.gbDualPP.ForeColor = System.Drawing.Color.SteelBlue;
-            this.gbDualPP.Location = new System.Drawing.Point(325, 421);
-            this.gbDualPP.Name = "gbDualPP";
-            this.gbDualPP.Size = new System.Drawing.Size(132, 44);
-            this.gbDualPP.TabIndex = 16;
-            this.gbDualPP.TabStop = false;
-            this.gbDualPP.Text = "Dual Piezo/Piezo";
-            this.gbDualPP.Visible = false;
-            // 
-            // labelHR
-            // 
-            this.labelHR.AutoSize = true;
-            this.labelHR.Location = new System.Drawing.Point(78, 105);
-            this.labelHR.Name = "labelHR";
-            this.labelHR.Size = new System.Drawing.Size(56, 13);
-            this.labelHR.TabIndex = 73;
-            this.labelHR.Text = "H: --- R: ---";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(72, 34);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(15, 13);
-            this.label37.TabIndex = 72;
-            this.label37.Text = "R";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(85, 21);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(15, 13);
-            this.label5.TabIndex = 71;
-            this.label5.Text = "H";
-            // 
-            // dudDualD
-            // 
-            this.dudDualD.Enabled = false;
-            this.dudDualD.Location = new System.Drawing.Point(197, 95);
-            this.dudDualD.Name = "dudDualD";
-            this.dudDualD.ReadOnly = true;
-            this.dudDualD.Size = new System.Drawing.Size(65, 20);
-            this.dudDualD.TabIndex = 38;
-            this.dudDualD.Text = "---";
-            this.dudDualD.SelectedItemChanged += new System.EventHandler(this.dudDualD_SelectedItemChanged);
-            // 
-            // dudDualC
-            // 
-            this.dudDualC.Enabled = false;
-            this.dudDualC.Location = new System.Drawing.Point(197, 69);
-            this.dudDualC.Name = "dudDualC";
-            this.dudDualC.ReadOnly = true;
-            this.dudDualC.Size = new System.Drawing.Size(65, 20);
-            this.dudDualC.TabIndex = 37;
-            this.dudDualC.Text = "---";
-            this.dudDualC.SelectedItemChanged += new System.EventHandler(this.dudDualC_SelectedItemChanged);
-            // 
-            // dudDualB
-            // 
-            this.dudDualB.Enabled = false;
-            this.dudDualB.Location = new System.Drawing.Point(197, 43);
-            this.dudDualB.Name = "dudDualB";
-            this.dudDualB.ReadOnly = true;
-            this.dudDualB.Size = new System.Drawing.Size(65, 20);
-            this.dudDualB.TabIndex = 36;
-            this.dudDualB.Text = "---";
-            this.dudDualB.SelectedItemChanged += new System.EventHandler(this.dudDualB_SelectedItemChanged);
-            // 
-            // dudDualA
-            // 
-            this.dudDualA.Enabled = false;
-            this.dudDualA.Location = new System.Drawing.Point(197, 17);
-            this.dudDualA.Name = "dudDualA";
-            this.dudDualA.ReadOnly = true;
-            this.dudDualA.Size = new System.Drawing.Size(65, 20);
-            this.dudDualA.TabIndex = 35;
-            this.dudDualA.Text = "---";
-            this.dudDualA.SelectedItemChanged += new System.EventHandler(this.dudDualA_SelectedItemChanged);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Enabled = false;
-            this.label20.Location = new System.Drawing.Point(181, 99);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(15, 13);
-            this.label20.TabIndex = 13;
-            this.label20.Text = "D";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Enabled = false;
-            this.label18.Location = new System.Drawing.Point(181, 73);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(14, 13);
-            this.label18.TabIndex = 10;
-            this.label18.Text = "C";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Enabled = false;
-            this.label16.Location = new System.Drawing.Point(181, 47);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(14, 13);
-            this.label16.TabIndex = 7;
-            this.label16.Text = "B";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Enabled = false;
-            this.label4.Location = new System.Drawing.Point(181, 21);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(14, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "A";
-            // 
-            // chkDualPiezo
-            // 
-            this.chkDualPiezo.AutoSize = true;
-            this.chkDualPiezo.ForeColor = System.Drawing.Color.Black;
-            this.chkDualPiezo.Location = new System.Drawing.Point(9, 17);
-            this.chkDualPiezo.Name = "chkDualPiezo";
-            this.chkDualPiezo.Size = new System.Drawing.Size(56, 17);
-            this.chkDualPiezo.TabIndex = 3;
-            this.chkDualPiezo.Text = "Active";
-            this.chkDualPiezo.UseVisualStyleBackColor = true;
-            this.chkDualPiezo.CheckedChanged += new System.EventHandler(this.chkDualPiezo_CheckedChanged);
-            // 
-            // pbDualZone
-            // 
-            this.pbDualZone.BackColor = System.Drawing.Color.Black;
-            this.pbDualZone.Enabled = false;
-            this.pbDualZone.Location = new System.Drawing.Point(91, 38);
-            this.pbDualZone.Name = "pbDualZone";
-            this.pbDualZone.Size = new System.Drawing.Size(65, 64);
-            this.pbDualZone.TabIndex = 2;
-            this.pbDualZone.TabStop = false;
-            this.pbDualZone.Paint += new System.Windows.Forms.PaintEventHandler(this.pbDualZone_Paint);
-            // 
-            // tbRim
-            // 
-            this.tbRim.Enabled = false;
-            this.tbRim.Location = new System.Drawing.Point(69, 38);
-            this.tbRim.Maximum = 255;
-            this.tbRim.Name = "tbRim";
-            this.tbRim.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.tbRim.Size = new System.Drawing.Size(45, 64);
-            this.tbRim.TabIndex = 1;
-            this.tbRim.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.tbRim.Value = 128;
-            this.tbRim.Scroll += new System.EventHandler(this.tbHeadRim_Scroll);
-            // 
-            // tbHead
-            // 
-            this.tbHead.Enabled = false;
-            this.tbHead.Location = new System.Drawing.Point(91, 16);
-            this.tbHead.Maximum = 255;
-            this.tbHead.Name = "tbHead";
-            this.tbHead.Size = new System.Drawing.Size(65, 45);
-            this.tbHead.TabIndex = 0;
-            this.tbHead.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.tbHead.Value = 128;
-            this.tbHead.Scroll += new System.EventHandler(this.tbHeadRim_Scroll);
             // 
             // gbHead
             // 
@@ -2971,9 +2661,18 @@
             this.pbLoad.TabIndex = 12;
             this.pbLoad.Value = 0;
             // 
+            // btnHH
+            // 
+            this.btnHH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnHH.Location = new System.Drawing.Point(112, 169);
+            this.btnHH.Name = "btnHH";
+            this.btnHH.Size = new System.Drawing.Size(27, 27);
+            this.btnHH.TabIndex = 94;
+            this.btnHH.Click += new System.EventHandler(this.btnHH_Click);
+            // 
             // btnLoadPadSend
             // 
-            this.btnLoadPadSend.Location = new System.Drawing.Point(78, 368);
+            this.btnLoadPadSend.Location = new System.Drawing.Point(78, 383);
             this.btnLoadPadSend.Name = "btnLoadPadSend";
             this.btnLoadPadSend.Size = new System.Drawing.Size(27, 27);
             this.btnLoadPadSend.TabIndex = 22;
@@ -3006,41 +2705,10 @@
             this.btnCCHHC.TabIndex = 41;
             this.btnCCHHC.Click += new System.EventHandler(this.btnCCHHC_Click);
             // 
-            // nudAlternativeThresold
-            // 
-            this.nudAlternativeThresold.Enabled = false;
-            this.nudAlternativeThresold.Location = new System.Drawing.Point(247, 41);
-            this.nudAlternativeThresold.Maximum = 255;
-            this.nudAlternativeThresold.Minimum = 0;
-            this.nudAlternativeThresold.Name = "nudAlternativeThresold";
-            this.nudAlternativeThresold.ShowSlider = false;
-            this.nudAlternativeThresold.Size = new System.Drawing.Size(66, 21);
-            this.nudAlternativeThresold.TabIndex = 105;
-            this.nudAlternativeThresold.Value = 20;
-            this.nudAlternativeThresold.ValueChanged += new System.EventHandler(this.nudAlternativeThresold_ValueChanged);
-            // 
-            // btnDualPiezoSwitch
-            // 
-            this.btnDualPiezoSwitch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDualPiezoSwitch.Location = new System.Drawing.Point(312, 88);
-            this.btnDualPiezoSwitch.Name = "btnDualPiezoSwitch";
-            this.btnDualPiezoSwitch.Size = new System.Drawing.Size(35, 35);
-            this.btnDualPiezoSwitch.TabIndex = 39;
-            this.btnDualPiezoSwitch.Click += new System.EventHandler(this.btnDualPiezoSwitch_Click);
-            // 
-            // btnHH
-            // 
-            this.btnHH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHH.Location = new System.Drawing.Point(321, 92);
-            this.btnHH.Name = "btnHH";
-            this.btnHH.Size = new System.Drawing.Size(27, 27);
-            this.btnHH.TabIndex = 94;
-            this.btnHH.Click += new System.EventHandler(this.btnHH_Click);
-            // 
             // btnSendPad
             // 
             this.btnSendPad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSendPad.Location = new System.Drawing.Point(46, 368);
+            this.btnSendPad.Location = new System.Drawing.Point(46, 383);
             this.btnSendPad.Name = "btnSendPad";
             this.btnSendPad.Size = new System.Drawing.Size(30, 30);
             this.btnSendPad.TabIndex = 18;
@@ -3067,7 +2735,7 @@
             // nudGeneralXtalk
             // 
             this.nudGeneralXtalk.Location = new System.Drawing.Point(178, 19);
-            this.nudGeneralXtalk.Maximum = 7;
+            this.nudGeneralXtalk.Maximum = 126;
             this.nudGeneralXtalk.Minimum = 0;
             this.nudGeneralXtalk.Name = "nudGeneralXtalk";
             this.nudGeneralXtalk.ShowSlider = false;
@@ -3222,7 +2890,7 @@
             // nudXtalkRim
             // 
             this.nudXtalkRim.Location = new System.Drawing.Point(70, 257);
-            this.nudXtalkRim.Maximum = 7;
+            this.nudXtalkRim.Maximum = 126;
             this.nudXtalkRim.Minimum = 0;
             this.nudXtalkRim.Name = "nudXtalkRim";
             this.nudXtalkRim.ShowSlider = false;
@@ -3320,15 +2988,6 @@
             this.btnCurveRim.Size = new System.Drawing.Size(27, 27);
             this.btnCurveRim.TabIndex = 39;
             this.btnCurveRim.Click += new System.EventHandler(this.btnCurveRim_Click);
-            // 
-            // btnDualPiezo
-            // 
-            this.btnDualPiezo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDualPiezo.Location = new System.Drawing.Point(312, 88);
-            this.btnDualPiezo.Name = "btnDualPiezo";
-            this.btnDualPiezo.Size = new System.Drawing.Size(35, 35);
-            this.btnDualPiezo.TabIndex = 39;
-            this.btnDualPiezo.Click += new System.EventHandler(this.btnDualPiezo_Click);
             // 
             // nudSensibilityHead
             // 
@@ -3437,7 +3096,7 @@
             // nudXtalkHead
             // 
             this.nudXtalkHead.Location = new System.Drawing.Point(70, 257);
-            this.nudXtalkHead.Maximum = 7;
+            this.nudXtalkHead.Maximum = 126;
             this.nudXtalkHead.Minimum = 0;
             this.nudXtalkHead.Name = "nudXtalkHead";
             this.nudXtalkHead.ShowSlider = false;
@@ -3622,8 +3281,6 @@
             this.gbHHCtrl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaskTimeHHC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCCHHC)).EndInit();
-            this.gbDualPS.ResumeLayout(false);
-            this.gbDualPS.PerformLayout();
             this.gbHHE.ResumeLayout(false);
             this.gbHHE.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHH_FootSplashThresold)).EndInit();
@@ -3637,11 +3294,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudNSensor)).EndInit();
             this.gbRim.ResumeLayout(false);
             this.gbRim.PerformLayout();
-            this.gbDualPP.ResumeLayout(false);
-            this.gbDualPP.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDualZone)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbRim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbHead)).EndInit();
             this.gbHead.ResumeLayout(false);
             this.gbHead.PerformLayout();
             this.tpTools.ResumeLayout(false);
@@ -3678,7 +3330,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAlternativeThresold)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGeneralXtalk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDelay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSensibilityRim)).EndInit();
@@ -3741,15 +3392,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem resetToolStripMenuItem;
         private System.Windows.Forms.Timer tFader;
-        private System.Windows.Forms.GroupBox gbDualPP;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox chkDualPiezo;
-        private System.Windows.Forms.PictureBox pbDualZone;
-        private System.Windows.Forms.TrackBar tbRim;
-        private System.Windows.Forms.TrackBar tbHead;
         private microDrum.SendButton btnGeneralDelay;
         private microDrum.Slider nudDelay;
         private microDrum.SendButton btnNoteRim;
@@ -3799,11 +3441,6 @@
         private System.Windows.Forms.NumericUpDown nudThresold;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox5;
-        private microDrum.SendButton btnDualPiezo;
-        private System.Windows.Forms.DomainUpDown dudDualD;
-        private System.Windows.Forms.DomainUpDown dudDualC;
-        private System.Windows.Forms.DomainUpDown dudDualB;
-        private System.Windows.Forms.DomainUpDown dudDualA;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.NumericUpDown nudCCHHC;
@@ -3827,8 +3464,6 @@
         private System.Windows.Forms.Label lblChokeRim;
         private System.Windows.Forms.ImageList ilIcons;
         private microDrum.SendButton btnSendPad;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown nudFormCurveViewer;
         private System.Windows.Forms.ComboBox cbCurveViewer;
         private System.Windows.Forms.PictureBox pbCurve;
@@ -3837,7 +3472,6 @@
         private System.Windows.Forms.ToolStripMenuItem loadTabToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem virtualInstrumentToolStripMenuItem;
         private microDrum.SendButton btnChokeRim;
-        private System.Windows.Forms.Label labelHR;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.ComboBox cbTypeHead;
         private microDrum.SendButton btnTypeHead;
@@ -3896,8 +3530,6 @@
         private System.Windows.Forms.DomainUpDown dudHH_FootSplashNote;
         private System.Windows.Forms.NumericUpDown nudHH_FootCloseThresold;
         private System.Windows.Forms.DomainUpDown dudHH_FootCloseNote;
-        private System.Windows.Forms.GroupBox gbDualPS;
-        private microDrum.SendButton btnDualPiezoSwitch;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TextBox txtEEPROM;
         private System.Windows.Forms.Button btnEEPROMBackup1;
@@ -3966,13 +3598,6 @@
         private System.Windows.Forms.Button btnClear;
         private NAudio.Gui.WaveformPainter wfpLog;
         private System.Windows.Forms.CheckBox chkZoom;
-        private System.Windows.Forms.CheckBox chkDualPiezoSwitch;
-        private System.Windows.Forms.Label lblAlternativeThresold;
-        private System.Windows.Forms.Label lblAlternative;
-        private microDrum.Slider nudAlternativeThresold;
-        private System.Windows.Forms.DomainUpDown dudAlternativeNote;
-        private System.Windows.Forms.Label lblAlternativeNote;
-        private System.Windows.Forms.CheckBox chkPiezoSuppression;
         private System.Windows.Forms.ToolStripMenuItem multiSettingToolStripMenuItem;
         private LedBar pbLoad;
         private System.Windows.Forms.ToolStripMenuItem errorReportToolStripMenuItem;

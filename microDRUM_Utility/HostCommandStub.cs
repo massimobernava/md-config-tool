@@ -70,7 +70,8 @@ namespace microDrum
 
         public VstProcessLevels GetProcessLevel()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return VstProcessLevels.Unknown;
         }
 
         public string GetProductString()
@@ -131,7 +132,8 @@ namespace microDrum
 
         public bool SizeWindow(int width, int height)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            return false;
         }
 
         public bool UpdateDisplay()

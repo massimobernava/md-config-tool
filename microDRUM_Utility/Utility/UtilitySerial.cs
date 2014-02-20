@@ -91,7 +91,14 @@ namespace microDrum
         }
         static internal void Write(byte[] buffer)
         {
-            if (IsOpen) serialPort.Write(buffer, 0, buffer.Length);
+            try
+            {
+                if (IsOpen) serialPort.Write(buffer, 0, buffer.Length);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
 

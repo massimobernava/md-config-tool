@@ -39,7 +39,7 @@ namespace microDrum
 
             for (byte i = (byte)nudFrom.Value; i < nudTo.Value; i++)
             {
-                UtilityMIDI.MIDI_SysEx((byte)(0x03 + (chkSave.Checked ? 0x01 : 0x00)), i, 0x0D, (byte)cbTypeMulti.SelectedIndex);
+                UtilityMIDI.MIDI_SysEx((byte)(0x03 + (chkSave.Checked ? 0x01 : 0x00)), i, 0x0D, (byte)(PinType)cbTypeMulti.SelectedItem);
                 System.Threading.Thread.Sleep(10);
                 UtilityMIDI.MIDI_SysEx((byte)(0x03 + (chkSave.Checked ? 0x01 : 0x00)), i, 0x00, ((Note)dudNoteMulti.SelectedItem).Value);
                 System.Threading.Thread.Sleep(10);

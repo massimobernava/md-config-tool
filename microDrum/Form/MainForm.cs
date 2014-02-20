@@ -105,8 +105,6 @@ namespace microDrum
             cbTypeRim.Items.Add(PinType.Disabled);
 
             gbHHCtrl.Location = gbHead.Location;
-            gbHHE.Location = gbDualPP.Location;
-            gbDualPS.Location = gbDualPP.Location;
 
             tscCOM.Items.AddRange(UtilitySerial.GetPortNames());
             if (UtilityMIDI.GetMIDIDevices(MIDIType.MIDI_IN) != null)
@@ -166,10 +164,6 @@ namespace microDrum
                 //dudNoteRim.Items.Add(new Note(n));
                 dudChokeHead.Items.Add(new Note(n));
                 dudChokeRim.Items.Add(new Note(n));
-                dudDualA.Items.Add(new Note(n));
-                dudDualB.Items.Add(new Note(n));
-                dudDualC.Items.Add(new Note(n));
-                dudDualD.Items.Add(new Note(n));
 
                 dudHH_A.Items.Add(new Note(n));
                 dudHH_B.Items.Add(new Note(n));
@@ -179,21 +173,9 @@ namespace microDrum
                 dudHH_FootCloseNote.Items.Add(new Note(n));
                 dudHH_FootSplashNote.Items.Add(new Note(n));
 
-                dudAlternativeNote.Items.Add(new Note(n));
-                //dudOpenNoteRim.Items.Add(new Note(n));
-                //dudOpenNoteHead.Items.Add(new Note(n));
             }
             dudChokeHead.Items.Add(new Note(127));
             dudChokeRim.Items.Add(new Note(127));
-
-            /*dudNoteHead.Items.Reverse();
-            dudNoteRim.Items.Reverse();
-            dudChokeHead.Items.Reverse();
-            dudChokeRim.Items.Reverse();
-            dudDualA.Items.Reverse();
-            dudDualB.Items.Reverse();
-            dudDualC.Items.Reverse();
-            dudDualD.Items.Reverse();*/
 
             if (lbPads.Items.Count > 0)
                 lbPads.SelectedIndex = 0;
@@ -1038,81 +1020,6 @@ namespace microDrum
 
             chkDualPiezoSwitch.Checked = true;*/
         }
-        private void UpdateDual(PinType HeadType, PinType RimType, bool DualHead, bool DualRim)
-        {
-            gbDualPP.Visible = HeadType == PinType.Piezo && RimType == PinType.Piezo;
-            gbDualPS.Visible = (HeadType == PinType.Piezo && (RimType == PinType.Switch || RimType == PinType.YSwitch))
-                || ((HeadType == PinType.Switch || HeadType == PinType.YSwitch) && RimType == PinType.Piezo);
-            gbHHCtrl.Visible = HeadType == PinType.HHC;
-            gbHHE.Visible = HeadType == PinType.HHC || HeadType == PinType.HH;
-            gbHead.Visible = HeadType != PinType.HHC;
-            gbHHCtrl.Visible = HeadType == PinType.HHC;
-            cbHH_HHC.Visible = HeadType == PinType.HH;
-
-            //Dual Piezo-Piezo
-            if (gbDualPP.Visible)
-            {
-                if (DualHead && DualRim)
-                {
-                    dudNoteHead.Text = "---";
-                    btnNoteHead.Enabled = false;
-                    dudNoteHead.Enabled = false;
-                    dudNoteRim.Text = "---";
-                    btnNoteRim.Enabled = false;
-                    dudNoteRim.Enabled = false;
-                    chkDualPiezo.Checked = true;
-                }
-                else
-                {
-                    btnNoteHead.Enabled = true;
-                    dudNoteHead.Enabled = true;
-                    btnNoteRim.Enabled = true;
-                    dudNoteRim.Enabled = true;
-                    chkDualPiezo.Checked = false;
-                    dudDualA.Text = "---";
-                    dudDualB.Text = "---";
-                    dudDualC.Text = "---";
-                    dudDualD.Text = "---";
-
-                    tbHead.Value = 128;
-                    tbRim.Value = 128;
-
-                    labelHR.Text = "H:--- R:---";
-                }
-            }
-
-            if (gbDualPS.Visible)
-            {
-                if (HeadType == PinType.YSwitch || RimType == PinType.YSwitch)
-                {
-                    lblAlternative.Visible = false;
-                    lblAlternativeThresold.Visible = false;
-                    lblAlternativeNote.Visible = false;
-                    dudAlternativeNote.Visible = false;
-                    nudAlternativeThresold.Visible = false;
-                }
-                else
-                {
-                    lblAlternative.Visible = true;
-                    lblAlternativeThresold.Visible = true;
-                    lblAlternativeNote.Visible = true;
-                    dudAlternativeNote.Visible = true;
-                    nudAlternativeThresold.Visible = true;
-                }
-
-                chkPiezoSuppression.Checked = DualHead;
-                chkDualPiezoSwitch.Checked = DualRim;
-
-                if (!DualHead)
-                    dudAlternativeNote.Text = "---";
-
-                btnNoteHead.Enabled = true;
-                dudNoteHead.Enabled = true;
-                btnNoteRim.Enabled = true;
-                dudNoteRim.Enabled = true;
-
-            }
-        }
         private void UpdateSetting()
         {
             int PinHead = DrumMap[lbPads.SelectedIndex].Head;
@@ -1122,10 +1029,10 @@ namespace microDrum
             gbRim.Visible = !DrumMap[lbPads.SelectedIndex].Single;
             /*gbDualPP.Visible = Setting[PinHead].Type == PinType.Piezo && Setting[PinRim].Type == PinType.Piezo;
             gbDualPS.Visible = (Setting[PinHead].Type == PinType.Piezo && (Setting[PinRim].Type == PinType.Switch || Setting[PinRim].Type == PinType.YSwitch))
-                || ((Setting[PinHead].Type == PinType.Switch || Setting[PinHead].Type == PinType.YSwitch) && Setting[PinRim].Type == PinType.Piezo);
+                || ((Setting[PinHead].Type == PinType.Switch || Setting[PinHead].Type == PinType.YSwitch) && Setting[PinRim].Type == PinType.Piezo);*/
             gbHHCtrl.Visible = false;
             gbHHE.Visible = false;
-            cbHH_HHC.Visible = false;*/
+            cbHH_HHC.Visible = false;
 
             gbHead.Text = lbPads.SelectedItem.ToString() + " Head";
             gbRim.Text = lbPads.SelectedItem.ToString() + " Rim";
@@ -1145,7 +1052,8 @@ namespace microDrum
             else if (Setting[PinRim].Type == PinType.HHs) UpdateHHs(false, Setting[PinRim]);
             else if (Setting[PinRim].Type == PinType.YSwitch) UpdateYSwitch(false, Setting[PinRim]);
 
-            UpdateDual(Setting[PinHead].Type, Setting[PinRim].Type, Setting[PinHead].Dual != 127, Setting[PinRim].Dual != 127);
+            gbHead.Visible = Setting[PinHead].Type != PinType.HHC;
+            gbHHCtrl.Visible = Setting[PinHead].Type == PinType.HHC;
 
             //Note===========================================================================
             //nudNoteHead.Value = Setting[PinHead].Note;
@@ -1158,13 +1066,11 @@ namespace microDrum
                 if (((Note)dudNoteHead.Items[n]).Value == Setting[PinHead].Note)
                 {
                     dudNoteHead.SelectedIndex = n;
-                    dudDualB.SelectedIndex = n;
                     HeadChanged = true;
                 }
                 if (((Note)dudNoteRim.Items[n]).Value == Setting[PinRim].Note)
                 {
                     dudNoteRim.SelectedIndex = n;
-                    dudDualC.SelectedIndex = n;
                     RimChanged = true;
                 }
                 /*if (((Note)dudDualD.Items[n]).Value == Setting[PinHead].DualNote)//DUAL
@@ -1181,12 +1087,10 @@ namespace microDrum
             if (!HeadChanged)
             {
                 dudNoteHead.SelectedIndex = dudNoteHead.Items.Count - 1;
-                dudDualB.SelectedIndex = dudDualB.Items.Count - 1;
             }
             if (!RimChanged)
             {
                 dudNoteRim.SelectedIndex = dudNoteRim.Items.Count - 1;
-                dudDualC.SelectedIndex = dudDualC.Items.Count - 1;
             }
 
             nudCCHHC.Value = Setting[PinHead].Note;
@@ -1227,7 +1131,7 @@ namespace microDrum
             //Type===========================================================================
 
             cbTypeHead.SelectedIndex = Setting[PinHead].Type == PinType.Disabled ? 6 : (int)Setting[PinHead].Type;
-            cbTypeRim.SelectedItem = Setting[PinRim].Type == PinType.Disabled ? 6 : (int)Setting[PinRim].Type;
+            cbTypeRim.SelectedIndex= Setting[PinRim].Type == PinType.Disabled ? 6 : (int)Setting[PinRim].Type;
             cbTypeHHC.SelectedIndex = cbTypeHead.SelectedIndex == (int)PinType.Disabled ? 6 : cbTypeHead.SelectedIndex;
 
             //Choke===========================================================================
@@ -1574,16 +1478,6 @@ namespace microDrum
             /* if (dudDualA.SelectedItem != null)//DUAL
                  Setting[DrumMap[lbPads.SelectedIndex].Rim].DualNote = ((Note)dudDualA.SelectedItem).Value;*/
         }
-        private void dudDualB_SelectedItemChanged(object sender, EventArgs e)
-        {
-            if (dudDualB.SelectedItem != null)
-                Setting[DrumMap[lbPads.SelectedIndex].Head].Note = ((Note)dudDualB.SelectedItem).Value;
-        }
-        private void dudDualC_SelectedItemChanged(object sender, EventArgs e)
-        {
-            if (dudDualC.SelectedItem != null)
-                Setting[DrumMap[lbPads.SelectedIndex].Rim].Note = ((Note)dudDualC.SelectedItem).Value;
-        }
         private void dudDualD_SelectedItemChanged(object sender, EventArgs e)
         {
             /*if (dudDualD.SelectedItem != null)//DUAL
@@ -1703,26 +1597,6 @@ namespace microDrum
         private void btnCurveFormRim_Click(object sender, EventArgs e)
         {
             UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x08, (byte)nudCurveFormRim.Value);
-        }
-        private void btnDualPiezo_Click(object sender, EventArgs e)
-        {
-            if (chkDualPiezo.Checked)
-            {
-                UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x00, ((Note)dudDualB.SelectedItem).Value);
-                UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x0A, (byte)DrumMap[lbPads.SelectedIndex].Rim);
-                UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x0B, ((Note)dudDualD.SelectedItem).Value);
-                UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x0C, (byte)tbHead.Value);
-
-                UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x00, ((Note)dudDualC.SelectedItem).Value);
-                UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x0A, (byte)DrumMap[lbPads.SelectedIndex].Head);
-                UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x0B, ((Note)dudDualA.SelectedItem).Value);
-                UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x0C, (byte)(255 - (byte)tbRim.Value));
-            }
-            else
-            {
-                UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x0A, 127);
-                UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x0A, 127);
-            }
         }
         //=======================================================
 
@@ -1913,18 +1787,6 @@ namespace microDrum
         }
         #endregion
 
-        private void pbDualZone_Paint(object sender, PaintEventArgs e)
-        {
-            Rectangle A = new Rectangle(0, 0, e.ClipRectangle.Width * tbHead.Value / tbHead.Maximum, e.ClipRectangle.Height - e.ClipRectangle.Height * tbRim.Value / tbRim.Maximum);
-            Rectangle B = new Rectangle(e.ClipRectangle.Width * tbHead.Value / tbHead.Maximum, 0, e.ClipRectangle.Width - e.ClipRectangle.Width * tbHead.Value / tbHead.Maximum, e.ClipRectangle.Height - e.ClipRectangle.Height * tbRim.Value / tbRim.Maximum);
-            Rectangle C = new Rectangle(0, e.ClipRectangle.Height - e.ClipRectangle.Height * tbRim.Value / tbRim.Maximum, e.ClipRectangle.Width * tbHead.Value / tbHead.Maximum, e.ClipRectangle.Height * tbRim.Value / tbRim.Maximum);
-            Rectangle D = new Rectangle(e.ClipRectangle.Width * tbHead.Value / tbHead.Maximum, e.ClipRectangle.Height - e.ClipRectangle.Height * tbRim.Value / tbRim.Maximum, e.ClipRectangle.Width - e.ClipRectangle.Width * tbHead.Value / tbHead.Maximum, e.ClipRectangle.Height * tbRim.Value / tbRim.Maximum);
-
-            DrawLetterInsideDualPiezoGraph(e.Graphics, A, "A");
-            DrawLetterInsideDualPiezoGraph(e.Graphics, B, "B");
-            DrawLetterInsideDualPiezoGraph(e.Graphics, C, "C");
-            DrawLetterInsideDualPiezoGraph(e.Graphics, D, "D");
-        }
         private void DrawLetterInsideDualPiezoGraph(Graphics g, Rectangle r, string s)
         {
             byte gray = (byte)(r.Width * r.Height * 256 / (64 * 64));
@@ -1932,42 +1794,6 @@ namespace microDrum
             g.DrawRectangle(Pens.SteelBlue, r);
             g.DrawString(s, this.Font, Brushes.SteelBlue, -(g.MeasureString(s, this.Font).Width / 2) + r.X + r.Width / 2, -(g.MeasureString(s, this.Font).Height / 2) + r.Y + r.Height / 2);
 
-        }
-        private void chkDualPiezo_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkDualPiezo.Checked)
-            {
-                tbHead.Enabled = true;
-                tbRim.Enabled = true;
-                dudDualA.Enabled = true;
-                dudDualB.Enabled = true;
-                dudDualC.Enabled = true;
-                dudDualD.Enabled = true;
-                //btnDualPiezo.Enabled = true;
-
-                Setting[DrumMap[lbPads.SelectedIndex].Head].Dual = DrumMap[lbPads.SelectedIndex].Rim;
-                Setting[DrumMap[lbPads.SelectedIndex].Rim].Dual = DrumMap[lbPads.SelectedIndex].Head;
-            }
-            else
-            {
-                //btnDualPiezo.Enabled = false;
-                tbHead.Enabled = false;
-                tbRim.Enabled = false;
-                dudDualA.Enabled = false;
-                dudDualB.Enabled = false;
-                dudDualC.Enabled = false;
-                dudDualD.Enabled = false;
-                dudDualA.Text = "---";
-                dudDualB.Text = "---";
-                dudDualC.Text = "---";
-                dudDualD.Text = "---";
-
-                Setting[DrumMap[lbPads.SelectedIndex].Head].Dual = 127;
-                Setting[DrumMap[lbPads.SelectedIndex].Rim].Dual = 127;
-
-            }
-
-            UpdateSetting();
         }
 
         private void tbHeadRim_Scroll(object sender, EventArgs e)
@@ -1983,7 +1809,7 @@ namespace microDrum
         private void nudLog_ValueChanged(object sender, EventArgs e)
         {
             UtilityMIDI.MIDI_SysEx(0x6E, (byte)nudLog.Value, (byte)nudThresold.Value, 0x00);
-            cbCurveViewer.SelectedIndex = Setting[(byte)nudLog.Value].Curve;
+            cbCurveViewer.SelectedIndex = Setting[(byte)nudLog.Value].Curve>=cbCurveViewer.Items.Count-1?-1:Setting[(byte)nudLog.Value].Curve;
             nudFormCurveViewer.Value = Setting[(byte)nudLog.Value].CurveForm;
         }
 
@@ -2799,69 +2625,10 @@ namespace microDrum
             lbLog.Items.Clear();
         }
 
-        private void btnDualPiezoSwitch_Click(object sender, EventArgs e)
-        {
-
-            if (chkDualPiezoSwitch.Checked)
-            {
-                //Se attivo abilita il Piezo-Switch lato Piezo altrimenti il piezo suonerà come uno normale
-                if (chkPiezoSuppression.Checked)
-                {
-                    UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x0A, (byte)DrumMap[lbPads.SelectedIndex].Rim);
-                    UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x0A, (byte)DrumMap[lbPads.SelectedIndex].Head);
-                }
-                else
-                {
-                    UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x0A, 127);
-                    UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x0A, 127);
-                }
-
-                //UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x0B, ((Note)dudDualD.SelectedItem).Value);
-                //UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x0C, (byte)tbHead.Value);
-
-                //se è un YSwitch B e C sono impostati da un'altra parte mentre A non credo serva ma devo controllare
-                if (lblAlternative.Visible)//Se è visibile ci troviamo in un Piezo-Switch altrimenti è un Piezo-YSwitch
-                {
-                    UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x0B, ((Note)dudAlternativeNote.SelectedItem).Value);
-                    UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x0C, (byte)(nudAlternativeThresold.Value));
-                }
-            }
-            else
-            {
-                UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Head, 0x0A, 127);
-                UtilityMIDI.MIDI_SysEx((byte)(0x03 + (alwaySaveToolStripMenuItem.Checked ? 0x01 : 0x00)), (byte)DrumMap[lbPads.SelectedIndex].Rim, 0x0A, 127);
-            }
-        }
-
         private void dudAlternativeNote_SelectedItemChanged(object sender, EventArgs e)
         {
             /*if (dudAlternativeNote.SelectedItem != null)
                 Setting[DrumMap[lbPads.SelectedIndex].Rim].DualNote = ((Note)dudAlternativeNote.SelectedItem).Value;*/
-        }
-
-        private void chkDualPiezoSwitch_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkDualPiezoSwitch.Checked)
-            {
-                nudAlternativeThresold.Enabled = true;
-                dudAlternativeNote.Enabled = true;
-                chkPiezoSuppression.Enabled = true;
-
-                //Setting[DrumMap[lbPads.SelectedIndex].Head].Dual = DrumMap[lbPads.SelectedIndex].Rim;
-                Setting[DrumMap[lbPads.SelectedIndex].Rim].Dual = DrumMap[lbPads.SelectedIndex].Head;
-            }
-            else
-            {
-                nudAlternativeThresold.Enabled = false;
-                dudAlternativeNote.Enabled = false;
-                chkPiezoSuppression.Enabled = false;
-
-                Setting[DrumMap[lbPads.SelectedIndex].Head].Dual = 127;
-                Setting[DrumMap[lbPads.SelectedIndex].Rim].Dual = 127;
-
-            }
-
-            UpdateSetting();
         }
 
         private void nudAlternativeThresold_ValueChanged(object sender, EventArgs e)
@@ -2918,14 +2685,6 @@ namespace microDrum
         {
             MultiSettingForm msf = new MultiSettingForm();
             msf.ShowDialog();
-        }
-
-        private void chkPiezoSuppression_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkPiezoSuppression.Checked)
-                Setting[DrumMap[lbPads.SelectedIndex].Head].Dual = DrumMap[lbPads.SelectedIndex].Rim;
-            else
-                Setting[DrumMap[lbPads.SelectedIndex].Head].Dual = 127;
         }
 
         private void btnCCHHC_Click(object sender, EventArgs e)
